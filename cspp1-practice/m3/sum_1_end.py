@@ -7,11 +7,8 @@ Encoding: Utf-8
 #sum of integers from 1 to end
 END = int(input())
 
-I = 1
 SUM = 0
 
-while I <= END:
+for I in range(1, END+1):
     SUM = SUM + I
-    I += 1
-
 print(SUM)

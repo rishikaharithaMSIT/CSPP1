@@ -8,6 +8,5 @@ Encoding: Utf-8
 
 print("Hello!")
 
-for I in range(10, 0, -2):
+for I in range(10, 1, -2):
     print(I)
-    
