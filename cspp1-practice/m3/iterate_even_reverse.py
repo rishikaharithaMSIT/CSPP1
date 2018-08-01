@@ -7,7 +7,7 @@ Encoding: Utf-8
 #program to print even numbers in reverse order
 
 print("Hello!")
-I = 10
-while I >= 2:
+
+for I in range(10, 0, -2):
     print(I)
-    I -= 2
+    
