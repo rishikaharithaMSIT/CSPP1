@@ -4,8 +4,14 @@ Date: 1-August-2018
 Encoding: Utf-8
 '''
 
-INPUT1 = input()
-INPUT2 = input()
+VARA = "abc"
+VARB = "abcd"
 
-for i in INPUT:
-    
+if isinstance(VARA, str) or isinstance(VARB, str) is str:
+    print("string involved")
+elif VARA > VARB:
+    print("bigger")
+elif VARA == VARB:
+    print("equal")
+else:
+    print("smaller")
