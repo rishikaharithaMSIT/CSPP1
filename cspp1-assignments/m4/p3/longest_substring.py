@@ -28,12 +28,11 @@ def main():
 		else: 
 			count_1= 0
 				
-		if count_max <= count_1:
+		if count_max < count_1:
 			count_max = count_1
 			end_index = index_strs+1
 			
-
-	print(in_strs[end_index - count_max:end_index+1])	
+	print(in_strs[end_index - count_max:end_index+1])
 
 if __name__== "__main__":
 	main()
