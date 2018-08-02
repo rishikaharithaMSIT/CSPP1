@@ -10,7 +10,7 @@ def main():
     input_string = input()
     # the input string is in s
     # remove pass and start your code here
-    count_bob = 0 
+    count_bob = 0
     for i in range(len(input_string)-2):
         if input_string[i:i+3] == 'bob':
             count_bob += 1
