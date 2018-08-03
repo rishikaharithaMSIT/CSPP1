@@ -15,6 +15,7 @@ Encoding: Utf-8
 # output: 6.999999999999991
 
 def main():
+    '''main function'''
     square_num = int(input())
     # epsilon and step are initialized
     # don't change these values
@@ -26,10 +27,10 @@ def main():
 
     while abs((middle_val ** 2) - square_num) >= approximation_val:
         if square_num > middle_val ** 2:
-            low_val = middle_val            
+            low_val = middle_val
         else:
             high_val = middle_val
-        middle_val = (low_val + high_val) / 2   
+        middle_val = (low_val + high_val) / 2
     print(middle_val) 
 
 
