@@ -31,8 +31,7 @@ def main():
         else:
             high_val = middle_val
         middle_val = (low_val + high_val) / 2
-    print(middle_val) 
-
+    print(middle_val)
 
 if __name__ == "__main__":
     main()
