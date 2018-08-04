@@ -17,12 +17,14 @@ def main():
     start_index = 1
     while start_index <= input_num:
             
-            if start_index % 3 == 0:
-                print("Fizz")
-            if start_index % 5 == 0:
-                print("Buzz")
-            if(start_index%3 != 0 or start_index%5 != 0 ) :
-                print(start_index)
+            if start_index % 3 == 0 or start_index % 5 == 0:
+                if start_index % 3 == 0:
+                    print("Fizz")
+                if start_index % 5 == 0:
+                    print("Buzz")
+            else:
+                print(start_index)      
+           
 
             start_index += 1
 
