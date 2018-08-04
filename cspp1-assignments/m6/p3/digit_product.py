@@ -10,11 +10,18 @@ def main():
     int_input = input()
 
     digits_product = 1
+    flag = 0
 
     for input_iterator in int_input:
-    	digits_product *= int(input_iterator)
-    	
-    print(digits_product)
+    	if input_iterator == '-' :
+    		flag=1
+    	else:
+    		digits_product *= int(input_iterator)
+
+    if flag==1:
+    	print("-"+str(digits_product))
+    else:
+    	print(digits_product)	
 
 
 
