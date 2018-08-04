@@ -14,19 +14,17 @@ def main():
     Read number from the input, store it in variable num.
     '''
     input_num = int(input())
-
-  
-
-    for iterator_num in range(input_num+1):
-    	
-    	if iterator_num % 15 == 0:
-    		print("FizzBuzz")
-    	elif iterator_num % 3 == 0:
-    		print("Fizz")
-    	elif iterator_num % 5 == 0:
-    		print("Buzz")
-    	else:
-       		print(iterator_num)
+    start_index = 1
+    while start_index <= input_num:
+            if start_index % 15 == 0:
+                print("FizzBuzz")
+            elif start_index % 3 == 0:
+                print("Fizz")
+            elif start_index % 5 == 0:
+                print("Buzz")
+            else:
+                print(start_index)
+            start_index += 1
 
 
 if __name__ == "__main__":
