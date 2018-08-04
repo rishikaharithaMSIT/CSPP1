@@ -3,12 +3,10 @@ Author: Rishika Haritha - 20186041
 Encoding: Utf-8
 '''
 
-'''
-Write a short program that prints each number from 1 to num on a new line.
-For each multiple of 3, print "Fizz" instead of the number.
-For each multiple of 5, print "Buzz" instead of the number.
-For numbers which are multiples of both 3 and 5, print "FizzBuzz" instead of the number.
-'''
+#print fizz for 3 multiples
+#print buzz for 5 multiples
+#print fizz and buzz for 5 multiples
+
 def main():
     '''
     Read number from the input, store it in variable num.
@@ -16,18 +14,15 @@ def main():
     input_num = int(input())
     start_index = 1
     while start_index <= input_num:
-            
-            if start_index % 3 == 0 or start_index % 5 == 0:
-                if start_index % 3 == 0:
-                    print("Fizz")
-                if start_index % 5 == 0:
-                    print("Buzz")
-            else:
-                print(start_index)      
-           
+        if start_index % 3 == 0 or start_index % 5 == 0:
+            if start_index % 3 == 0:
+                print("Fizz")
+            if start_index % 5 == 0:
+                print("Buzz")
+        else:
+            print(start_index)
 
-            start_index += 1
-
+        start_index += 1
 
 if __name__ == "__main__":
     main()
