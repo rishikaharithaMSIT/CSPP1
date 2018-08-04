@@ -16,14 +16,14 @@ def main():
     input_num = int(input())
     start_index = 1
     while start_index <= input_num:
-            if start_index % 15 == 0:
-                print("FizzBuzz")
-            elif start_index % 3 == 0:
+            
+            if start_index % 3 == 0:
                 print("Fizz")
-            elif start_index % 5 == 0:
+            if start_index % 5 == 0:
                 print("Buzz")
-            else:
+            if(start_index%3 != 0 or start_index%5 != 0 ) :
                 print(start_index)
+
             start_index += 1
 
 
