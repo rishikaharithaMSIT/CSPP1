@@ -11,12 +11,11 @@ def main():
     '''
     str_input = input()
     output_str = ""
-    for str_iterator in enumerate(len(str_input)):
-        if str_input[str_iterator] in "!@#$%^&*":
+    for str_iterator in str_input:
+        if str_iterator in "!@#$%^&*":
             output_str += " "
         else:
-            output_str += str_input[str_iterator]
-
+            output_str += str_iterator
     print(output_str)
 
 if __name__ == "__main__":
