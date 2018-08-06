@@ -29,7 +29,7 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print(payingDebtOffInAYear(data[0], data[1]))
+    print(paying_debt_off_inayear(data[0], data[1]))
     
 if __name__ == "__main__":
     main()
