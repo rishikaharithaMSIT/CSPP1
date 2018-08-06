@@ -17,7 +17,7 @@ def paying_debt(balance_unpaid, annual_interest_rate, guess_num):
 
 def paying_debt_off_inayear(balance_unpaid, annual_interest_rate):
     '''paying deft off in a year'''
-    approximation_val = 0.01
+    approximation_val = 0.05
     montly_interest_rate = annual_interest_rate /12.0
     high_val = (balance_unpaid * (1 + montly_interest_rate) ** 12) / 12.0
     low_val = balance_unpaid / 12
