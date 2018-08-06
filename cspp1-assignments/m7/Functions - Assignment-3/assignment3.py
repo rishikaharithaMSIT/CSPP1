@@ -24,7 +24,7 @@ def paying_debt_off_inayear(balance_unpaid, annual_interest_rate):
     middle_val = (low_val + high_val) / 2.0
 
     while abs(paying_debt(balance_unpaid, annual_interest_rate, middle_val)) >= approximation_val:
-        if approximation_val =< paying_debt(balance_unpaid, annual_interest_rate, middle_val):
+        if approximation_val <= paying_debt(balance_unpaid, annual_interest_rate, middle_val):
             low_val = middle_val
         else:
             high_val = middle_val
