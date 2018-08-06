@@ -23,14 +23,14 @@
 # Minimum monthly payment = (Minimum monthly payment rate) x (Previous balance)
 # Monthly unpaid balance = (Previous balance) - (Minimum monthly payment)
 # Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x Monthly unpaid balance)
-
-
+'''
+'''
 def payingDebtOffInAYear(balance, annualInterestRate, monthlyPaymentRate):
 	balance_copy = balance
 
 	i = 1
 	while i <= 12:
-		mir = annualInterestRate/12.0
+		mir = annualInterestRate / 12.0
 		mmp = monthlyPaymentRate*balance_copy
 		mub = balance_copy - mmp
 		balance_copy = mub + (mir*mub)
