@@ -35,7 +35,7 @@ def payingDebtOffInAYear(balance, annualInterestRate, monthlyPaymentRate):
 		mub = balance_copy - mmp
 		balance_copy = mub + (mir*mub)
 		i += 1
-	return round(balance_copy, 2)
+	return "Remaining balance: "+str(round(balance_copy, 2))
 	
 
 def main():
