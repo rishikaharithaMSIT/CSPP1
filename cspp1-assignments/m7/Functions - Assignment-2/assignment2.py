@@ -4,6 +4,7 @@ Encoding: Utf-8
 '''
 
 def paying_debt(balance_unpaid, annual_interest_rate, guess_num):
+    '''in paying debt'''
     balance_copy = balance_unpaid
 
     iterator_i = 1
@@ -15,6 +16,7 @@ def paying_debt(balance_unpaid, annual_interest_rate, guess_num):
     return balance_copy
 
 def paying_debt_off_inayear(balance_unpaid, annual_interest_rate):
+    '''paying debt off in a year'''
     balance_copy = balance_unpaid
     aprroximation_val = 0.1
     step_val = 1
