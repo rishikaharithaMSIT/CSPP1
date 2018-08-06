@@ -41,19 +41,19 @@ def payingDebtOffInAYear(balance, annualInterestRate):
     # print("a")
     # while payingDebt(balance_copy, annualInterestRate, guess_num*10) >= aprroximation_val:      
     #     guess_num += step_val
-    approximation_val = 10
+    approximation_val = 0.01
     # your code starts here
-    mir = annualInterestRate/12
+    mir = annualInterestRate/12.0
     high_val = (balance * (1 + mir)**12) / 12.0
     low_val = balance/12
-    middle_val = (low_val + high_val) / 2
+    middle_val = (low_val + high_val) / 2.0
 
     while abs(payingDebt(balance_copy, annualInterestRate, middle_val)) >= approximation_val:
         if approximation_val < payingDebt(balance_copy, annualInterestRate, middle_val):            
             low_val = middle_val
         else:
             high_val = middle_val
-        middle_val = (low_val + high_val) / 2
+        middle_val = (low_val + high_val) / 2.0
 
       
     k = middle_val
