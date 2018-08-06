@@ -1,72 +1,42 @@
-# Assignment-2 - Paying Debt off in a Year
+'''
+Author: Rishika Haritha - 20186041
+Encoding: Utf-8
+'''
 
-# Now write a program that calculates the minimum fixed monthly payment needed in order pay off a credit card balance within 12 months.
-# By a fixed monthly payment, we mean a single number which does not change each month, but instead is a constant amount that will be
-# paid each month.
+def paying_debt(balance_unpaid, annual_interest_rate, guess_num):
+    '''in paying debt'''
+    balance_copy = balance_unpaid
 
-# In this problem, we will not be dealing with a minimum monthly payment rate.
-
-# The following variables contain values as described below:
-# balance - the outstanding balance on the credit card
-# annualInterestRate - annual interest rate as a decimal
-
-# The program should print out one line: the lowest monthly payment that will pay off all debt in under 1 year, for example:
-# Lowest Payment: 180
-
-# Assume that the interest is compounded monthly according to the balance at the end of the month (after the payment for that month is
-# made).
-# The monthly payment must be a multiple of $10 and is the same for all months. Notice that it is possible for the balance to become
-# negative using this payment scheme, which is okay. A summary of the required math is found below:
-# Monthly interest rate = (Annual interest rate) / 12.0
-# Monthly unpaid balance = (Previous balance) - (Minimum fixed monthly payment)
-# Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x Monthly unpaid balance)
-
-def payingDebt(balance, annualInterestRate, guess_num):
-    balance_copy = balance
-
-    i = 1
-    while i <= 12:
-        mir = annualInterestRate/12      
-        mub = balance_copy - guess_num
-        balance_copy = mub + (mir*mub)
-        i += 1
+    iterator_i = 1
+    while iterator_i <= 12:
+        montly_interest_rate = annual_interest_rate / 12
+        monthly_unpaid_balance = balance_copy - guess_num
+        balance_copy = monthly_unpaid_balance + (montly_interest_rate * monthly_unpaid_balance)
+        iterator_i += 1
     return balance_copy
 
-def payingDebtOffInAYear(balance, annualInterestRate):
-    balance_copy = balance
-
-    # aprroximation_val = 0.1
-    # step_val = 0.1
-    # guess_num = 0.0
-    # print("a")
-    # while payingDebt(balance_copy, annualInterestRate, guess_num*10) >= aprroximation_val:      
-    #     guess_num += step_val
+def paying_debt_off_inayear(balance_unpaid, annual_interest_rate):
+    '''paying deft off in a year'''
     approximation_val = 0.01
-    # your code starts here
-    mir = annualInterestRate/12.0
-    high_val = (balance * (1 + mir)**12) / 12.0
-    low_val = balance/12
+    montly_interest_rate = annual_interest_rate /12.0
+    high_val = (balance_unpaid * (1 + montly_interest_rate) ** 12) / 12.0
+    low_val = balance_unpaid / 12
     middle_val = (low_val + high_val) / 2.0
 
-    while abs(payingDebt(balance_copy, annualInterestRate, middle_val)) >= approximation_val:
-        if approximation_val < payingDebt(balance_copy, annualInterestRate, middle_val):            
+    while abs(paying_debt(balance_unpaid, annual_interest_rate, middle_val)) >= approximation_val:
+        if approximation_val =< paying_debt(balance_unpaid, annual_interest_rate, middle_val):
             low_val = middle_val
         else:
             high_val = middle_val
         middle_val = (low_val + high_val) / 2.0
-
-      
-    k = middle_val
-    return "Lowest Payment: "+str(round(k, 2))
-    
-    
-    
+    min_pay = middle_val
+    return "Lowest Payment: "+str(round(min_pay, 2))
 
 def main():
+    '''main function'''
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print(payingDebtOffInAYear(data[0],data[1]))
-    
-if __name__== "__main__":
+    print(paying_debt_off_inayear(data[0], data[1]))
+if __name__ == "__main__":
     main()
