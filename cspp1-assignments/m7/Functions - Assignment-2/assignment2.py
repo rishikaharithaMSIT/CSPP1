@@ -19,7 +19,7 @@ def paying_debt_off_inayear(balance_unpaid, annual_interest_rate):
     aprroximation_val = 0.1
     step_val = 1
     guess_num = 0.0
-    while payingDebt(balance_copy, annual_interest_rate, guess_num * 10) >= aprroximation_val:      
+    while paying_debt(balance_copy, annual_interest_rate, guess_num * 10) >= aprroximation_val:      
         guess_num += step_val         
     
     min_pay = round(guess_num)
