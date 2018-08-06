@@ -41,7 +41,7 @@ def payingDebtOffInAYear(balance, annualInterestRate):
     # print("a")
     # while payingDebt(balance_copy, annualInterestRate, guess_num*10) >= aprroximation_val:      
     #     guess_num += step_val
-    approximation_val = 0.01
+    approximation_val = 0.1
     # your code starts here
     mir = annualInterestRate/12
     high_val = (balance * (1 + mir)**12) / 12.0
