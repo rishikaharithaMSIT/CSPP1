@@ -57,7 +57,7 @@ def payingDebtOffInAYear(balance, annualInterestRate):
 
       
     k = middle_val * 10
-    return round(k, 2)
+    return "Lowest Payment: "+str(round(k, 2))
     
     
     
