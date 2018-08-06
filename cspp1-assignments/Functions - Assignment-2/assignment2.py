@@ -42,7 +42,7 @@ def payingDebtOffInAYear(balance, annualInterestRate):
         guess_num += step_val
          
     
-    m = guess_num
+    m = round(guess_num)
     return "Lowest Payment: "+str(m*10)
     
     
