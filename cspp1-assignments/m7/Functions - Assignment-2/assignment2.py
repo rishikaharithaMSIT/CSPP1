@@ -10,7 +10,7 @@ def paying_debt(balance_unpaid, annual_interest_rate, guess_num):
     while iterator_i <= 12:
         montly_interest_rate = annual_interest_rate / 12      
         monthly_unpaid_balance = balance_copy - guess_num
-        balance_copy = mub + (montly_interest_rate * monthly_unpaid_balance)
+        balance_copy = monthly_unpaid_balance + (montly_interest_rate * monthly_unpaid_balance)
         iterator_i += 1
     return balance_copy
 
