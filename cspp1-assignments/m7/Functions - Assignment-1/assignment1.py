@@ -11,7 +11,7 @@ def payingDebtOffInAYear(balance_unpaid, annual_interest_rate, monthly_payment_r
     while iterator_i <= 12:
         montly_interest_rate = annual_interest_rate / 12.0
         minimum_monthly_payment = monthly_payment_rate*balance_copy
-        monthly_unpaid_balance = balance_copy - minimum_monthly_paymentmmp
+        monthly_unpaid_balance = balance_copy - minimum_monthly_payment
         balance_copy = monthly_unpaid_balance + (montly_interest_rate * monthly_unpaid_balance)
         iterator_i += 1
     return "Remaining balance: "+str(round(balance_copy, 2))
