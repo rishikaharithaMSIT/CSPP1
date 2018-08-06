@@ -9,7 +9,7 @@ def paying_debt(balance_unpaid, annual_interest_rate, guess_num):
 
     iterator_i = 1
     while iterator_i <= 12:
-        montly_interest_rate = annual_interest_rate / 12      
+        montly_interest_rate = annual_interest_rate / 12
         monthly_unpaid_balance = balance_copy - guess_num
         balance_copy = monthly_unpaid_balance + (montly_interest_rate * monthly_unpaid_balance)
         iterator_i += 1
@@ -21,9 +21,8 @@ def paying_debt_off_inayear(balance_unpaid, annual_interest_rate):
     aprroximation_val = 0.1
     step_val = 1
     guess_num = 0.0
-    while paying_debt(balance_copy, annual_interest_rate, guess_num * 10) >= aprroximation_val:      
-        guess_num += step_val         
-    
+    while paying_debt(balance_copy, annual_interest_rate, guess_num * 10) >= aprroximation_val:
+        guess_num += step_val
     min_pay = round(guess_num)
     return "Lowest Payment: "+str(min_pay * 10)
     
