@@ -38,12 +38,12 @@ def payingDebtOffInAYear(balance, annualInterestRate):
     aprroximation_val = 0.1
     step_val = 0.1
     guess_num = 0.0
-    while payingDebt(balance_copy, annualInterestRate, guess_num*10) >= aprroximation_val:      
+    while payingDebt(balance_copy, annualInterestRate, guess_num) >= aprroximation_val:      
         guess_num += step_val
          
     
-    m = round(guess_num*10)
-    return "Lowest Payment: "+str(m)
+    m = round(guess_num)
+    return "Lowest Payment: "+str(m*10)
     
     
     
