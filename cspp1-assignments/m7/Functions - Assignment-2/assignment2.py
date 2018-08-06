@@ -25,12 +25,11 @@ def paying_debt_off_inayear(balance_unpaid, annual_interest_rate):
         guess_num += step_val
     min_pay = round(guess_num)
     return "Lowest Payment: "+str(min_pay * 10)
-    
 def main():
+    '''in main'''
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
     print(paying_debt_off_inayear(data[0], data[1]))
-    
 if __name__ == "__main__":
     main()
