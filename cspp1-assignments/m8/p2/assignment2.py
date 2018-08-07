@@ -17,6 +17,7 @@ def sum_of_digits(input_num):
 
 
 def main():
+    '''main function'''
     input_num = input()
     print(sum_of_digits(int(input_num)))
 if __name__ == "__main__":
