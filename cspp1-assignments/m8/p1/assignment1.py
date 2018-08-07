@@ -12,9 +12,6 @@ def factorial(input_num):
     if input_num == 1 or input_num == 0:
         return 1
     return input_num * factorial(input_num - 1)
-    
-
-
 def main():
     '''in main function'''
     input_num = input()
