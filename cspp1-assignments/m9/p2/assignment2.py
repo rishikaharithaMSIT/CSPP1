@@ -12,7 +12,7 @@ def replace_by(secret_word, secret_word_copy):
         secret_word.remove(item)
         secret_word.insert(loc, '_')
         
-    print(secret_word)
+    #print(secret_word)
     return secret_word
 
 def convert_list_to_string(secret_word):
