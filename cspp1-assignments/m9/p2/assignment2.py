@@ -7,9 +7,9 @@ letters in letters_guessed are in secret_word. This shouldn't be too different f
 '''
 def replace_by(secret_word, secret_word_copy):
     #print(secret_word)
-    if secret_word_copy in secret_word:
-        loc = secret_word.index(secret_word_copy)
-        secret_word.remove(secret_word_copy)
+    for item in secret_word_copy:
+        loc = secret_word.index(item)
+        secret_word.remove(item)
         secret_word.insert(loc, '_')
         
     #print(secret_word)
@@ -32,14 +32,14 @@ def get_guessed_word(secret_word, letters_guessed):
     secret_word1 = secret_word[:]
     for i in letters_guessed:
         if i in secret_word:
-            secret_word_copy =  replace_by(secret_word, i)
+            secret_word_copy =  list(filter(lambda a: a != i, secret_word))
             secret_word =  list(filter(lambda a: a != i, secret_word))
         if len(secret_word) == 0:
             return convert_list_to_string(secret_word1)
         
     
     if len(secret_word) != 0:
-        #secret_word_copy = replace_by(secret_word1,secret_word_copy)
+        secret_word_copy = replace_by(secret_word1,secret_word_copy)
         #print(secret_word_copy)
         return convert_list_to_string(secret_word_copy)
     else:
