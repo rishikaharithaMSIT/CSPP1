@@ -6,7 +6,7 @@ returns a string that is comprised of letters and underscores, based on what
 letters in letters_guessed are in secret_word. This shouldn't be too different from isWordGuessed!
 '''
 def replace_by(secret_word, secret_word_copy):
-    print(secret_word)
+    #print(secret_word)
     for item in secret_word_copy:
         loc = secret_word.index(item)
         secret_word.remove(item)
