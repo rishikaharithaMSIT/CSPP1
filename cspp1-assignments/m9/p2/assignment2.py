@@ -32,7 +32,7 @@ def get_guessed_word(secret_word, letters_guessed):
     secret_word1 = secret_word[:]
     for i in letters_guessed:
         if i in secret_word:
-            secret_word_copy =  replace_by(secret_word, i):
+            secret_word_copy =  replace_by(secret_word, i)
             secret_word =  list(filter(lambda a: a != i, secret_word))
         if len(secret_word) == 0:
             return convert_list_to_string(secret_word1)
