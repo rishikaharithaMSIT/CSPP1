@@ -8,8 +8,8 @@ letters in letters_guessed are in secret_word. This shouldn't be too different f
 def replace_by(secret_word, secret_word_copy):
     #print(secret_word)
     if secret_word_copy in secret_word:
-        loc = secret_word.index(item)
-        secret_word.remove(item)
+        loc = secret_word.index(secret_word_copy)
+        secret_word.remove(secret_word_copy)
         secret_word.insert(loc, '_')
         
     #print(secret_word)
