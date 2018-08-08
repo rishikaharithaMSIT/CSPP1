@@ -28,13 +28,13 @@ def get_guessed_word(secret_word, letters_guessed):
     secret_word1 = secret_word[:]
     for i_iterator in letters_guessed:
         if i_iterator in secret_word:
-            secret_word_copy = list(filter(lambda lambda_param:
+            secret_word_copy = list(filter(
+                                    lambda lambda_param:
                                     lambda_param != i_iterator, secret_word))
             secret_word = list(filter(lambda lambda_param:
                                       lambda_param != i_iterator, secret_word))
         if len(secret_word) == 0:
             return convert_list_to_string(secret_word1)
-    
     if len(secret_word) != 0:
         secret_word_copy = replace_by(secret_word1,secret_word_copy)
         #print(secret_word_copy)
