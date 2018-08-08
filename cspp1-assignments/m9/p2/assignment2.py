@@ -9,7 +9,7 @@ def replace_by(secret_word, secret_word_copy):
     for each_item in secret_word_copy:
         loc_letter = secret_word.index(each_item)
         secret_word.remove(each_item)
-        secret_word.insert(loc_letter, '_')        
+        secret_word.insert(loc_letter, '_')
     #print(secret_word)
     return secret_word
 
@@ -29,7 +29,7 @@ def get_guessed_word(secret_word, letters_guessed):
     i_iterator = ""
     for i_iterator in letters_guessed:
         if i_iterator in secret_word:
-            secret_word_copy = list(filter(lambda 
+            secret_word_copy = list(filter(lambda
                                            lambda_param:lambda_param != i_iterator, secret_word))
             secret_word = list(filter(lambda lambda_param:
                                       lambda_param != i_iterator, secret_word))
