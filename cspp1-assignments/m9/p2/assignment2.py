@@ -30,9 +30,10 @@ def get_guessed_word(secret_word, letters_guessed):
     for i_iterator in letters_guessed:
         if i_iterator in secret_word:
             secret_word_copy = list(filter(lambda
-                                           lambda_param:
+                                    lambda_param:
                                            lambda_param != i_iterator, secret_word))
-            secret_word = list(filter(lambda lambda_param:
+            secret_word = list(filter(lambda
+                                      lambda_param:
                                       lambda_param != i_iterator, secret_word))
         if not secret_word:
             return convert_list_to_string(secret_word1)
