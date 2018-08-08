@@ -26,6 +26,7 @@ def get_guessed_word(secret_word, letters_guessed):
     secret_word = list(secret_word)
     secret_word_copy = secret_word[:]
     secret_word1 = secret_word[:]
+    i_iterator = ""
     for i_iterator in letters_guessed:
         if i_iterator in secret_word:
             secret_word_copy = list(filter(lambda 
@@ -35,7 +36,7 @@ def get_guessed_word(secret_word, letters_guessed):
         if not secret_word:
             return convert_list_to_string(secret_word1)
     if secret_word:
-        secret_word_copy = replace_by(secret_word1,secret_word_copy)
+        secret_word_copy = replace_by(secret_word1, secret_word_copy)
         #print(secret_word_copy)
         return convert_list_to_string(secret_word_copy)
     else:
