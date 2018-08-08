@@ -33,7 +33,7 @@ def get_guessed_word(secret_word, letters_guessed):
                 lambda_param:
                                            lambda_param != i_iterator, secret_word))
             secret_word = list(filter(lambda
-                                      lambda_param:
+                lambda_param:
                                       lambda_param != i_iterator, secret_word))
         if not secret_word:
             return convert_list_to_string(secret_word1)
