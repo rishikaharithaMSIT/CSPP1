@@ -42,7 +42,7 @@ def get_guessed_word(secret_word, letters_guessed):
         #print(secret_word_copy)
         return convert_list_to_string(secret_word_copy)
     else:
-        return "True"
+        return ""
 
 def main():
     '''
