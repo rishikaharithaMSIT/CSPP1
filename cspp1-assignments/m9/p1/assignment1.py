@@ -9,6 +9,7 @@ def is_word_guessed(secret_word, letters_guessed):
     '''
     # FILL IN YOUR CODE HERE...
     secret_word = list(secret_word)
+    secret_letter = ""
     for secret_letter in letters_guessed:
         if secret_letter in secret_word:
             lambda_solution = filter(lambda lambda_params:
