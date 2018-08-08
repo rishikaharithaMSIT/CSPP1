@@ -13,7 +13,11 @@ def replace_by(secret_word, secret_word_copy):
         secret_word.insert(loc, '_')
         
     print(secret_word)
-    return secret_word           
+    return secret_word
+
+def convert_list_to_string(secret_word):
+    str1 = ''.join(str(e) for e in secret_word)
+    return str1         
 def get_guessed_word(secret_word, letters_guessed):
     '''
     secret_word: string, the word the user is guessing
@@ -30,13 +34,13 @@ def get_guessed_word(secret_word, letters_guessed):
             secret_word_copy =  list(filter(lambda a: a != i, secret_word))
             secret_word =  list(filter(lambda a: a != i, secret_word))
         if len(secret_word) == 0:
-            return str(secret_word1)
+            return convert_list_to_string(secret_word1)
         
     
     if len(secret_word) != 0:
         secret_word_copy = replace_by(secret_word1,secret_word_copy)
         #print(secret_word_copy)
-        return str(secret_word_copy)
+        return convert_list_to_string(secret_word_copy)
     else:
         return "True"
 
