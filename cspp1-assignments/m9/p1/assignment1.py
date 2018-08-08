@@ -17,7 +17,7 @@ def is_word_guessed(secret_word, letters_guessed):
             secret_word = list(lambda_solution)
         if len(secret_word) == 0:
             return "True"
-    if len(secret_word) is 0:
+    if len(secret_word) == 0:
         return "True"
     return "False"
 def main():
