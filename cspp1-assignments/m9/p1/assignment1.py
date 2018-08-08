@@ -15,7 +15,7 @@ def is_word_guessed(secret_word, letters_guessed):
             lambda_solution = filter(lambda lambda_params:
                                      lambda_params != secret_letter, secret_word)
             secret_word = list(lambda_solution)
-        if len(secret_word) == 0:
+        if not secret_word:
             return "True"
     if not secret_word:
         return "True"
