@@ -26,7 +26,6 @@ def update_hand(player_hand, input_word):
             #print(hand[i])
             player_hand[each_word] -= 1
     return player_hand
-    
 
 def main():
     '''in main funtion'''
@@ -35,10 +34,10 @@ def main():
     for i_iterator in range(int(no_test_cases)):
         da_ta = input()
         l_data = da_ta.split()
-        a_dict[l_data[0]]=int(l_data[1])
+        a_dict[l_data[0]] = int(l_data[1])
+        i_iterator += 1
     input_word = input()
-    print(update_hand(a_dict,input_word))
-        
+    print(update_hand(a_dict, input_word))
 
 
 if __name__ == "__main__":
