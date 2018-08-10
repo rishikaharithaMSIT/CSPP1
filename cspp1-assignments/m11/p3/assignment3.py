@@ -43,6 +43,7 @@ def main():
         da_ta = input()
         l_1 = da_ta.split()
         a_dict[l_1[0]] = int(l_1[1])
+        i = i + 1
     l_2 = input().split()
     print(is_validword(input_word, a_dict, l_2))
         
