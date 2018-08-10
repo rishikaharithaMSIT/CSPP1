@@ -3,7 +3,7 @@ Author: Rishika Haritha - 20186041
 Encoding: Utf-8
 '''
 
-def is_validword(word, hand, wordList):
+def is_validword(input_word, player_hand, word_list):
     """
     Returns True if word is in the wordList and is entirely
     composed of letters in the hand. Otherwise, returns False.
@@ -17,13 +17,13 @@ def is_validword(word, hand, wordList):
     # TO DO ... <-- Remove this comment when you code this function
     is_in_hand = False
     is_in_wordlist = False
-    flag = 0
-    for w in word:
-        if w not in hand:
-            flag = 1
-    if not flag:
+    check_flag = 0
+    for each_word in input_word:
+        if each_word not in player_hand:
+            check_flag = 1
+    if not check_flag:
         is_in_hand = True
-    if word in wordList:
+    if input_word in word_list:
         is_in_wordlist = True
 
     if is_in_hand and is_in_wordlist:
@@ -38,7 +38,7 @@ def main():
     '''in main function'''
     input_word = input()
     test_cases = int(input())
-    a_dict={}
+    a_dict = {}
     for i in range(test_cases):
         da_ta = input()
         l_1 = da_ta.split()
