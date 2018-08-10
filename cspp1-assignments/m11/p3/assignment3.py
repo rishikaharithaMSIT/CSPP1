@@ -25,7 +25,7 @@ def isValidWord(word, hand, wordList):
     for w in word:
     	if w not in hand:
     		flag = 1
-    if flag:
+    if not flag:
     	is_in_hand = True
     if word in wordList:
     	is_in_wordlist = True
