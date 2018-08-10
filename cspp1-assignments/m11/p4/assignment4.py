@@ -4,9 +4,8 @@ Encoding: Utf-8
 '''
 
 def calculate_handlen(player_hand):
-    """ 
+    """
     Returns the length (number of letters) in the current hand.
-    
     hand: dictionary (string int)
     returns: integer
     """
@@ -15,6 +14,7 @@ def calculate_handlen(player_hand):
     return hand_length
 
 def main():
+    '''in main function'''
     i_n = input()
     a_dict = {}
     for i in range(int(i_n)):
