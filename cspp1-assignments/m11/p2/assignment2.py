@@ -20,7 +20,7 @@ def updateHand(hand, word):
     """
     # TO DO ... <-- Remove this comment when you code this function
     for i in word:
-        if i in list(adict.values()):
+        if i in list(hand.values()):
             hand[i] -= 1
     return hand
     
