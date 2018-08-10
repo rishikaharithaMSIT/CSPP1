@@ -19,8 +19,8 @@ def updateHand(hand, word):
     returns: dictionary (string -> int)
     """
     # TO DO ... <-- Remove this comment when you code this function
-    for i in hand:
-        if i in word:
+    for i in word:
+        if i in list(adict.values()):
             hand[i] -= 1
     return hand
     
