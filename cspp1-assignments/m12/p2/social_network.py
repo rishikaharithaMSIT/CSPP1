@@ -49,7 +49,8 @@ def delete_person(network, arg1):
     for person in network:
         if arg1 in network[person]:
             network[person].remove(arg1)
-    del network[arg1]
+    if arg1 in network:
+        del network[arg1]
     return network
     
 
