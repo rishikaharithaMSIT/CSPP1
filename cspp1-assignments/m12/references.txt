@@ -1,0 +1,2 @@
+1)https://stackoverflow.com/questions/11277432/how-to-remove-a-key-from-a-python-dictionary
+2)python docs
