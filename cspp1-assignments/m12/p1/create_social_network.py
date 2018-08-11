@@ -39,7 +39,7 @@ def create_social_network(data):
         return {}
     follow_list = []
     for each_person in persons_data:
-            follow_list.append(each_person.split('follows'))
+        follow_list.append(each_person.split('follows'))
     new_list2 = []
     for j_j in follow_list:
         new_list = []
@@ -49,7 +49,8 @@ def create_social_network(data):
             new_list.append(j_j[1].split(','))
             new_list2.append(new_list)
     adict = {}
-    for m_m in range(len(new_list2)):
+    len_list = len(new_list2)
+    for m_m in range(len_list):
         if new_list2[m_m][0] in adict:
             adict[new_list2[m_m][0]] += new_list2[m_m][1]
         else:
