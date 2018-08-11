@@ -43,7 +43,7 @@ def create_social_network(data):
     new_list2 = []
     for j_j in follow_list:
         new_list = []
-        if j[0] != '':
+        if j_j[0] != '':
             new_list.append(j_j[0].strip(' '))
             j_j[1] = j_j[1].strip(' ')
             new_list.append(j_j[1].split(','))
