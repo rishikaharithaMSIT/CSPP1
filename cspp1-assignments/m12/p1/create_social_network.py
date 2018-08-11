@@ -1,5 +1,6 @@
 '''
-    Assignment-1 Create Social Network
+Author: Rishika Haritha - 20186041
+Encoding: Utf-8
 '''
 
 def create_social_network(data):
@@ -35,27 +36,24 @@ def create_social_network(data):
     # remove the pass below and start writing your code
     persons_data = data.split('\n')
     if 'follows' not in data:
-    	return {}
+        return {}
     follow_list = []
     for each_person in persons_data:
-    		follow_list.append(each_person.split('follows'))
-    	
-    	  
-    
+            follow_list.append(each_person.split('follows'))
     new_list2 = []
-    for j in follow_list:
-    	new_list = []
-    	if j[0] != '':
-    		new_list.append(j[0].strip(' '))
-    		j[1] = j[1].strip(' ')
-    		new_list.append(j[1].split(','))
-    		new_list2.append(new_list)
-    adict= {}
-    for m in range(len(new_list2)):
-    	if new_list2[m][0] in adict:
-    		adict[new_list2[m][0]] += new_list2[m][1]
-    	else:
-    		adict[new_list2[m][0]] = new_list2[m][1]
+    for j_j in follow_list:
+        new_list = []
+        if j[0] != '':
+            new_list.append(j_j[0].strip(' '))
+            j_j[1] = j_j[1].strip(' ')
+            new_list.append(j_j[1].split(','))
+            new_list2.append(new_list)
+    adict = {}
+    for m_m in range(len(new_list2)):
+        if new_list2[m_m][0] in adict:
+            adict[new_list2[m_m][0]] += new_list2[m_m][1]
+        else:
+            adict[new_list2[m_m][0]] = new_list2[m_m][1]
     return adict
 
 def main():
