@@ -36,6 +36,7 @@ def create_social_network(data):
     persons_data = data.split('\n')
     follow_list = []
     for each_person in persons_data:
+    	print("eac"+ each_person)
     	if 'follows' in each_person:
     		follow_list.append(each_person.split('follows'))
     	else:
