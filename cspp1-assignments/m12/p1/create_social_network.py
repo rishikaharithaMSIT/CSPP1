@@ -37,7 +37,7 @@ def create_social_network(data):
     follow_list = []
     for each_person in persons_data:
     	follow_list.append(each_person.split('follows'))
-    print(follow_list)
+    #print(follow_list)
     
     new_list2 = []
     for j in follow_list:
