@@ -49,7 +49,7 @@ def create_social_network(data):
     		for l in follow_list[k][1]:
     			if l != ' ':
     				new_val += l
-    		follow_list[k][1] = new_val
+    		follow_list[k][1] = list(new_val)
     		if follow_list[k][0] in adict:
     			adict[follow_list[k][0]] += follow_list[k][1]
     		else:
