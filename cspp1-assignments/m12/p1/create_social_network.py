@@ -37,24 +37,24 @@ def create_social_network(data):
     follow_list = []
     for each_person in persons_data:
     	follow_list.append(each_person.split('follows'))
-    adict = {}
-    for k in range(len(follow_list)):
-    	if follow_list[k][0] != '':
-    		new_key = ""
-    		for l in follow_list[k][0]:
-    			if l != ' ':
-    				new_key += l
-    		follow_list[k][0] = new_key
-    		new_val = ""
-    		for l in follow_list[k][1]:
-    			if l != ' ':
-    				new_val += l
-    		follow_list[k][1] = list(new_val)
-    		if follow_list[k][0] in adict:
-    			adict[follow_list[k][0]] += follow_list[k][1]
-    		else:
-    			adict[follow_list[k][0]] = follow_list[k][1]	
-    return(adict)
+    print(follow_list)
+    
+    new_list2 = []
+    for j in follow_list:
+    	new_list = []
+    	if j[0] != '':
+    		new_list.append(j[0].strip(' '))
+    		j[1] = j[1].strip(' ')
+    		new_list.append(j[1].split(','))
+    		new_list2.append(new_list)
+    adict= {}
+    for m in range(len(new_list2)):
+    	if new_list2[m][0] in adict:
+    		adict[new_list2[m][0]] += new_list2[m][1]
+    	else:
+    		adict[new_list2[m][0]] = new_list2[m][1]
+    return adict
+
 def main():
     '''
         handling testcase input and printing output
