@@ -141,7 +141,7 @@ class Message(object):
         '''
         #delete this line and replace with your code here
 
-        build_shift_dict(self, shift)
+        
 
         alphabet_seq = string.ascii_lowercase
         cipher_string = list(self.message_text)
@@ -150,7 +150,7 @@ class Message(object):
 
         cipher_string = str(cipher_string)
         cipher_string.replace(',','')
-        
+
         return cipher_string
 
         
@@ -161,6 +161,7 @@ def main():
     '''
     data = Message(input())
     data.get_message_text()
+    data.build_shift_dict(shift)
     print(data.apply_shift(int(input())))
 
 if __name__ == "__main__":
