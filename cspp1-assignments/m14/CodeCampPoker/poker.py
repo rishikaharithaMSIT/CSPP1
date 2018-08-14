@@ -29,16 +29,17 @@ def is_straight(hand):
             hand[i] = int(hand[i])
     #print(hand)
     hand.sort(reverse=True)
-    sum_all = 2.5*float(hand[0]+hand[len(hand) -1])
-    sum_again = 0
+    
+    seq_hand = [1,2,3,4,5,6,7,8,9,10,11,12,13]
 
-    for i in hand:
-        sum_again += i
-    #print(int(sum_all), sum_again)
-    if sum_again == int(sum_all):
-        return True
+    if hand[0] == 1:
+        pass
     else:
-        return False
+        for i in range(len(seq_hand)):
+            if hand == seq_hand[i:i+5]:
+                print(seq_hand[i:i+5]) 
+
+
 
 
 def is_flush(hand):
