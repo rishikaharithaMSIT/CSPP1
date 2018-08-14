@@ -123,10 +123,10 @@ class Message(object):
             n = n-1
 
         shift_dict ={}
-        for i in range(0,26):
+        for i in range(0,(26-shift)):
             shift_dict[lower[i]] = lower[i+shift]
 
-        for i in range(0,26):
+        for i in range(0,(26-shift)):
             shift_dict[upper[i]] = upper[i+shift]
 
         #print(shift_dict)
