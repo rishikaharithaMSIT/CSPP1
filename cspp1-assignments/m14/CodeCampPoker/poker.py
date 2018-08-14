@@ -17,11 +17,11 @@ def is_straight(hand):
     for i in range(len(hand)):
         if hand[i] is 'A':
             hand[i] = 1
-        elif hand[i] = 'J':
+        elif hand[i] is 'J':
             hand[i] = 11
-        elif hand[i] = 'Q':
+        elif hand[i] is 'Q':
             hand[i] = 12
-        elif hand[i] = 'K':
+        elif hand[i] is 'K':
             hand[i] =13
         else:
             hand[i] = int(hand[i])
