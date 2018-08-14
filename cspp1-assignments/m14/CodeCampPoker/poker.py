@@ -68,8 +68,7 @@ def is_flush(hand):
             break
     if flag:
         return False
-    else:
-        return True
+    return True
 
 def hand_rank(hand):
     '''
