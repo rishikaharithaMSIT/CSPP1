@@ -125,7 +125,7 @@ class Message(object):
             shift_dict[upper[i]] = upper[i+shift]
 
         print(shift_dict)
-
+        return shift_dict
 
     def apply_shift(self, shift,h):
         '''
