@@ -140,6 +140,9 @@ class Message(object):
              down the alphabet by the input shift
         '''
         #delete this line and replace with your code here
+
+        build_shift_dict(self, shift)
+
         alphabet_seq = string.ascii_lowercase
         cipher_string = list(self.message_text)
         for i in range(len(cipher_string)):
@@ -147,6 +150,7 @@ class Message(object):
 
         cipher_string = str(cipher_string)
         cipher_string.replace(',','')
+        
         return cipher_string
 
         
