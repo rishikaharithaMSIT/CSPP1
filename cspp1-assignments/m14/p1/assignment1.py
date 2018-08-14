@@ -161,8 +161,10 @@ def main():
     '''
     data = Message(input())
     data.get_message_text()
-    data.build_shift_dict(shift)
-    print(data.apply_shift(int(input())))
+    
+    n = int(input())
+    data.build_shift_dict(n)
+    print(data.apply_shift(n))
 
 if __name__ == "__main__":
     main()
