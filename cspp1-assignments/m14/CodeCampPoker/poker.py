@@ -30,7 +30,7 @@ def is_straight(hand):
             hand[i] = int(hand[i])
     #print(hand)
     hand.sort()
-    
+    print(hand)
     seq_hand = [1,2,3,4,5,6,7,8,9,10,11,12,13]
     flag = False
     if hand[0] == 1:
