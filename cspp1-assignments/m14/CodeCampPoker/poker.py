@@ -97,10 +97,11 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
     hand_val = []
-    for i in range(len(hand)):
+    len_hand = len(hand)
+    for i in range(len_hand):
         hand_val.append(list(hand[i])[0])
     hand_suit = []
-    for i in range(len(hand)):
+    for i in range(len_hand):
         hand_suit.append(list(hand[i])[1])
     #print(hand_suit, hand_val)
 
