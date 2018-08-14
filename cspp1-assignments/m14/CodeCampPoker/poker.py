@@ -14,6 +14,7 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
+     
     for i in range(len(hand)):
         if hand[i] is 'A':
             hand[i] = 1
@@ -34,6 +35,7 @@ def is_straight(hand):
     flag = False
     if hand[0] == 1:
         if hand[2:5] is seq_hand[10:14]:
+            print(hand)
             return True
     else:
         for i in range(len(seq_hand)):
@@ -97,9 +99,9 @@ def hand_rank(hand):
         hand_suit.append(list(hand[i])[1])
     #print(hand_suit, hand_val)
 
-    if is_straight(hand_val) and is_flush(hand_suit):
+    if is_straight(hand) and is_flush(hand_suit):
         return 3
-    elif is_straight(hand_val):
+    elif is_straight(hand):
         return 1
     elif is_flush(hand_suit):
         return 2
