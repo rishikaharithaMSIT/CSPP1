@@ -127,7 +127,7 @@ class Message(object):
         print(shift_dict)
 
 
-    def apply_shift(self, shift):
+    def apply_shift(self, shift,h):
         '''
         Applies the Caesar Cipher to self.message_text with the input shift.
         Creates a new string that is self.message_text shifted down the
@@ -139,21 +139,18 @@ class Message(object):
         Returns: the message text (string) in which every character is shifted
              down the alphabet by the input shift
         '''
-        #delete this line and replace with your code here
+        #delete this line and replace with your code here   
 
-        
-
-        alphabet_seq = string.ascii_lowercase
-        cipher_string = list(self.message_text)
-        for i in range(len(cipher_string)):
-            cipher_string[i] = alphabet_seq[i+shift]
-
-        cipher_string = str(cipher_string)
-        cipher_string.replace(',','')
-
+        mess = self.message_text
+        cipher_string = ""
+        for i in mess:
+            if i in h:
+                cipher_string += h[i]
+            else:
+                cipher_string += i
         return cipher_string
 
-        
+
 
 def main():
     '''
@@ -163,8 +160,8 @@ def main():
     data.get_message_text()
     
     n = int(input())
-    data.build_shift_dict(n)
-    print(data.apply_shift(n))
+    h = data.build_shift_dict(n)
+    print(data.apply_shift(n,h))
 
 if __name__ == "__main__":
     main()
