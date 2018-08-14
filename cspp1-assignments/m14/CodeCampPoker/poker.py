@@ -23,6 +23,8 @@ def is_straight(hand):
             hand[i] = 12
         elif hand[i] is 'K':
             hand[i] =13
+        elif hand[i] is 'T':
+            hand[i] =10
         else:
             hand[i] = int(hand[i])
     #print(hand)
