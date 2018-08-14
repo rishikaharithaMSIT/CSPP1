@@ -40,7 +40,7 @@ def is_straight(hand):
             return True
     else:
         for i in range(len(seq_hand)):
-            print(i,i+5, "try try try")
+            print(i,i+5, "try try try", seq_hand[i:(i+5)])
             if hand == seq_hand[i:(i+5)]:
                 print(seq_hand, "in seq hand")
                 flag = True
