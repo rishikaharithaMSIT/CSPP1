@@ -31,7 +31,7 @@ def is_straight(hand):
     #print(hand)
     hand.sort()
     #print(hand)
-    seq_hand = [1,2,3,4,5,6,7,8,9,10,11,12,13]
+    seq_hand = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
     flag = False
     if hand[0] == 1:
         #print(hand[1:5] , seq_hand[9:14])
@@ -108,7 +108,7 @@ def hand_rank(hand):
         return 1
     elif is_flush(hand_suit):
         return 2
-    else :
+    else:
         return 0
     return 1
 
