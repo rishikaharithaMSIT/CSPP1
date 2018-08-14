@@ -46,8 +46,7 @@ def is_straight(hand):
                 flag = True
     if flag is True:
         return True
-    else:
-        return False
+    return False
 
 
 
@@ -111,7 +110,7 @@ def hand_rank(hand):
         return 2
     else:
         return 0
-    return 1
+    
 
 def poker(hands):
     '''
