@@ -116,6 +116,9 @@ class Message(object):
         #delete this line and replace with your code here
         lower = string.ascii_lowercase
         upper  = string.ascii_uppercase
+        while int(shift/26) > 0:
+            lower += lower
+            upper += upper
 
         shift_dict ={}
         for i in range(len(lower)-shift):
@@ -162,6 +165,7 @@ def main():
     n = int(input())
     h = data.build_shift_dict(n)
     print(data.apply_shift(n,h))
+
 
 if __name__ == "__main__":
     main()
