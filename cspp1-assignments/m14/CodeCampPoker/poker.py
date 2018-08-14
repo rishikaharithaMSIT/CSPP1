@@ -35,7 +35,7 @@ def is_straight(hand):
     flag = False
     if hand[0] == 1:
         print(hand, "see")
-        if hand[2:5] is seq_hand[10:14]:
+        if hand[1:5] is seq_hand[10:14]:
             return True
     else:
         for i in range(len(seq_hand)):
