@@ -15,7 +15,16 @@ def is_straight(hand):
         Write the code for it and return True if it is a straight else return False
     '''
     for i in range(len(hand)):
-        hand[i] = int(hand[i])
+        if hand[i] is 'A':
+            hand[i] = 1
+        elif hand[i] = 'J':
+            hand[i] = 11
+        elif hand[i] = 'Q':
+            hand[i] = 12
+        elif hand[i] = 'K':
+            hand[i] =13
+        else:
+            hand[i] = int(hand[i])
     #print(hand)
     hand.sort(reverse=True)
     sum_all = 2.5*float(hand[0]+hand[len(hand) -1])
