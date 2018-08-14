@@ -116,15 +116,17 @@ class Message(object):
         #delete this line and replace with your code here
         lower = string.ascii_lowercase
         upper  = string.ascii_uppercase
-        while int(shift/26) > 0:
+        n = int(shift/26)
+        while n:
             lower += lower
             upper += upper
+            n = n-1
 
         shift_dict ={}
-        for i in range(len(lower)):
+        for i in range(0,26):
             shift_dict[lower[i]] = lower[i+shift]
 
-        for i in range(len(upper)):
+        for i in range(0,26):
             shift_dict[upper[i]] = upper[i+shift]
 
         #print(shift_dict)
