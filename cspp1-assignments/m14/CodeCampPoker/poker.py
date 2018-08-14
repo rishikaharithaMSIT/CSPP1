@@ -104,12 +104,11 @@ def hand_rank(hand):
 
     if is_straight(hand_val) and is_flush(hand_suit):
         return 3
-    elif is_straight(hand_val):
+    if is_straight(hand_val):
         return 1
-    elif is_flush(hand_suit):
+    if is_flush(hand_suit):
         return 2
-    else:
-        return 0
+    return 0
     
 
 def poker(hands):
