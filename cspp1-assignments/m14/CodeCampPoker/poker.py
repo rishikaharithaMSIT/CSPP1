@@ -30,19 +30,19 @@ def is_straight(hand):
             hand[i] = int(hand[i])
     #print(hand)
     hand.sort()
-    print(hand)
+    #print(hand)
     seq_hand = [1,2,3,4,5,6,7,8,9,10,11,12,13]
     flag = False
     if hand[0] == 1:
         print(hand[1:5] , seq_hand[9:14])
         if hand[1:5] == seq_hand[9:14]:
-            print(hand[1:5], "try try try", seq_hand[9:14])
+            #print(hand[1:5], "try try try", seq_hand[9:14])
             return True
     else:
         for i in range(len(seq_hand)):
 
             if hand == seq_hand[i:(i+5)]:
-                print(hand, "try try try", seq_hand[i:(i+5)])
+                #print(hand, "try try try", seq_hand[i:(i+5)])
                 flag = True
     if flag:
         return True
