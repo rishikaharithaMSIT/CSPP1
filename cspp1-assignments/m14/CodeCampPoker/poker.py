@@ -31,14 +31,17 @@ def is_straight(hand):
     hand.sort(reverse=True)
     
     seq_hand = [1,2,3,4,5,6,7,8,9,10,11,12,13]
-
+    flag = False
     if hand[0] == 1:
         pass
     else:
         for i in range(len(seq_hand)):
             if hand == seq_hand[i:i+5]:
-                print(seq_hand[i:i+5]) 
-
+                flag = True 
+    if flag:
+        return True
+    else: 
+        return False
 
 
 
