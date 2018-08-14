@@ -18,16 +18,15 @@ def is_straight(hand):
     for i in range(len_hand):
         if hand[i] == 'A':
             hand[i] = 1
-        elif hand[i] == 'J':
+        if hand[i] == 'J':
             hand[i] = 11
-        elif hand[i] == 'Q':
+        if hand[i] == 'Q':
             hand[i] = 12
-        elif hand[i] == 'K':
+        if hand[i] == 'K':
             hand[i] = 13
-        elif hand[i] == 'T':
+        if hand[i] == 'T':
             hand[i] = 10
-        else:
-            hand[i] = int(hand[i])
+        hand[i] = int(hand[i])
     #print(hand)
     hand.sort()
     #print(hand)
@@ -109,7 +108,6 @@ def hand_rank(hand):
     if is_flush(hand_suit):
         return 2
     return 0
-    
 
 def poker(hands):
     '''
