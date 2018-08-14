@@ -114,10 +114,10 @@ class Message(object):
                  another letter (string). 
         '''
         #delete this line and replace with your code here
-        lower = string.ascii_lowercase
-        upper  = string.ascii_uppercase
+        lower = string.ascii_lowercase + string.ascii_lowercase
+        upper  = string.ascii_uppercase + string.ascii_uppercase
         n = int(shift/26)
-        while n:
+        while n > 0:
             lower += lower
             upper += upper
             n = n-1
