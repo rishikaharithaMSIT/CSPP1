@@ -118,10 +118,10 @@ class Message(object):
         upper  = string.ascii_uppercase
 
         shift_dict ={}
-        for i in range(len(lower)):
+        for i in range(len(lower)-shift):
             shift_dict[i] = lower[i+shift]
 
-        for i in range(len(upper)):
+        for i in range(len(upper)-shift):
             shift_dict[i] = upper[i+shift]
 
         print(shift_dict)
