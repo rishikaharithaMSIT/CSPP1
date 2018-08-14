@@ -119,7 +119,7 @@ class Message(object):
 
         shift_dict ={}
         for i in range(len(lower)-shift):
-            shift_dict[i] = lower[i+shift]
+            shift_dict[lower[i]] = lower[i+shift]
 
         for i in range(len(upper)-shift):
             shift_dict[i] = upper[i+shift]
