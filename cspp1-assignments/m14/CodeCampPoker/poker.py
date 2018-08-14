@@ -39,14 +39,14 @@ def is_straight(hand):
             #print(hand[1:5], "try try try", seq_hand[9:14])
             return True
     else:
-        len_seq = len(seq_hand) 
+        len_seq = len(seq_hand)
         for i in range(len_seq):
             if hand == seq_hand[i:(i+5)]:
                 #print(hand, "try try try", seq_hand[i:(i+5)])
                 flag = True
-    if flag:
+    if flag is True:
         return True
-    else: 
+    else:
         return False
 
 
