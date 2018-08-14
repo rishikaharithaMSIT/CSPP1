@@ -34,7 +34,7 @@ def is_straight(hand):
 
     for i in hand:
         sum_again += i
-    print(int(sum_all), sum_again)
+    #print(int(sum_all), sum_again)
     if sum_again == int(sum_all):
         return True
     else:
@@ -82,7 +82,7 @@ def hand_rank(hand):
     hand_suit = []
     for i in range(len(hand)):
         hand_suit.append(list(hand[i])[1])
-    print(hand_suit, hand_val)
+    #print(hand_suit, hand_val)
 
     if is_straight(hand_val) and is_flush(hand_suit):
         return 3
