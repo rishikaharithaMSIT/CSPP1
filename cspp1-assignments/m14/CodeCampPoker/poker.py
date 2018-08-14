@@ -33,7 +33,7 @@ def is_straight(hand):
     seq_hand = [1,2,3,4,5,6,7,8,9,10,11,12,13]
     flag = False
     if hand[0] == 1:
-        pass
+        print("Fail")
     else:
         for i in range(len(seq_hand)):
             if hand == seq_hand[i:i+5]:
