@@ -50,7 +50,15 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    pass
+    flag = False
+    for i in range(len(hand)-1):
+        if hand[i] is not hand[i+1]:
+            flag = True
+            break
+    if flag:
+        return False
+    else:
+        return True
 
 def hand_rank(hand):
     '''
