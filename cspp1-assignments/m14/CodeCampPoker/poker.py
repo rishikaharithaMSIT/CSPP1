@@ -4,60 +4,60 @@
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
 def make_dict(hand):
-	dict_val = {}
-	for i in hand:
-		if i in dict_val:
-			dict_val[i] += 1
-		else:
-			dict_val[i] = 1
-	return dict_val
+    dict_val = {}
+    for i in hand:
+        if i in dict_val:
+            dict_val[i] += 1
+        else:
+            dict_val[i] = 1
+    return dict_val
 
 def is_four_of_kind(hand):
-	dict_val = make_dict(hand)
-	is_four_count = 0
-	for i in dict_val:
-		if dict_val[i] == 4:
-			is_four_count += 1
-	if is_four_count == 0:
-		return False
-	else:
-		return True
+    dict_val = make_dict(hand)
+    is_four_count = 0
+    for i in dict_val:
+        if dict_val[i] == 4:
+            is_four_count += 1
+    if is_four_count == 0:
+        return False
+    else:
+        return True
 
 def is_three_of_kind(hand):
-	dict_val = make_dict(hand)
-	#print(dict_val)
-	is_three_count = 0
-	for i in dict_val:
-		if dict_val[i] == 3:
-			is_three_count += 1
-			#print(dict_val[i], dict_val, is_three_count)
-	if is_three_count == 0:
-		return False
-	else:
-		#print(dict_val)
-		return True
+    dict_val = make_dict(hand)
+    #print(dict_val)
+    is_three_count = 0
+    for i in dict_val:
+        if dict_val[i] == 3:
+            is_three_count += 1
+            #print(dict_val[i], dict_val, is_three_count)
+    if is_three_count == 0:
+        return False
+    else:
+        #print(dict_val)
+        return True
 
 def is_one_pair(hand):
-	dict_val = make_dict(hand)
-	is_four_count = 0
-	for i in dict_val:
-		if dict_val[i] == 2:
-			is_four_count += 1
-	if is_four_count == 1:
-		return True
-	else:
-		return False
+    dict_val = make_dict(hand)
+    is_four_count = 0
+    for i in dict_val:
+        if dict_val[i] == 2:
+            is_four_count += 1
+    if is_four_count == 1:
+        return True
+    else:
+        return False
 
 def is_two_pair(hand):
-	dict_val = make_dict(hand)
-	is_four_count = 0
-	for i in dict_val:
-		if dict_val[i] == 2:
-			is_four_count += 1
-	if is_four_count == 2:
-		return True
-	else:
-		return False
+    dict_val = make_dict(hand)
+    is_four_count = 0
+    for i in dict_val:
+        if dict_val[i] == 2:
+            is_four_count += 1
+    if is_four_count == 2:
+        return True
+    else:
+        return False
 
 def is_straight(hand):
     '''
@@ -155,24 +155,20 @@ def hand_rank(hand):
     for i in range(len_hand):
         hand_suit.append(list(hand[i])[1])
     #print(hand_suit, hand_val)
-    
     if is_straight(hand_val) and is_flush(hand_suit):
         return 7
     if is_four_of_kind(hand_val):
-    	return 6
+        return 6
     if is_flush(hand_suit):
-        return 5	
+        return 5
     if is_straight(hand_val):
         return 4
     if is_three_of_kind(hand_val):
-    	return 3
+        return 3
     if is_two_pair(hand_val):
-    	return 2
+        return 2
     if is_one_pair(hand_val):
-    	return 1
-        
-    
-    
+        return 1
     return 0
 
 def poker(hands):
