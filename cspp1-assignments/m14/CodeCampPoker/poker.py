@@ -35,7 +35,7 @@ def is_three_of_kind(hand):
 		return True
 	else:
 		print("hi")
-		return True
+		return False
 
 def is_straight(hand):
     '''
