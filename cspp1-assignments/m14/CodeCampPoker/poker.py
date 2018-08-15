@@ -29,13 +29,13 @@ def is_three_of_kind(hand):
 	is_four_count = 0
 	for i in dict_val:
 		if dict_val[i] == 3:
-			print(dict_val[i], dict_val)
 			is_four_count += 1
+			print(dict_val[i], dict_val, is_four_count)
 	if is_four_count > 0:
-		return True
+		return False
 	else:
 		print("hi")
-		return False
+		return True
 
 def is_straight(hand):
     '''
