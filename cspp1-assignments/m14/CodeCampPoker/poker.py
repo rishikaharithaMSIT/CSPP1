@@ -161,7 +161,6 @@ def hand_rank(hand):
     if is_straight(hand_val):
         return 4
     if is_three_of_kind(hand_val) and is_one_pair(hand_val):
-        print("hi")
         return 6
     if is_three_of_kind(hand_val):
         return 3
