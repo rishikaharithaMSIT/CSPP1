@@ -22,13 +22,14 @@ def is_four_of_kind(hand):
 		return False
 	else:
 		return True
+
 def is_three_of_kind(hand):
 	dict_val = make_dict(hand)
 	print(dict_val)
 	is_four_count = 0
 	for i in dict_val:
 		if dict_val[i] == 3:
-			print(dict_val[i])
+			print(dict_val[i], dict_val)
 			is_four_count += 1
 	if is_four_count == 0:
 		return False
