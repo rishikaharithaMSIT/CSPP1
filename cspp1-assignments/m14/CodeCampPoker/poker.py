@@ -32,10 +32,10 @@ def is_three_of_kind(hand):
 			is_three_count += 1
 			print(dict_val[i], dict_val, is_three_count)
 	if is_three_count > 0:
-		return True
+		return False
 	else:
 		print("hi")
-		return False
+		return True
 
 def is_straight(hand):
     '''
