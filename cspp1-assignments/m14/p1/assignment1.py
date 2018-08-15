@@ -116,9 +116,10 @@ class Message(object):
         #delete this line and replace with your code here
         lower = string.ascii_lowercase + string.ascii_lowercase
         upper  = string.ascii_uppercase + string.ascii_uppercase
-        n = int(shift/26)
-        while n > 0:
-            print("in while")
+        
+        hift > 25:
+
+            print("in")
             lower += lower
             upper += upper
             n = n-1
