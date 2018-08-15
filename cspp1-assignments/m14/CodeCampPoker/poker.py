@@ -55,9 +55,7 @@ def is_two_pair(hand):
             is_four_count += 1
     if is_four_count == 2:
         return True
-    else:
-        return False
-
+    return False
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
