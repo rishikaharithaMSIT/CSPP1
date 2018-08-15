@@ -142,7 +142,7 @@ def hand_rank(hand):
         return 2	
     if is_straight(hand_val):
         return 1
-    if is_three_of_kind(hand_val) != True:
+    if is_three_of_kind(hand_val) == True:
     	return 0
         
     
