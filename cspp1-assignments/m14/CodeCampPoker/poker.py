@@ -46,7 +46,7 @@ def is_one_pair(hand):
 	if is_four_count == 1:
 		return True
 	else:
-		return True
+		return False
 
 def is_straight(hand):
     '''
