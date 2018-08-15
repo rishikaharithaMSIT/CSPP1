@@ -30,11 +30,11 @@ def is_three_of_kind(hand):
 	for i in dict_val:
 		if dict_val[i] == 3:
 			is_three_count += 1
-			print(dict_val[i], dict_val, is_three_count)
+			#print(dict_val[i], dict_val, is_three_count)
 	if is_three_count == 0:
 		return False
 	else:
-		print(dict_val)
+		#print(dict_val)
 		return True
 
 def is_straight(hand):
