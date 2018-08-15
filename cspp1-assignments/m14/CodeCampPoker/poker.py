@@ -45,9 +45,7 @@ def is_one_pair(hand):
             is_four_count += 1
     if is_four_count == 1:
         return True
-    else:
-        return False
-
+    return False
 def is_two_pair(hand):
     """Check for two pairs"""
     dict_val = make_dict(hand)
