@@ -22,6 +22,16 @@ def is_four_of_kind(hand):
 		return False
 	else:
 		return True
+def is_three_of_kind(hand):
+	dict_val = make_dict(hand)
+	is_four_count = 0
+	for i in dict_val:
+		if dict_val[i] == 3:
+			is_four_count += 1
+	if is_four_count == 0:
+		return False
+	else:
+		return True
 
 def is_straight(hand):
     '''
@@ -120,11 +130,11 @@ def hand_rank(hand):
         hand_suit.append(list(hand[i])[1])
     #print(hand_suit, hand_val)
     
-    	
-    if is_straight(hand_val) and is_flush(hand_suit):
-        return 3
     if is_four_of_kind(hand_val):
-    	return 4
+    	return 3	
+    if is_straight(hand_val) and is_flush(hand_suit):
+        return 4
+    
     if is_straight(hand_val):
         return 1
     if is_flush(hand_suit):
