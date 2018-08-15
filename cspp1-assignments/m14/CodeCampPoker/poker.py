@@ -48,6 +48,17 @@ def is_one_pair(hand):
 	else:
 		return False
 
+def is_two_pair(hand):
+	dict_val = make_dict(hand)
+	is_four_count = 0
+	for i in dict_val:
+		if dict_val[i] == 2:
+			is_four_count += 1
+	if is_four_count == 2:
+		return True
+	else:
+		return False
+
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -146,14 +157,16 @@ def hand_rank(hand):
     #print(hand_suit, hand_val)
     
     if is_straight(hand_val) and is_flush(hand_suit):
-        return 6
+        return 7
     if is_four_of_kind(hand_val):
-    	return 5
+    	return 6
     if is_flush(hand_suit):
-        return 4	
+        return 5	
     if is_straight(hand_val):
-        return 3
+        return 4
     if is_three_of_kind(hand_val) == True:
+    	return 3
+    if is_one_pair(hand_val):
     	return 2
     if is_one_pair(hand_val):
     	return 1
