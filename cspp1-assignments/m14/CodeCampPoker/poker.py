@@ -14,9 +14,14 @@ def make_dict(hand):
 
 def is_four_of_kind(hand):
 	dict_val = make_dict(hand)
-
-	print(dict_val)
-	return False
+	is_four_count = 0
+	for i in dict_val:
+		if dict_val[i] == 4:
+			is_four_count += 1
+	if is_four_count == 0:
+		return False
+	else:
+		return True
 
 def is_straight(hand):
     '''
