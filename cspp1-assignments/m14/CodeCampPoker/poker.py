@@ -56,6 +56,7 @@ def is_two_pair(hand):
     if is_four_count == 2:
         return True
     return False
+
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -152,13 +153,15 @@ def hand_rank(hand):
         hand_suit.append(list(hand[i])[1])
     #print(hand_suit, hand_val)
     if is_straight(hand_val) and is_flush(hand_suit):
-        return 7
+        return 8
     if is_four_of_kind(hand_val):
-        return 6
+        return 7
     if is_flush(hand_suit):
         return 5
     if is_straight(hand_val):
         return 4
+    if is_three_of_kind(hand_val) and is_one_pair(hand_val):
+        return 6
     if is_three_of_kind(hand_val):
         return 3
     if is_two_pair(hand_val):
