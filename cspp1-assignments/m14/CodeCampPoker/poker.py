@@ -120,7 +120,7 @@ def hand_rank(hand):
         hand_suit.append(list(hand[i])[1])
     #print(hand_suit, hand_val)
     
-    	print("hi")
+    	
     if is_straight(hand_val) and is_flush(hand_suit):
         return 3
     if is_four_of_kind(hand_val):
