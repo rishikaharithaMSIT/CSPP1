@@ -4,6 +4,7 @@
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
 def make_dict(hand):
+    """Convert hand to dictionary"""
     dict_val = {}
     for i in hand:
         if i in dict_val:
@@ -13,6 +14,7 @@ def make_dict(hand):
     return dict_val
 
 def is_four_of_kind(hand):
+    """Check for four of a kind"""
     dict_val = make_dict(hand)
     is_four_count = 0
     for i in dict_val:
@@ -24,6 +26,7 @@ def is_four_of_kind(hand):
         return True
 
 def is_three_of_kind(hand):
+    """Check for three of a kind"""
     dict_val = make_dict(hand)
     #print(dict_val)
     is_three_count = 0
@@ -38,6 +41,7 @@ def is_three_of_kind(hand):
         return True
 
 def is_one_pair(hand):
+    """Check for a pair"""
     dict_val = make_dict(hand)
     is_four_count = 0
     for i in dict_val:
@@ -49,6 +53,7 @@ def is_one_pair(hand):
         return False
 
 def is_two_pair(hand):
+    """Check for two pairs"""
     dict_val = make_dict(hand)
     is_four_count = 0
     for i in dict_val:
