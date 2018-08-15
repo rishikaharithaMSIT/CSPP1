@@ -33,6 +33,7 @@ def is_three_of_kind(hand):
 	if is_four_count == 0:
 		return False
 	else:
+		print("hi")
 		return True
 
 def is_straight(hand):
