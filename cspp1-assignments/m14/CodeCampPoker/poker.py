@@ -3,6 +3,20 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
+def make_dict(hand):
+	dict_val = {}
+	for i in hand:
+		if i in dict_val:
+			dict_val[i] += 1
+		else:
+			dict_val[i] = 1
+	return dict_val
+
+def is_four_of_kind(hand):
+	dict_val = make_dict(hand)
+
+	print(dict_val)
+	return False
 
 def is_straight(hand):
     '''
@@ -100,7 +114,8 @@ def hand_rank(hand):
     for i in range(len_hand):
         hand_suit.append(list(hand[i])[1])
     #print(hand_suit, hand_val)
-
+    if is_four_of_kind(hand_val):
+    	print("hi")
     if is_straight(hand_val) and is_flush(hand_suit):
         return 3
     if is_straight(hand_val):
