@@ -135,15 +135,15 @@ def hand_rank(hand):
     #print(hand_suit, hand_val)
     
     if is_straight(hand_val) and is_flush(hand_suit):
-        return 4
+        return 5
     if is_four_of_kind(hand_val):
-    	return 3
+    	return 4
     if is_flush(hand_suit):
-        return 2	
+        return 3	
     if is_straight(hand_val):
-        return 1
+        return 2
     if is_three_of_kind(hand_val) == True:
-    	return 0
+    	return 1
         
     
     
