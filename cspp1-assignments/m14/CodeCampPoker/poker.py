@@ -166,7 +166,7 @@ def hand_rank(hand):
         return 4
     if is_three_of_kind(hand_val) == True:
     	return 3
-    if is_one_pair(hand_val):
+    if is_two_pair(hand_val):
     	return 2
     if is_one_pair(hand_val):
     	return 1
