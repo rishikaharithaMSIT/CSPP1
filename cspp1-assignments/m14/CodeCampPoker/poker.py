@@ -22,9 +22,7 @@ def is_four_of_kind(hand):
             is_four_count += 1
     if is_four_count == 0:
         return False
-    else:
-        return True
-
+    return True
 def is_three_of_kind(hand):
     """Check for three of a kind"""
     dict_val = make_dict(hand)
