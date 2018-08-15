@@ -132,6 +132,8 @@ def hand_rank(hand):
     for i in range(len_hand):
         hand_suit.append(list(hand[i])[1])
     #print(hand_suit, hand_val)
+    if is_three_of_kind(hand_val):
+    	return 0
     if is_straight(hand_val) and is_flush(hand_suit):
         return 4
     if is_four_of_kind(hand_val):
@@ -140,8 +142,7 @@ def hand_rank(hand):
         return 2	
     if is_straight(hand_val):
         return 1
-    if is_three_of_kind(hand_val):
-    	return 0    
+        
     
     
     return 0
