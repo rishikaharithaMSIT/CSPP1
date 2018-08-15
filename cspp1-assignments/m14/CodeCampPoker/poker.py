@@ -34,9 +34,7 @@ def is_three_of_kind(hand):
             #print(dict_val[i], dict_val, is_three_count)
     if is_three_count == 0:
         return False
-    else:
-        #print(dict_val)
-        return True
+    return True
 
 def is_one_pair(hand):
     """Check for a pair"""
