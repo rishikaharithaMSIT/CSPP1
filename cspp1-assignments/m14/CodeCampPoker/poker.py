@@ -26,16 +26,16 @@ def is_four_of_kind(hand):
 def is_three_of_kind(hand):
 	dict_val = make_dict(hand)
 	print(dict_val)
-	is_four_count = 0
+	is_three_count = 0
 	for i in dict_val:
 		if dict_val[i] == 3:
-			is_four_count += 1
-			print(dict_val[i], dict_val, is_four_count)
-	if is_four_count > 0:
-		return False
+			is_three_count += 1
+			print(dict_val[i], dict_val, is_three_count)
+	if is_three_count > 0:
+		return True
 	else:
 		print("hi")
-		return True
+		return False
 
 def is_straight(hand):
     '''
