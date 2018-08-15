@@ -28,6 +28,7 @@ def is_three_of_kind(hand):
 	is_four_count = 0
 	for i in dict_val:
 		if dict_val[i] == 3:
+			print(dict_val[i])
 			is_four_count += 1
 	if is_four_count == 0:
 		return False
