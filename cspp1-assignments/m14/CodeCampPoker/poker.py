@@ -133,7 +133,7 @@ def hand_rank(hand):
     for i in range(len_hand):
         hand_suit.append(list(hand[i])[1])
     #print(hand_suit, hand_val)
-    if is_three_of_kind(hand_val):
+    if is_three_of_kind(hand_val) == True:
     	return 0
     if is_straight(hand_val) and is_flush(hand_suit):
         return 4
