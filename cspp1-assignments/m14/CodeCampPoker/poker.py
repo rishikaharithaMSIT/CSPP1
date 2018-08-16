@@ -131,7 +131,7 @@ def is_no_same(hands):
         print("hand_val", hand_val)
     #print(hand)
         ok.append(hand_val)
-
+    print("ok", ok)
     k = max(ok)
     print("k is",k)
 
