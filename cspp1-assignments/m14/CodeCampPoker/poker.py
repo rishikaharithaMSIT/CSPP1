@@ -165,8 +165,8 @@ def is_same(com_list):
     maxh = []
     for i in s_rank:
         for k in range(len(i)):
-            if int(k[1][0]) > maxv:
-                maxv = nt(k[1][0])
+            if int(i[k][1]) > maxv:
+                maxv = int(i[k][0])
                 maxh = k[0]
     print("max h", maxh)
     
