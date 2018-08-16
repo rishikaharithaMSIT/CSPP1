@@ -131,6 +131,7 @@ def is_same(com_list):
         for i in dict_val:
             if dict_val[i] == 2:
                 o.append(dict_val[i])
+        print("o", o)
         return o
 
     max_r = 0
