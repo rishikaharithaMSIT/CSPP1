@@ -168,7 +168,7 @@ def is_same(com_list):
             maxv = int(s_rank[i][1][0])
             maxh = s_rank[i][0]
     print("max h", maxh)
-    
+    return maxh
 
 def hand_rank(hand):
     '''
@@ -251,10 +251,10 @@ def poker(hands):
     print("hands", hands)
     for i in range(len(hands)):
         com_list[str(hands[i])] = hand_rank(hands[i])  
-    is_same(com_list)
+    h = is_same(com_list)
     n = max(hands, key=hand_rank)
     print(n)
-    return n
+    return h
 
 if __name__ == "__main__":
     # read the number of test cases
