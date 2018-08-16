@@ -154,7 +154,7 @@ def is_same(com_list):
             for j in range(len_hand):
                 hand_val.append(i[j][0])
             
-            s_rank.append(int(isone_pair(hand_val)))
+            s_rank.append(isone_pair(hand_val))
     print("srank ",s_rank)
     
 
