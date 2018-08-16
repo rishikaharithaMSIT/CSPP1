@@ -204,7 +204,7 @@ def poker(hands):
     for i in range(len(hands)):
         hand_list.append(hands[i])
         com_list.append(hand_rank(hands[i]))
-
+    print(hand_list, "ting ting", com_list)
         
     n = max(hands, key=hand_rank)
     print(n)
