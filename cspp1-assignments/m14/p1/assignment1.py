@@ -124,7 +124,7 @@ class Message(object):
             upper += upper
             n = n-1
 
-        print(lower, upper)
+        #print(lower, upper)
         shift_dict ={}
         for i in range(0,(len(lower)-shift)):
             shift_dict[lower[i]] = lower[i+shift]
