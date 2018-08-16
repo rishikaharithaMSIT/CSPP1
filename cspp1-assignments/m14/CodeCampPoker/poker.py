@@ -144,15 +144,11 @@ def is_same(com_list):
     for i in com_list:
         if max_r == com_list[i]:
             print("i  is : ",i)
-            l = i.strip("[]")
-            l = l.split(",")
-            for i in l:
-                i = i.strip(" ''")
-            print("l is :", l)
+            
             hand_val = []
-            len_hand = len(l)
-            for i in range(len_hand):
-                hand_val.append(list(l[i])[0])
+            len_hand = len(i)
+            for j in range(len_hand):
+                hand_val.append(list(i[j])[0])
             
             s_rank.append(isone_pair(hand_val))
     print(s_rank)
