@@ -130,18 +130,31 @@ def is_no_same(hands):
             if 'A' in hands[j][k]:
                 hands[j][k] = hands[j][k].replace('A','14')
             if 'K' in hands[j][k]:
-                hands[j][k] = hands[j][k].replace('A','13')
+                hands[j][k] = hands[j][k].replace('K','13')
             if 'Q' in hands[j][k]:
-                hands[j][k] = hands[j][k].replace('A','12')
+                hands[j][k] = hands[j][k].replace('Q','12')
             if 'J' in hands[j][k]:
-                hands[j][k] = hands[j][k].replace('A','11')
+                hands[j][k] = hands[j][k].replace('J','11')
             if 'T' in hands[j][k]:
-                hands[j][k] = hands[j][k].replace('A','10')    
+                hands[j][k] = hands[j][k].replace('T','10')    
         
     #print(hand)
         
     print("ok", hands)
-    k = max(hands)
+    p = max(hands)
+
+    for k in range(len(p)):
+        if 'A' in p[k]:
+            p[k] = p[k].replace('14','A')
+        if 'K' in p[k]:
+            p[k] = p[k].replace('13','K')
+        if 'Q' in p[k]:
+            p[k] = p[k].replace('12','Q')
+        if 'J' in p[k]:
+            p[k] = p[k].replace('11','J')
+        if 'T' in p[k]:
+            p[k] = p[k].replace('10','T')
+
     print("k is",k)
 
 def is_same(com_list):
