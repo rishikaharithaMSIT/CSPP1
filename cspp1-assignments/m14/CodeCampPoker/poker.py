@@ -125,13 +125,18 @@ def is_flush(hand):
 def is_same(com_list):
     def isone_pair(hand):
         """Check for a pair"""
+        check = False
         o = []
         dict_val = make_dict(hand)
         print("dictval ",dict_val)
         is_four_count = 0
         for i in dict_val:
             if dict_val[i] == 2:
-                o.append(i)
+                check = True
+            if check:
+                q = [hand , i]
+                o.append(q)
+
         print("o", o)
         return o
 
