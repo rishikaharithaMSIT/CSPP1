@@ -122,7 +122,7 @@ def is_flush(hand):
     return True
 
 def is_no_same(hands):
-    hands_cpoy = hands.copy()    
+    hands_cpoy = hands.copy()
     #print("hnds cop",hands_cpoy)
     len_hand = len(hands_cpoy)
     max_v = 0
@@ -176,7 +176,6 @@ def is_same(com_list):
         o_o = []
         dict_val = make_dict(hand)
         #print("dictval ",dict_val)
-        is_four_count = 0
         for i in dict_val:
             if dict_val[i] == 2:
                 o_o.append(i)
@@ -200,8 +199,8 @@ def is_same(com_list):
             len_hand = len(i)
             for j in range(len_hand):
                 hand_val.append(i[j][0])
-            g = [i ,isone_pair(hand_val)]
-            s_rank.append(g)
+            g_g = [i, isone_pair(hand_val)]
+            s_rank.append(g_g)
     #print("srank : ",s_rank)
     #print("after: ",com_list)
     maxv = 0
@@ -291,8 +290,7 @@ def poker(hands):
     #hand_list =[]
     #print("hands", hands)
     for i in range(len(hands)):
-        com_list[str(hands[i])] = hand_rank(hands[i])  
-    
+        com_list[str(hands[i])] = hand_rank(hands[i])
     n_max = max(hands, key=hand_rank)
     r_rank = hand_rank(n_max)
     if r_rank == 1:
