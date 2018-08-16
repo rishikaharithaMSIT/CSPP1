@@ -127,7 +127,7 @@ def is_same(com_list):
         """Check for a pair"""
         o = []
         dict_val = make_dict(hand)
-        print(dict_val)
+        print("dictval ",dict_val)
         is_four_count = 0
         for i in dict_val:
             if dict_val[i] == 2:
@@ -151,7 +151,7 @@ def is_same(com_list):
                 hand_val.append(list(i[j])[0])
             
             s_rank.append(isone_pair(hand_val))
-    print(s_rank)
+    print("srank ",s_rank)
     
 
 def hand_rank(hand):
