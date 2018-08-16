@@ -121,6 +121,18 @@ def is_flush(hand):
         return False
     return True
 
+def is_no_same(hands):
+    ok = []
+    len_hand = len(hands)
+    for j in range(len_hand):
+        hand_val = []
+        for k in range(len(hands[j])):
+            hand_val.append(i[j][k])
+            hand_val.sort()
+        ok.append(hand_val)
+
+    k = max(ok)
+    print("k is",k)
 
 def is_same(com_list):
     def isone_pair(hand):
@@ -257,6 +269,8 @@ def poker(hands):
     if r == 1:
         h = is_same(com_list)
         return h
+    if r == 0:
+        h = is_no_same(hands)
     return n
 
 if __name__ == "__main__":
