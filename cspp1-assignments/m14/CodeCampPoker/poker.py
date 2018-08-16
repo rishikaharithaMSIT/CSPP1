@@ -195,7 +195,6 @@ def is_same(com_list):
             maxh = s_rank[i][0]
     #print("max h", maxh)
     return maxh
-
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to

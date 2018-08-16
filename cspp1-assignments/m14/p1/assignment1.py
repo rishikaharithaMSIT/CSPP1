@@ -117,7 +117,7 @@ class Message(object):
         lower = string.ascii_lowercase + string.ascii_lowercase
         upper  = string.ascii_uppercase + string.ascii_uppercase
         
-        hift > 25:
+        shift > 25:
 
             print("in")
             lower += lower
@@ -126,10 +126,10 @@ class Message(object):
 
         print(lower, upper)
         shift_dict ={}
-        for i in range(0,(26-shift)):
+        for i in range(0,(len(lower)-shift)):
             shift_dict[lower[i]] = lower[i+shift]
 
-        for i in range(0,(26-shift)):
+        for i in range(0,(len(lower)-shift)):
             shift_dict[upper[i]] = upper[i+shift]
 
         #print(shift_dict)
