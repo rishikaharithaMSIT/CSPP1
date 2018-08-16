@@ -131,7 +131,7 @@ def is_same(com_list):
         is_four_count = 0
         for i in dict_val:
             if dict_val[i] == 2:
-                o.append(dict_val[i])
+                o.append(i)
         print("o", o)
         return o
 
