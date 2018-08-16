@@ -140,7 +140,7 @@ def is_no_same(hands):
         
     #print(hand)
         
-    print("ok", hands)
+    #print("ok", hands)
     p = max(hands)
 
     for k in range(len(p)):
@@ -155,7 +155,7 @@ def is_no_same(hands):
         if '10' in p[k]:
             p[k] = p[k].replace('10','T')
 
-    print("k is",p)
+    #print("k is",p)
     return p
 
 def is_same(com_list):
