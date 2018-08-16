@@ -133,7 +133,7 @@ def is_same(com_list):
         for i in dict_val:
             if dict_val[i] == 2:
                 check = True
-                q = [hand , i]
+                q = i
                 o.append(q)
 
         print("o", o)
@@ -157,8 +157,8 @@ def is_same(com_list):
             len_hand = len(i)
             for j in range(len_hand):
                 hand_val.append(i[j][0])
-            
-            s_rank.append(isone_pair(hand_val))
+            g = [i ,isone_pair(hand_val)]
+            s_rank.append(g)
     print("srank : ",s_rank)
     print("after: ",com_list)
 
