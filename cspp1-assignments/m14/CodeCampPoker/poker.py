@@ -167,7 +167,7 @@ def is_no_same(hands):
 
     # #print("k is",p)
     # return p
-
+    return max_h
 def is_same(com_list):
     def isone_pair(hand):
         """Check for a pair"""
