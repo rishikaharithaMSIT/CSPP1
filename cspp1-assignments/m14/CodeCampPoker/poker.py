@@ -143,7 +143,7 @@ def is_no_same(hands):
                     hands[j][d] = hands[j][d][0]
                 print("after",hands[j])
                 if int(hands[j][d]) > max_v:
-                    print("hc ", hands_cpoy[j] ,"max",int(hands[j][d]) )
+                    max_v = hands[j][d]
                     max_h = hands_cpoy[j]
 
             
