@@ -248,7 +248,7 @@ def poker(hands):
     # max uses the rank returned by hand_rank and returns the best hand
     com_list = {}
     hand_list =[]
-    print("hands", hands)
+    #print("hands", hands)
     for i in range(len(hands)):
         com_list[str(hands[i])] = hand_rank(hands[i])  
     
