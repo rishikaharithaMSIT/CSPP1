@@ -173,18 +173,15 @@ def is_no_same(hands):
 def is_same(com_list):
     def isone_pair(hand):
         """Check for a pair"""
-        check = False
-        o = []
+        o_o = []
         dict_val = make_dict(hand)
         #print("dictval ",dict_val)
         is_four_count = 0
         for i in dict_val:
             if dict_val[i] == 2:
-                check = True
-                q = i
-                o.append(q)
+                o_o.append(i)
         #print("o", o)
-        return o
+        return o_o
     max_r = 0
     for i in com_list:
         if com_list[i] > 0:
