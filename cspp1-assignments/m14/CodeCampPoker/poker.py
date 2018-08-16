@@ -141,6 +141,7 @@ def is_same(com_list):
             max_r = com_list[i]
     print(max_r)
     s_rank = []
+    print("com list : ",com_list)
     for i in com_list:
         if max_r == com_list[i]:
             print("i  is : ",i)
