@@ -122,6 +122,7 @@ def is_flush(hand):
     return True
 
 def is_no_same(hands):
+    '''is no same'''
     hands_cpoy = hands.copy()
     #print("hnds cop",hands_cpoy)
     len_hand = len(hands_cpoy)
@@ -129,7 +130,8 @@ def is_no_same(hands):
     max_h = []
     for j in range(len_hand):
         new_list = hands[j].copy()
-        for d_d in range(len(hands_cpoy[j])):
+        len_len = len(hands_cpoy[j])
+        for d_d in range(len_len):
             #print("...", hands_cpoy[j][d])
             if 'A' in hands_cpoy[j][d_d]:
                 hands_cpoy[j][d_d] = hands_cpoy[j][d_d][0].replace('A', '14')
@@ -150,6 +152,7 @@ def is_no_same(hands):
                 max_h = new_list
     return max_h
 def is_same(com_list):
+    '''is same'''
     def isone_pair(hand):
         """Check for a pair"""
         o_o = []
