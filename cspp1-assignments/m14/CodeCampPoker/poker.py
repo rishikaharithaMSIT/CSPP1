@@ -143,7 +143,7 @@ def is_same(com_list):
     s_rank = []
     for i in com_list:
         if max_r == com_list[i]:
-            l = i.strip("[]")
+            l = i.strip("['']")
             l = l.split(",")
             for i in l:
                 i = i.strip(" ''")
