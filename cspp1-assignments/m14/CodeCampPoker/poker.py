@@ -155,11 +155,7 @@ def is_same(com_list):
                 hand_val.append(i[j][0])
             
             s_rank.append(isone_pair(hand_val))
-    m = []
-    for d in s_rank:
-        m.append(int(s_rank[d][0]))
-    ma = max(m)
-    print("max",ma)
+    print("after: ",com_list)
 
     
 
