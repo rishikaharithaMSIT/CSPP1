@@ -122,36 +122,37 @@ def is_flush(hand):
     return True
 
 
-# def is_same(com_list):
-#     def isone_pair(hand):
-#         """Check for a pair"""
-#         o = []
-#         dict_val = make_dict(hand)
-#         print(dict_val)
-#         is_four_count = 0
-#         for i in dict_val:
-#             if dict_val[i] == 2:
-#                 o.append(dict_val[i])
-#         print("o", o)
-#         return o
+def is_same(com_list):
+    def isone_pair(hand):
+        """Check for a pair"""
+        o = []
+        dict_val = make_dict(hand)
+        print(dict_val)
+        is_four_count = 0
+        for i in dict_val:
+            if dict_val[i] == 2:
+                o.append(dict_val[i])
+        print("o", o)
+        return o
 
-#     max_r = 0
-#     for i in com_list:
-#         if com_list[i] > 0:
-#             max_r = com_list[i]
-#     print(max_r)
-#     s_rank = []
-#     for i in com_list:
-#         if max_r == com_list[i]:
-#             l = i.strip("[]")
-#             l = l.split(",")
-#             hand_val = []
-#             len_hand = len(l)
-#             for i in range(len_hand):
-#                 hand_val.append(list(l[i])[0])
+    max_r = 0
+    for i in com_list:
+        if com_list[i] > 0:
+            max_r = com_list[i]
+    print(max_r)
+    s_rank = []
+    for i in com_list:
+        if max_r == com_list[i]:
+            l = i.strip("[]")
+            l = l.split(",")
+            print("l is :", l)
+            hand_val = []
+            len_hand = len(l)
+            for i in range(len_hand):
+                hand_val.append(list(l[i])[0])
             
-#             s_rank.append(isone_pair(hand_val))
-#     print(s_rank)
+            s_rank.append(isone_pair(hand_val))
+    print(s_rank)
     
 
 def hand_rank(hand):
@@ -178,8 +179,6 @@ def hand_rank(hand):
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
-    global count 
-    count = 0
     hand_val = []
     len_hand = len(hand)
     for i in range(len_hand):
@@ -237,9 +236,9 @@ def poker(hands):
     # com_list = {}
     # hand_list =[]
 
-    # for i in range(len(hands)):
-    #     com_list[str(hands[i])] = hand_rank(hands[i])  
-    # is_same(com_list)
+    for i in range(len(hands)):
+        com_list[str(hands[i])] = hand_rank(hands[i])  
+    is_same(com_list)
     n = max(hands, key=hand_rank)
     print(n)
     return n
