@@ -128,6 +128,19 @@ def is_no_same(hands):
         hand_val = []
         for k in range(len(hands[j])):
             hand_val.append(hands[j][k])
+        for i in range(len_hand):
+        if hand[i] == 'A':
+            hand[i] = 14
+        if hand[i] == 'J':
+            hand[i] = 11
+        if hand[i] == 'Q':
+            hand[i] = 12
+        if hand[i] == 'K':
+            hand[i] = 13
+        if hand[i] == 'T':
+            hand[i] = 10
+        hand[i] = int(hand[i])
+    #print(hand)
         ok.append(hand_val)
 
     k = max(ok)
