@@ -120,12 +120,32 @@ def is_flush(hand):
     if flag:
         return False
     return True
+
+
 def is_same(com_list):
+    def isone_pair(hand):
+    """Check for a pair"""
+        o = []
+        dict_val = make_dict(hand)
+        is_four_count = 0
+        for i in dict_val:
+            if dict_val[i] == 2:
+                o.append(dict_val[i])
+        return o
+
     max_r = 0
     for i in com_list:
         if com_list[i] > 0:
             max_r = com_list[i]
     print(max_r)
+    s_rank = []
+    for i in com_list:
+        if max_r == com_list[i]:
+            l = com_list[i].strip("[]")
+            l = l.split(",")
+            s.append(isone_pair(l))
+    print(s_rank)
+    
 
 def hand_rank(hand):
     '''
