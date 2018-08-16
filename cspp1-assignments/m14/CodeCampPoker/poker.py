@@ -273,7 +273,8 @@ def poker(hands):
     com_list = {}
     #hand_list =[]
     #print("hands", hands)
-    for i in range(len(hands)):
+    han_len = len(hands)
+    for i in range(han_len):
         com_list[str(hands[i])] = hand_rank(hands[i])
     n_max = max(hands, key=hand_rank)
     r_rank = hand_rank(n_max)
