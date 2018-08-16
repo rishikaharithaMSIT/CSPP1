@@ -148,7 +148,7 @@ def is_no_same(hands):
     #print(hand)
         
     #print("ok", hands)
-    p = max(hands)
+    print("maxh", max_h)
 
     for k in range(len(p)):
         if '14' in p[k]:
