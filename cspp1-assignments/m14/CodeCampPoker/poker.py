@@ -130,6 +130,8 @@ def is_no_same(hands):
     max_v = 0
     max_h = []
     for j in range(len_hand):
+        new  = []
+        new = hands[j].copy()
         for d in range(len(hands_cpoy[j])):
                 print("...", hands_cpoy[j][d])
                 if 'A' in hands_cpoy[j][d]:
@@ -148,7 +150,7 @@ def is_no_same(hands):
                 if int(hands_cpoy[j][d]) > max_v:
                     max_v = int(hands_cpoy[j][d])
                     print("hnds cop 2",hands_cpoy)
-                    max_h = abc[j]
+                    max_h = new
 
             
         
