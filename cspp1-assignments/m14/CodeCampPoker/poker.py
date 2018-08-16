@@ -148,7 +148,7 @@ def is_same(com_list):
             hand_val = []
             len_hand = len(i)
             for j in range(len_hand):
-                hand_val.append(list(i[j])[0])
+                hand_val.append(i[j][0])
             
             s_rank.append(isone_pair(hand_val))
     print("srank ",s_rank)
