@@ -189,7 +189,9 @@ def poker(hands):
     # hand_rank is a function passed to max
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
-    print(hand_rank[i] for i in hand_rank)
+    for i in range(len(hands)):
+        print(hand_rank(hands[i]))
+
     return max(hands, key=hand_rank)
 
 if __name__ == "__main__":
