@@ -128,7 +128,7 @@ def is_same(com_list):
         check = False
         o = []
         dict_val = make_dict(hand)
-        print("dictval ",dict_val)
+        #print("dictval ",dict_val)
         is_four_count = 0
         for i in dict_val:
             if dict_val[i] == 2:
@@ -136,38 +136,38 @@ def is_same(com_list):
                 q = i
                 o.append(q)
 
-        print("o", o)
+        #print("o", o)
         return o
 
     max_r = 0
     for i in com_list:
         if com_list[i] > 0:
             max_r = com_list[i]
-    print(max_r)
+    #print(max_r)
     s_rank = []
-    print("com list : ",com_list)
+    #print("com list : ",com_list)
     for i in com_list:
         if max_r == com_list[i]:
             i = i.strip("[]")
             i = i.split(",")
             for j in range(len(i)):
                 i[j] = i[j].strip(" ''")
-            print("i is : ",i)
+            #print("i is : ",i)
             hand_val = []
             len_hand = len(i)
             for j in range(len_hand):
                 hand_val.append(i[j][0])
             g = [i ,isone_pair(hand_val)]
             s_rank.append(g)
-    print("srank : ",s_rank)
-    print("after: ",com_list)
+    #print("srank : ",s_rank)
+    #print("after: ",com_list)
     maxv = 0
     maxh = []
     for i in range(len(s_rank)):
         if int(s_rank[i][1][0]) > maxv:
             maxv = int(s_rank[i][1][0])
             maxh = s_rank[i][0]
-    print("max h", maxh)
+    #print("max h", maxh)
     return maxh
 
 def hand_rank(hand):
@@ -251,10 +251,12 @@ def poker(hands):
     print("hands", hands)
     for i in range(len(hands)):
         com_list[str(hands[i])] = hand_rank(hands[i])  
-    h = is_same(com_list)
+    
     n = max(hands, key=hand_rank)
-    print(n)
-    return h
+    if n = 2:
+        h = is_two_same(com_list)
+        return h
+    return n
 
 if __name__ == "__main__":
     # read the number of test cases
