@@ -133,7 +133,6 @@ def is_same(com_list):
         for i in dict_val:
             if dict_val[i] == 2:
                 check = True
-            if check:
                 q = [hand , i]
                 o.append(q)
 
