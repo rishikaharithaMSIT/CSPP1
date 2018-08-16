@@ -253,7 +253,10 @@ def poker(hands):
         com_list[str(hands[i])] = hand_rank(hands[i])  
     
     n = max(hands, key=hand_rank)
-    print("n",hand_rank(n))
+    r = hand_rank(n)
+    if r == 1:
+        h = is_same(com_list)
+        return h
     return n
 
 if __name__ == "__main__":
