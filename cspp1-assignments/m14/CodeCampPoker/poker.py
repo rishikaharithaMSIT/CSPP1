@@ -154,23 +154,31 @@ def hand_rank(hand):
         hand_suit.append(list(hand[i])[1])
     #print(hand_suit, hand_val)
     if is_straight(hand_val) and is_flush(hand_suit):
+        print("sf")
         return 8
     if is_four_of_kind(hand_val):
+        print("4k")
         return 7
     if is_flush(hand_suit):
+        print("f")
         return 5
     if is_straight(hand_val):
+        print("s")
         return 4
     if is_three_of_kind(hand_val) and is_one_pair(hand_val):
+        print("fh")
         return 6
     if is_three_of_kind(hand_val):
+        print("3k")
         return 3
     if is_two_pair(hand_val):
+        print("2p")
         return 2
     if is_one_pair(hand_val):
+        print("1p")
         return 1
-    print("abc")
-    return 1
+
+    return 0
 
 def poker(hands):
     '''
