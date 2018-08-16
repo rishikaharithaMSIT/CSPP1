@@ -174,7 +174,8 @@ def is_same(com_list):
         if max_r == com_list[i]:
             i = i.strip("[]")
             i = i.split(",")
-            for j in range(len(i)):
+            i_len = len(i)
+            for j in range(i_len):
                 i[j] = i[j].strip(" ''")
             #print("i is : ",i)
             hand_val = []
@@ -187,7 +188,8 @@ def is_same(com_list):
     #print("after: ",com_list)
     maxv = 0
     maxh = []
-    for i in range(len(s_rank)):
+    len_srank = len(s_rank) 
+    for i in range(len_srank):
         if int(s_rank[i][1][0]) > maxv:
             maxv = int(s_rank[i][1][0])
             maxh = s_rank[i][0]
