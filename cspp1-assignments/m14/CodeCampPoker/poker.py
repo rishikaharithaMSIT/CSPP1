@@ -132,15 +132,15 @@ def is_no_same(hands):
         for d_d in range(len(hands_cpoy[j])):
             #print("...", hands_cpoy[j][d])
             if 'A' in hands_cpoy[j][d_d]:
-                hands_cpoy[j][d_d] = hands_cpoy[j][d_d][0].replace('A','14')
+                hands_cpoy[j][d_d] = hands_cpoy[j][d_d][0].replace('A', '14')
             elif 'K' in hands_cpoy[j][d_d]:
-                hands_cpoy[j][d_d] = hands_cpoy[j][d_d][0].replace('K','13')
+                hands_cpoy[j][d_d] = hands_cpoy[j][d_d][0].replace('K', '13')
             elif 'Q' in hands_cpoy[j][d_d]:
-                hands_cpoy[j][d_d] = hands_cpoy[j][d_d][0].replace('Q','12')
+                hands_cpoy[j][d_d] = hands_cpoy[j][d_d][0].replace('Q', '12')
             elif 'J' in hands_cpoy[j][d_d]:
-                hands_cpoy[j][d_d] = hands_cpoy[j][d_d][0].replace('J','11')
+                hands_cpoy[j][d_d] = hands_cpoy[j][d_d][0].replace('J', '11')
             elif 'T' in hands_cpoy[j][d_d]:
-                hands_cpoy[j][d_d] = hands_cpoy[j][d_d][0].replace('T','10')
+                hands_cpoy[j][d_d] = hands_cpoy[j][d_d][0].replace('T', '10')
             else:
                 hands_cpoy[j][d_d] = hands_cpoy[j][d_d][0]
             #print("after",hands[j])
