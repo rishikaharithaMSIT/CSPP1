@@ -145,6 +145,11 @@ def is_same(com_list):
         if max_r == com_list[i]:
             l = i.strip("[]")
             l = l.split(",")
+            hand_val = []
+            len_hand = len(l)
+            for i in range(len_hand):
+                hand_val.append(list(l[i])[0])
+            
             s_rank.append(isone_pair(l))
     print(s_rank)
     
