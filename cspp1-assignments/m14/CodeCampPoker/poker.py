@@ -255,7 +255,7 @@ def poker(hands):
     n = max(hands, key=hand_rank)
     r = hand_rank(n)
     if r == 2:
-        h = is_two_same(com_list)
+        h = is_same(com_list)
         return h
     return n
 
