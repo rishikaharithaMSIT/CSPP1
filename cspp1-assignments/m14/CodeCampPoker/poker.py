@@ -145,7 +145,7 @@ def is_same(com_list):
     for i in com_list:
         if max_r == com_list[i]:
             i = i.strip("[]")
-            i = i.strip(",")
+            i = i.split(",")
             for j in range(len(i)):
                 i[j] = i[j].strip("''")
 
