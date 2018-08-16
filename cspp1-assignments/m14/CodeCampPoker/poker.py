@@ -153,20 +153,20 @@ def is_no_same(hands):
     #print("ok", hands)
     print("maxh", max_h)
 
-    for k in range(len(p)):
-        if '14' in p[k]:
-            p[k] = p[k].replace('14','A')
-        if '13' in p[k]:
-            p[k] = p[k].replace('13','K')
-        if '12' in p[k]:
-            p[k] = p[k].replace('12','Q')
-        if '11' in p[k]:
-            p[k] = p[k].replace('11','J')
-        if '10' in p[k]:
-            p[k] = p[k].replace('10','T')
+    # for k in range(len(p)):
+    #     if '14' in p[k]:
+    #         p[k] = p[k].replace('14','A')
+    #     if '13' in p[k]:
+    #         p[k] = p[k].replace('13','K')
+    #     if '12' in p[k]:
+    #         p[k] = p[k].replace('12','Q')
+    #     if '11' in p[k]:
+    #         p[k] = p[k].replace('11','J')
+    #     if '10' in p[k]:
+    #         p[k] = p[k].replace('10','T')
 
-    #print("k is",p)
-    return p
+    # #print("k is",p)
+    # return p
 
 def is_same(com_list):
     def isone_pair(hand):
