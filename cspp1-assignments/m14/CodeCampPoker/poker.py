@@ -122,21 +122,28 @@ def is_flush(hand):
     return True
 
 def is_no_same(hands):
-    
+    hands_cpoy = hands.copy()
     len_hand = len(hands)
+    max_v = 0
+    max_h = []
     for j in range(len_hand):
+        for d in hands[j]:
+                print("...", hands[j][d])
+                if 'A' in hands[j][k]:
+                    hands[j][k][0] = hands[j][k][0].replace('A','14')
+                if 'K' in hands[j][k]:
+                    hands[j][k][0] = hands[j][k][0].replace('K','13')
+                if 'Q' in hands[j][k]:
+                    hands[j][k][0] = hands[j][k][0].replace('Q','12')
+                if 'J' in hands[j][k]:
+                    hands[j][k][0] = hands[j][k][0].replace('J','11')
+                if 'T' in hands[j][k]:
+                    hands[j][k][0] = hands[j][k][0].replace('T','10')
+                
+                if int(hands[j][d][:len(hands[j][d])-1]) > max_v:
+                    max_h = hands_cpoy[j]
 
-        for k in range(len(hands[j])):
-            if 'A' in hands[j][k]:
-                hands[j][k] = hands[j][k].replace('A','14')
-            if 'K' in hands[j][k]:
-                hands[j][k] = hands[j][k].replace('K','13')
-            if 'Q' in hands[j][k]:
-                hands[j][k] = hands[j][k].replace('Q','12')
-            if 'J' in hands[j][k]:
-                hands[j][k] = hands[j][k].replace('J','11')
-            if 'T' in hands[j][k]:
-                hands[j][k] = hands[j][k].replace('T','10')    
+            
         
     #print(hand)
         
