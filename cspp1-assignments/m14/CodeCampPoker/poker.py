@@ -145,7 +145,7 @@ def is_same(com_list):
     for i in com_list:
         if max_r == com_list[i]:
             print("i  is : ",i)
-            
+            i = is_one_pair
             hand_val = []
             len_hand = len(i)
             for j in range(len_hand):
@@ -233,7 +233,7 @@ def poker(hands):
     # max uses the rank returned by hand_rank and returns the best hand
     com_list = {}
     hand_list =[]
-
+    print("hands", hands)
     for i in range(len(hands)):
         com_list[str(hands[i])] = hand_rank(hands[i])  
     is_same(com_list)
