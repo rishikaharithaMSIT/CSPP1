@@ -144,18 +144,19 @@ def is_no_same(hands):
     p = max(hands)
 
     for k in range(len(p)):
-        if 'A' in p[k]:
+        if '14' in p[k]:
             p[k] = p[k].replace('14','A')
-        if 'K' in p[k]:
+        if '13' in p[k]:
             p[k] = p[k].replace('13','K')
-        if 'Q' in p[k]:
+        if '12' in p[k]:
             p[k] = p[k].replace('12','Q')
-        if 'J' in p[k]:
+        if '11' in p[k]:
             p[k] = p[k].replace('11','J')
-        if 'T' in p[k]:
+        if '10' in p[k]:
             p[k] = p[k].replace('10','T')
 
     print("k is",p)
+    return p
 
 def is_same(com_list):
     def isone_pair(hand):
@@ -294,6 +295,7 @@ def poker(hands):
         return h
     if r == 0:
         h = is_no_same(hands)
+        return h
     return n
 
 if __name__ == "__main__":
