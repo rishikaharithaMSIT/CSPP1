@@ -125,7 +125,7 @@ def is_no_same(hands):
     hands_cpoy = hands.copy()
     abc = []
     abc = hands.copy()
-    print("hnds cop",hands_cpoy)
+    #print("hnds cop",hands_cpoy)
     len_hand = len(hands_cpoy)
     max_v = 0
     max_h = []
@@ -133,7 +133,7 @@ def is_no_same(hands):
         new  = []
         new = hands[j].copy()
         for d in range(len(hands_cpoy[j])):
-                print("...", hands_cpoy[j][d])
+                #print("...", hands_cpoy[j][d])
                 if 'A' in hands_cpoy[j][d]:
                     hands_cpoy[j][d] = hands_cpoy[j][d][0].replace('A','14')
                 elif 'K' in hands_cpoy[j][d]:
@@ -146,10 +146,10 @@ def is_no_same(hands):
                     hands_cpoy[j][d] = hands_cpoy[j][d][0].replace('T','10')
                 else:
                     hands_cpoy[j][d] = hands_cpoy[j][d][0]
-                print("after",hands[j])
+                #print("after",hands[j])
                 if int(hands_cpoy[j][d]) > max_v:
                     max_v = int(hands_cpoy[j][d])
-                    print("hnds cop 2",hands_cpoy)
+                    #print("hnds cop 2",hands_cpoy)
                     max_h = new
 
             
@@ -157,7 +157,7 @@ def is_no_same(hands):
     #print(hand)
         
     #print("ok", hands)
-    print("maxh", max_h)
+    #print("maxh", max_h)
 
     # for k in range(len(p)):
     #     if '14' in p[k]:
