@@ -123,6 +123,7 @@ def is_flush(hand):
 
 def is_no_same(hands):
     hands_cpoy = hands[:]
+    print("hnds cop",hands_cpoy)
     len_hand = len(hands)
     max_v = 0
     max_h = []
@@ -144,6 +145,7 @@ def is_no_same(hands):
                 print("after",hands[j])
                 if int(hands[j][d]) > max_v:
                     max_v = int(hands[j][d])
+                    print("hnds cop 2",hands_cpoy)
                     max_h = hands_cpoy[j]
 
             
