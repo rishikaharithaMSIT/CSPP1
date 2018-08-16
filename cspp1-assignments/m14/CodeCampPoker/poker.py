@@ -129,19 +129,19 @@ def is_no_same(hands):
     for j in range(len_hand):
         for d in range(len(hands[j])):
                 print("...", hands[j][d])
-                if 'A' in hands[j][k]:
-                    hands[j][k][0] = hands[j][k][0].replace('A','14')
-                if 'K' in hands[j][k]:
-                    hands[j][k][0] = hands[j][k][0].replace('K','13')
-                if 'Q' in hands[j][k]:
-                    hands[j][k][0] = hands[j][k][0].replace('Q','12')
-                if 'J' in hands[j][k]:
-                    hands[j][k][0] = hands[j][k][0].replace('J','11')
-                if 'T' in hands[j][k]:
-                    hands[j][k][0] = hands[j][k][0].replace('T','10')
+                # if 'A' in hands[j][k]:
+                #     hands[j][k][0] = hands[j][k][0].replace('A','14')
+                # if 'K' in hands[j][k]:
+                #     hands[j][k][0] = hands[j][k][0].replace('K','13')
+                # if 'Q' in hands[j][k]:
+                #     hands[j][k][0] = hands[j][k][0].replace('Q','12')
+                # if 'J' in hands[j][k]:
+                #     hands[j][k][0] = hands[j][k][0].replace('J','11')
+                # if 'T' in hands[j][k]:
+                #     hands[j][k][0] = hands[j][k][0].replace('T','10')
                 
-                if int(hands[j][d][:len(hands[j][d])-1]) > max_v:
-                    max_h = hands_cpoy[j]
+                # if int(hands[j][d][:len(hands[j][d])-1]) > max_v:
+                #     max_h = hands_cpoy[j]
 
             
         
