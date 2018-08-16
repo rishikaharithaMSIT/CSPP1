@@ -202,7 +202,7 @@ def poker(hands):
     hand_list =[]
 
     for i in range(len(hands)):
-        comlist[hands[i]] = hand_rank(hands[i])  
+        com_list[hands[i]] = hand_rank(hands[i])  
     print("diction" , com_list)
     n = max(hands, key=hand_rank)
     print(n)
