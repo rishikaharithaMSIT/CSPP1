@@ -164,7 +164,7 @@ def is_same(com_list):
     maxv = 0
     maxh = []
     for i in s_rank:
-        for k in range(0,len(i),2):
+        for k in range(len(i)):
             if int(i[k][1][0]) > maxv:
                 maxv = int(i[k][1][0])
                 maxh = i[k][0]
