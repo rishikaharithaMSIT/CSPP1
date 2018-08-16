@@ -209,8 +209,6 @@ def hand_rank(hand):
     if is_two_pair(hand_val):
         return 2
     if is_one_pair(hand_val):
-        count+=1
-        print(count)
         return 1
 
     return 0
