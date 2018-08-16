@@ -161,7 +161,14 @@ def is_same(com_list):
             s_rank.append(g)
     print("srank : ",s_rank)
     print("after: ",com_list)
-
+    maxv = 0
+    maxh = []
+    for i in srank:
+        for k in range(len(i)):
+            if int(k[1][0]) > maxv:
+                maxv = nt(k[1][0])
+                maxh = k[0]
+    print("max h", maxh)
     
 
 def hand_rank(hand):
