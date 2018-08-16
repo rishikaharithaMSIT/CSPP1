@@ -127,7 +127,7 @@ def is_no_same(hands):
     for j in range(len_hand):
         hand_val = []
         for k in range(len(hands[j])):
-            hand_val.append(i[j][k])
+            hand_val.append(hands[j][k])
             hand_val.sort()
         ok.append(hand_val)
 
