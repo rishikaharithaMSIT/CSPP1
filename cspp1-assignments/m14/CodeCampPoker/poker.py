@@ -127,7 +127,7 @@ def is_no_same(hands):
     max_v = 0
     max_h = []
     for j in range(len_hand):
-        for d in hands[j]:
+        for d in range(len(hands[j])):
                 print("...", hands[j][d])
                 if 'A' in hands[j][k]:
                     hands[j][k][0] = hands[j][k][0].replace('A','14')
