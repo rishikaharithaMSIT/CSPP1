@@ -155,7 +155,7 @@ def is_no_same(hands):
         if 'T' in p[k]:
             p[k] = p[k].replace('10','T')
 
-    print("k is",k)
+    print("k is",p)
 
 def is_same(com_list):
     def isone_pair(hand):
