@@ -299,20 +299,20 @@ def poker(hands):
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
     com_list = {}
-    hand_list =[]
+    #hand_list =[]
     #print("hands", hands)
     for i in range(len(hands)):
         com_list[str(hands[i])] = hand_rank(hands[i])  
     
-    n = max(hands, key=hand_rank)
-    r = hand_rank(n)
-    if r == 1:
-        h = is_same(com_list)
-        return h
-    if r == 0:
-        h = is_no_same(hands)
-        return h
-    return n
+    n_max = max(hands, key=hand_rank)
+    r_rank = hand_rank(n)
+    if r_rank == 1:
+        h_return = is_same(com_list)
+        return h_return
+    if r_rank == 0:
+        h_return = is_no_same(hands)
+        return h_return
+    return n_max
 
 if __name__ == "__main__":
     # read the number of test cases
