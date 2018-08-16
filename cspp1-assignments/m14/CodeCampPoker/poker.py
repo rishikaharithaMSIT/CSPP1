@@ -178,7 +178,7 @@ def hand_rank(hand):
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
-    count = 0
+    global count 
     hand_val = []
     len_hand = len(hand)
     for i in range(len_hand):
