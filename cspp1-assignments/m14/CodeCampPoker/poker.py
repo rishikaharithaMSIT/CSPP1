@@ -120,6 +120,12 @@ def is_flush(hand):
     if flag:
         return False
     return True
+def is_same(com_list):
+    max_r = 0
+    for i in com_list:
+        if com_list[i] > 0:
+            max_r = com_list[i]
+    print(max_r)
 
 def hand_rank(hand):
     '''
@@ -154,28 +160,26 @@ def hand_rank(hand):
         hand_suit.append(list(hand[i])[1])
     #print(hand_suit, hand_val)
     if is_straight(hand_val) and is_flush(hand_suit):
-        print("sf")
+        #print("sf")
         return 8
     if is_four_of_kind(hand_val):
-        print("4k")
+        #print("4k")
         return 7
     if is_flush(hand_suit):
-        print("f")
+        #print("f")
         return 5
     if is_straight(hand_val):
-        print("s")
+        #print("s")
         return 4
     if is_three_of_kind(hand_val) and is_one_pair(hand_val):
-        print("fh")
+        #print("fh")
         return 6
     if is_three_of_kind(hand_val):
-        print("3k")
+        #print("3k")
         return 3
     if is_two_pair(hand_val):
-        print("2p")
         return 2
     if is_one_pair(hand_val):
-        print("1p")
         return 1
 
     return 0
@@ -203,7 +207,7 @@ def poker(hands):
 
     for i in range(len(hands)):
         com_list[str(hands[i])] = hand_rank(hands[i])  
-    print("diction" , com_list)
+    is_same(com_list)
     n = max(hands, key=hand_rank)
     print(n)
     return n
