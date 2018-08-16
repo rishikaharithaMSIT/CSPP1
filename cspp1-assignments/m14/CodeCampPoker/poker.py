@@ -130,45 +130,24 @@ def is_no_same(hands):
     for j in range(len_hand):
         new_list = hands[j].copy()
         for d_d in range(len(hands_cpoy[j])):
-                #print("...", hands_cpoy[j][d])
-                if 'A' in hands_cpoy[j][d_d]:
-                    hands_cpoy[j][d_d] = hands_cpoy[j][d_d][0].replace('A','14')
-                elif 'K' in hands_cpoy[j][d_d]:
-                    hands_cpoy[j][d_d] = hands_cpoy[j][d_d][0].replace('K','13')
-                elif 'Q' in hands_cpoy[j][d_d]:
-                    hands_cpoy[j][d_d] = hands_cpoy[j][d_d][0].replace('Q','12')
-                elif 'J' in hands_cpoy[j][d_d]:
-                    hands_cpoy[j][d_d] = hands_cpoy[j][d_d][0].replace('J','11')
-                elif 'T' in hands_cpoy[j][d_d]:
-                    hands_cpoy[j][d_d] = hands_cpoy[j][d_d][0].replace('T','10')
-                else:
-                    hands_cpoy[j][d_d] = hands_cpoy[j][d_d][0]
-                #print("after",hands[j])
-                if int(hands_cpoy[j][d_d]) > max_v:
-                    max_v = int(hands_cpoy[j][d_d])
-                    #print("hnds cop 2",hands_cpoy)
-                    max_h = new_list
-
-            
-        
-    #print(hand)
-        
-    #print("ok", hands)
-    #print("maxh", max_h)
-
-    # for k in range(len(p)):
-    #     if '14' in p[k]:
-    #         p[k] = p[k].replace('14','A')
-    #     if '13' in p[k]:
-    #         p[k] = p[k].replace('13','K')
-    #     if '12' in p[k]:
-    #         p[k] = p[k].replace('12','Q')
-    #     if '11' in p[k]:
-    #         p[k] = p[k].replace('11','J')
-    #     if '10' in p[k]:
-    #         p[k] = p[k].replace('10','T')
-    # #print("k is",p)
-    # return p
+            #print("...", hands_cpoy[j][d])
+            if 'A' in hands_cpoy[j][d_d]:
+                hands_cpoy[j][d_d] = hands_cpoy[j][d_d][0].replace('A','14')
+            elif 'K' in hands_cpoy[j][d_d]:
+                hands_cpoy[j][d_d] = hands_cpoy[j][d_d][0].replace('K','13')
+            elif 'Q' in hands_cpoy[j][d_d]:
+                hands_cpoy[j][d_d] = hands_cpoy[j][d_d][0].replace('Q','12')
+            elif 'J' in hands_cpoy[j][d_d]:
+                hands_cpoy[j][d_d] = hands_cpoy[j][d_d][0].replace('J','11')
+            elif 'T' in hands_cpoy[j][d_d]:
+                hands_cpoy[j][d_d] = hands_cpoy[j][d_d][0].replace('T','10')
+            else:
+                hands_cpoy[j][d_d] = hands_cpoy[j][d_d][0]
+            #print("after",hands[j])
+            if int(hands_cpoy[j][d_d]) > max_v:
+                max_v = int(hands_cpoy[j][d_d])
+                #print("hnds cop 2",hands_cpoy)
+                max_h = new_list
     return max_h
 def is_same(com_list):
     def isone_pair(hand):
