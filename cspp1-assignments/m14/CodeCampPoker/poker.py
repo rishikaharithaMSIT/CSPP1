@@ -130,15 +130,15 @@ def is_no_same(hands):
         for d in range(len(hands[j])):
                 print("...", hands[j][d])
                 if 'A' in hands[j][d]:
-                    hands[j][d][0] = hands[j][d][0].replace('A','14')
+                    hands[j][d] = hands[j][d][0].replace('A','14')
                 if 'K' in hands[j][d]:
-                    hands[j][d][0] = hands[j][d][0].replace('K','13')
+                    hands[j][d] = hands[j][d][0].replace('K','13')
                 if 'Q' in hands[j][d]:
-                    hands[j][d][0] = hands[j][d][0].replace('Q','12')
+                    hands[j][d] = hands[j][d][0].replace('Q','12')
                 if 'J' in hands[j][d]:
-                    hands[j][d][0] = hands[j][d][0].replace('J','11')
+                    hands[j][d] = hands[j][d][0].replace('J','11')
                 if 'T' in hands[j][d]:
-                    hands[j][d][0] = hands[j][d][0].replace('T','10')
+                    hands[j][d] = hands[j][d][0].replace('T','10')
                 
                 if int(hands[j][d][:len(hands[j][d])-1]) > max_v:
                     max_h = hands_cpoy[j]
