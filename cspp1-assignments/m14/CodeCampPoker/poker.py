@@ -124,29 +124,29 @@ def is_flush(hand):
 def is_no_same(hands):
     hands_cpoy = hands.copy()
     print("hnds cop",hands_cpoy)
-    len_hand = len(hands)
+    len_hand = len(hands_cpoy)
     max_v = 0
     max_h = []
     for j in range(len_hand):
-        for d in range(len(hands[j])):
-                print("...", hands[j][d])
-                if 'A' in hands[j][d]:
-                    hands[j][d] = hands[j][d][0].replace('A','14')
-                elif 'K' in hands[j][d]:
-                    hands[j][d] = hands[j][d][0].replace('K','13')
-                elif 'Q' in hands[j][d]:
-                    hands[j][d] = hands[j][d][0].replace('Q','12')
-                elif 'J' in hands[j][d]:
-                    hands[j][d] = hands[j][d][0].replace('J','11')
-                elif 'T' in hands[j][d]:
-                    hands[j][d] = hands[j][d][0].replace('T','10')
+        for d in range(len(hands_cpoy[j])):
+                print("...", hands_cpoy[j][d])
+                if 'A' in hands_cpoy[j][d]:
+                    hands_cpoy[j][d] = hands_cpoy[j][d][0].replace('A','14')
+                elif 'K' in hands_cpoy[j][d]:
+                    hands_cpoy[j][d] = hands_cpoy[j][d][0].replace('K','13')
+                elif 'Q' in hands_cpoy[j][d]:
+                    hands_cpoy[j][d] = hands_cpoy[j][d][0].replace('Q','12')
+                elif 'J' in hands_cpoy[j][d]:
+                    hands_cpoy[j][d] = hands_cpoy[j][d][0].replace('J','11')
+                elif 'T' in hands_cpoy[j][d]:
+                    hands_cpoy[j][d] = hands_cpoy[j][d][0].replace('T','10')
                 else:
-                    hands[j][d] = hands[j][d][0]
+                    hands_cpoy[j][d] = hands_cpoy[j][d][0]
                 print("after",hands[j])
-                if int(hands[j][d]) > max_v:
-                    max_v = int(hands[j][d])
+                if int(hands_cpoy[j][d]) > max_v:
+                    max_v = int(hands_cpoy[j][d])
                     print("hnds cop 2",hands_cpoy)
-                    max_h = hands_cpoy[j]
+                    max_h = hands[j]
 
             
         
