@@ -159,6 +159,7 @@ def is_same(com_list):
                 hand_val.append(i[j][0])
             
             s_rank.append(isone_pair(hand_val))
+    print("srank : ",s_rank)
     print("after: ",com_list)
 
     
