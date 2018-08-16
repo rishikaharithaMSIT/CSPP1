@@ -190,7 +190,7 @@ def poker(hands):
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
 
-    return max(hands, key=hand_rank)
+    return max(set(hands), key=hand_rank)
 
 if __name__ == "__main__":
     # read the number of test cases
