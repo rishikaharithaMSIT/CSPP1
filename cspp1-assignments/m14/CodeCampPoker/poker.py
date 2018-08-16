@@ -130,7 +130,7 @@ def is_no_same(hands):
         for d in range(len(hands[j])):
                 print("...", hands[j][d])
                 if 'A' in hands[j][d]:
-                    hands[j][d] = hands[j][d][0].replace('A','14')
+                    hands[j][d] = hands[j][d].replace('A','14')
                 if 'K' in hands[j][d]:
                     hands[j][d] = hands[j][d][0].replace('K','13')
                 if 'Q' in hands[j][d]:
