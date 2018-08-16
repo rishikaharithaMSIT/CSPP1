@@ -128,7 +128,6 @@ def is_no_same(hands):
         hand_val = []
         for k in range(len(hands[j])):
             hand_val.append(hands[j][k])
-            hand_val.sort()
         ok.append(hand_val)
 
     k = max(ok)
