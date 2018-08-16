@@ -117,7 +117,7 @@ class Message(object):
         lower = string.ascii_lowercase + string.ascii_lowercase
         upper  = string.ascii_uppercase + string.ascii_uppercase
         
-        shift > 25:
+        if shift > 25:
 
             print("in")
             lower += lower
