@@ -122,9 +122,10 @@ def is_flush(hand):
     return True
 
 def is_no_same(hands):
-    ok = []
+    
     len_hand = len(hands)
     for j in range(len_hand):
+
         for k in range(len(hands[j])):
             if 'A' in hands[j][k]:
                 hands[j][k] = hands[j][k].replace('A','14')
@@ -136,11 +137,11 @@ def is_no_same(hands):
                 hands[j][k] = hands[j][k].replace('A','11')
             if 'T' in hands[j][k]:
                 hands[j][k] = hands[j][k].replace('A','10')    
-        print("hand_val", hand_val)
+        
     #print(hand)
-        ok.append(hand_val)
-    print("ok", ok)
-    k = max(ok)
+        
+    print("ok", hands)
+    k = max(hands)
     print("k is",k)
 
 def is_same(com_list):
