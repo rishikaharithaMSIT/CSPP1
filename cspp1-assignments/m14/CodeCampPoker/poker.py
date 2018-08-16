@@ -188,7 +188,7 @@ def is_same(com_list):
     #print("after: ",com_list)
     maxv = 0
     maxh = []
-    len_srank = len(s_rank) 
+    len_srank = len(s_rank)
     for i in range(len_srank):
         if int(s_rank[i][1][0]) > maxv:
             maxv = int(s_rank[i][1][0])
