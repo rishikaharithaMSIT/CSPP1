@@ -146,7 +146,7 @@ def is_same(com_list):
         if max_r == com_list[i]:
             i = i.strip("[]")
             i = i.strip(",")
-            for j in range(len(s)):
+            for j in range(len(i)):
                 i[j] = i[j].strip("''")
 
             hand_val = []
