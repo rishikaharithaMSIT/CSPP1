@@ -125,9 +125,17 @@ def is_no_same(hands):
     ok = []
     len_hand = len(hands)
     for j in range(len_hand):
-        hand_val = []
         for k in range(len(hands[j])):
-            hand_val.append(hands[j][k])
+            if 'A' in hands[j][k]:
+                hands[j][k] = hands[j][k].replace('A','14')
+            if 'K' in hands[j][k]:
+                hands[j][k] = hands[j][k].replace('A','13')
+            if 'Q' in hands[j][k]:
+                hands[j][k] = hands[j][k].replace('A','12')
+            if 'J' in hands[j][k]:
+                hands[j][k] = hands[j][k].replace('A','11')
+            if 'T' in hands[j][k]:
+                hands[j][k] = hands[j][k].replace('A','10')    
         print("hand_val", hand_val)
     #print(hand)
         ok.append(hand_val)
