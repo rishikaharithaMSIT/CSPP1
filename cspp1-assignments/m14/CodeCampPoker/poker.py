@@ -122,7 +122,7 @@ def is_flush(hand):
     return True
 
 def is_no_same(hands):
-    hands_cpoy = hands.copy()
+    hands_cpoy = hands[:]
     len_hand = len(hands)
     max_v = 0
     max_h = []
