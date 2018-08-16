@@ -146,7 +146,7 @@ def is_same(com_list):
             l = i.strip("[]")
             l = l.split(",")
             for i in l:
-                i = i.strip("''")
+                i = i.strip(" ''")
             print("l is :", l)
             hand_val = []
             len_hand = len(l)
