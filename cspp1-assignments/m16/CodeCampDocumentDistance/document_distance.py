@@ -63,7 +63,7 @@ def compute_similarity(freq_dict1, freq_dict2):
         den_sum2 = den_sum2 + (common_dict[each_key][1] ** 2.0) 
     den_val = math.sqrt(den_sum1) * math.sqrt(den_sum2)
     #print(num_val/den_val)
-    return num_val//den_val
+    return num_val/den_val
 
 def similarity(input1, input2):
     '''
