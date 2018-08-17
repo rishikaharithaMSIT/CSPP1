@@ -21,11 +21,11 @@ def frequency_count(in_str):
             freq_dict[each_word] = 1
     return freq_dict
 
-def load_stopwords(filename):
+def load_stopwords():
     '''
         loads stop words from a file and returns a dictionary
     '''
-    file_name = filename
+    filename = "stopwords.txt"
     stopwords = {}
     with open(file_name, 'r') as filename:
         for line in filename:
@@ -35,7 +35,7 @@ def load_stopwords(filename):
 def remove_stop_words(in_freq):
     '''remove stop words'''
     in_freq_copy = copy.deepcopy(in_freq)
-    stop_words = load_stopwords("stopwords.txt")
+    stop_words = load_stopwords()
     for each_key in in_freq:
         if each_key in stop_words:
             del in_freq_copy[each_key]
