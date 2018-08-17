@@ -1,6 +1,8 @@
 '''
     Document Distance - A detailed description is given in the PDF
 '''
+import copy
+
 def frequency_count(in_str):
     words_list = in_str.split()
     freq_dict = {}
@@ -23,11 +25,12 @@ def load_stopwords(filename):
     return stopwords
 
 def remove_stop_words(in_freq):
+    in_freq_copy = copy.deepcopy(in_freq)
     stop_words = load_stopwords("stopwords.txt")
     for each_key in in_freq:
         if each_key in stop_words:
-            del in_freq[each_key]
-    return in_freq
+            del in_freq_copy[each_key]
+    return in_freq_copy
 
 
 def similarity(input1, input2):
