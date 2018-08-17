@@ -17,13 +17,13 @@ def frequency_count(in_str):
             freq_dict[each_word] = 1
     return freq_dict
 
-def load_stopwords(filename):
+def load_stopwords(file_name):
     '''
         loads stop words from a file and returns a dictionary
     '''
     stopwords = {}
-    with open(filename, 'r') as filename:
-        for line in filename:
+    with open(file_name, 'r') as file_name:
+        for line in file_name:
             stopwords[line.strip()] = 0
     return stopwords
 
@@ -64,7 +64,7 @@ def compute_similarity(freq_dict1, freq_dict2):
         #print(common_dict[each_key][0])
         num_val = num_val + (common_dict[each_key][0] * common_dict[each_key][1])
         den_sum1 = den_sum1 + (common_dict[each_key][0] ** 2.0)
-        den_sum2 = den_sum2 + (common_dict[each_key][1] ** 2.0) 
+        den_sum2 = den_sum2 + (common_dict[each_key][1] ** 2.0)
     den_val = math.sqrt(den_sum1) * math.sqrt(den_sum2)
     #print(num_val/den_val)
     return num_val/den_val
@@ -85,7 +85,6 @@ def main():
     '''
     input1 = input()
     input2 = input()
-    
 
     print(similarity(input1, input2))
 
