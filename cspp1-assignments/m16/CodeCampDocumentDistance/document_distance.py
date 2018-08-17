@@ -21,13 +21,14 @@ def frequency_count(in_str):
             freq_dict[each_word] = 1
     return freq_dict
 
-def load_stopwords(file_name):
+def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
     '''
+    file_name = filename
     stopwords = {}
-    with open(file_name, 'r') as file_name:
-        for line in file_name:
+    with open(file_name, 'r') as filename:
+        for line in filename:
             stopwords[line.strip()] = 0
     return stopwords
 
