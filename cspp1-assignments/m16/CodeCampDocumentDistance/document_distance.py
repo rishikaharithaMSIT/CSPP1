@@ -67,7 +67,8 @@ def compute_similarity(freq_dict1, freq_dict2):
     #print(len(common_dict))
     common_dict_copy = copy.deepcopy(common_dict)
     for each_key in common_dict_copy:
-        if len(each_key) == 0:
+        len_key = len(each_key)
+        if len_key == 0:
             del common_dict[each_key]
     for each_key in common_dict:
         #print(common_dict[each_key][0])
