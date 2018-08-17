@@ -73,8 +73,8 @@ def similarity(input1, input2):
     in2_freq = frequency_count(input2)
     freq_dict1 = remove_stop_words(in1_freq)
     freq_dict2 = remove_stop_words(in2_freq)
-    compute_similarity(freq_dict1,freq_dict2)
-
+    similarity_val = compute_similarity(freq_dict1,freq_dict2)
+    return similarity_val
 def main():
     '''
         take two inputs and call the similarity function
