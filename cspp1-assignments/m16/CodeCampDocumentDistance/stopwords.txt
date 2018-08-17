@@ -240,7 +240,7 @@ isn't
 it
 itd
 it'll
-it's
+its
 itself
 i've
 j
@@ -653,7 +653,7 @@ y
 yes
 yet
 you
-you'd
+youd
 you'll
 your
 youre
