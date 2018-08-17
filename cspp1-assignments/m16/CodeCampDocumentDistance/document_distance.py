@@ -7,8 +7,8 @@ import math
 def frequency_count(in_str):
     '''frequency count'''
     words_list = in_str.split()
-    freq_dict = {}
-    for each_word in words_list:
+    freq_dict = 
+        for each_word in words_list:
         #each_word = each_word.strip("!-@#$%^&*()_?.,\n ")
         each_word = each_word.lower()
         each_word = ''.join(e for e in each_word if e.isalpha())
@@ -64,7 +64,7 @@ def compute_similarity(freq_dict1, freq_dict2):
     den_val = 1
     den_sum1 = 0
     den_sum2 = 0
-    #print(common_dict)
+    print(common_dict)
     #print(len(common_dict))
     common_dict_copy = copy.deepcopy(common_dict)
     for each_key in common_dict_copy:
