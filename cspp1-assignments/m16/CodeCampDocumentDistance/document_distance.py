@@ -8,7 +8,7 @@ def frequency_count(in_str):
     freq_dict = {}
     for each_word in words_list:
         each_word = each_word.strip("!@#$%^&*()_?.,\n ")
-        each_word = each_word.lowercase()
+        each_word = each_word.lower()
         if each_word in freq_dict:
             freq_dict[each_word] += 1
         else:
