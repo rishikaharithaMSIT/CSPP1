@@ -5,6 +5,7 @@ import copy
 import math
 
 def frequency_count(in_str):
+    '''frequency count'''
     words_list = in_str.split()
     freq_dict = {}
     for each_word in words_list:
@@ -27,14 +28,17 @@ def load_stopwords(filename):
     return stopwords
 
 def remove_stop_words(in_freq):
+    '''remove stop words'''
     in_freq_copy = copy.deepcopy(in_freq)
     stop_words = load_stopwords("stopwords.txt")
     for each_key in in_freq:
         if each_key in stop_words:
             del in_freq_copy[each_key]
     return in_freq_copy
+
 def compute_similarity(freq_dict1, freq_dict2):
-    common_dict  = {}
+    '''compute similarity'''
+    common_dict = {}
     for each_key in freq_dict1:
         if each_key not in freq_dict2:
             freq_dict2[each_key] = 0
