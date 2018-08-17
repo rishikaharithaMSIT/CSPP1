@@ -1,12 +1,15 @@
 '''
     Document Distance - A detailed description is given in the PDF
 '''
+def frequency_count(in_str):
+    words_list = in_str.split()
+    print(words_list)
 
 def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
     '''
-    print(dict1, dict2)
+    
 
 def load_stopwords(filename):
     '''
@@ -24,7 +27,7 @@ def main():
     '''
     input1 = input()
     input2 = input()
-
+    frequency_count(input1)
     print(similarity(input1, input2))
 
 if __name__ == '__main__':
