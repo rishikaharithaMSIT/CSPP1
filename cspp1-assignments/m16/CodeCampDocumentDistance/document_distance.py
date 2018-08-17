@@ -27,7 +27,7 @@ def load_stopwords():
     '''
     filename = "stopwords.txt"
     stopwords = {}
-    with open(file_name, 'r') as filename:
+    with open(filename, 'r') as filename:
         for line in filename:
             stopwords[line.strip()] = 0
     return stopwords
