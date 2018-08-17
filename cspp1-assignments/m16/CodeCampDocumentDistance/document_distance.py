@@ -39,7 +39,7 @@ def remove_stop_words(in_freq):
         if each_key in stop_words:
             del in_freq_copy[each_key]
     return in_freq_copy
-def make_dicts_equal(freq_dict1,bfreq_dict2):
+def make_dicts_equal(freq_dict1, freq_dict2):
     for each_key in freq_dict2:
         if each_key not in freq_dict1:
             freq_dict1[each_key] = 0
