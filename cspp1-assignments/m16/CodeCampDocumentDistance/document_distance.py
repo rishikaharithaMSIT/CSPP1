@@ -11,7 +11,7 @@ def frequency_count(in_str):
     for each_word in words_list:
         #each_word = each_word.strip("!-@#$%^&*()_?.,\n ")
         each_word = each_word.lower()
-        #each_word = ''.join(e for e in each_word if e.isalnum())
+        each_word = ''.join(e for e in each_word if e.isalnum())
         each_word = ''.join([i for i in each_word if not each_word.isdigit()])
         each_word = each_word.rstrip()
         if each_word in freq_dict:
@@ -70,6 +70,7 @@ def compute_similarity(freq_dict1, freq_dict2):
         len_key = len(each_key)
         if len_key == 0:
             del common_dict[each_key]
+    print(len(common_dict))
     for each_key in common_dict:
         #print(common_dict[each_key][0])
         num_val = num_val + (common_dict[each_key][0] * common_dict[each_key][1])
