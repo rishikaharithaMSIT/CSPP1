@@ -50,6 +50,7 @@ def compute_similarity(freq_dict1,freq_dict2):
     den_sum1 = 0.0
     den_sum2 = 0.0
     for each_key in common_dict:
+        print(common_dict[each_key][0])
         num_val = num_val + (common_dict[each_key][0] * common_dict[each_key][1])
         den_sum1 = den_sum1 + (common_dict[each_key][0] ** 2)
         den_sum2 = den_sum2 + (common_dict[each_key][1] ** 2) 
