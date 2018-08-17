@@ -44,7 +44,7 @@ def compute_similarity(freq_dict1,freq_dict2):
             common_dict[each_word].append(freq_dict2[each_word])
         else:
             common_dict[each_word] = [freq_dict2[each_word]]
-    
+    num_val = 0.0
     for each_key in common_dict:
         num_val = num_val + (common_dict[each_key][0] * common_dict[each_key][0])
     print(num_val)
