@@ -5,7 +5,7 @@ def frequency_count(in_str):
     words_list = in_str.split()
     freq_dict = {}
     for each_word in words_list:
-        each_word = each_word.strip("!@#$%^&*()_?., ")
+        each_word = each_word.strip("!@#$%^&*()_?.,\n ")
         if each_word in freq_dict:
             freq_dict[each_word] += 1
         else:
