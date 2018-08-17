@@ -24,7 +24,10 @@ def load_stopwords(filename):
 
 def remove_stop_words(in_freq):
     stop_words = load_stopwords("stopwords.txt")
-    print(stop_words)
+    for each_key in in_freq:
+        if each_key in stop_words:
+            del in_freq[each_key]
+    return in_freq
 
 
 def similarity(input1, input2):
@@ -33,7 +36,7 @@ def similarity(input1, input2):
     '''
     in1_freq = frequency_count(input1)
     in2_freq = frequency_count(input2)
-    remove_stop_words(in1_freq)  
+    print(remove_stop_words(in1_freq))  
 
 def main():
     '''
