@@ -46,6 +46,7 @@ def make_dicts_equal(freq_dict1, freq_dict2):
         if each_key not in freq_dict1:
             freq_dict1[each_key] = 0
     return freq_dict1
+
 def compute_similarity(freq_dict1, freq_dict2):
     '''compute similarity'''
     common_dict = {}
@@ -92,6 +93,7 @@ def similarity(input1, input2):
     freq_dict2 = remove_stop_words(in2_freq)
     similarity_val = compute_similarity(freq_dict1, freq_dict2)
     return similarity_val
+
 def main():
     '''
         take two inputs and call the similarity function
