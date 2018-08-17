@@ -3,11 +3,15 @@
 '''
 def frequency_count(in_str):
     words_list = in_str.split()
+    freq_dict = {}
     for each_word in words_list:
         each_word = each_word.strip("!@#$%^&*()_?., ")
-        print(each_word)
-    print(words_list)
-
+        if each_word in freq_dict:
+            freq_dict[each_word] += 1
+        else:
+            freq_dict[each_word] = 1
+    print(freq_dict)
+    
 def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
