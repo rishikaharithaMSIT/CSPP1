@@ -40,6 +40,7 @@ def remove_stop_words(in_freq):
             del in_freq_copy[each_key]
     return in_freq_copy
 def make_dicts_equal(freq_dict1, freq_dict2):
+    '''make lens equal'''
     for each_key in freq_dict2:
         if each_key not in freq_dict1:
             freq_dict1[each_key] = 0
@@ -47,8 +48,8 @@ def make_dicts_equal(freq_dict1, freq_dict2):
 def compute_similarity(freq_dict1, freq_dict2):
     '''compute similarity'''
     common_dict = {}
-    freq_dict1 = make_dicts_equal(freq_dict1,freq_dict2)
-    freq_dict2 = make_dicts_equal(freq_dict2,freq_dict1)
+    freq_dict1 = make_dicts_equal(freq_dict1, freq_dict2)
+    freq_dict2 = make_dicts_equal(freq_dict2, freq_dict1)
 
     for each_word in freq_dict1:
         if each_word in common_dict:
