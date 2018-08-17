@@ -7,8 +7,8 @@ import math
 def frequency_count(in_str):
     '''frequency count'''
     words_list = in_str.split()
-    freq_dict = 
-        for each_word in words_list:
+    freq_dict = {}
+    for each_word in words_list:
         #each_word = each_word.strip("!-@#$%^&*()_?.,\n ")
         each_word = each_word.lower()
         each_word = ''.join(e for e in each_word if e.isalpha())
