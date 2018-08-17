@@ -3,7 +3,7 @@
 '''
 import copy
 import math
- 
+
 def frequency_count(in_str):
     '''frequency count'''
     words_list = in_str.split()
