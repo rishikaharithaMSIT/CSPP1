@@ -8,6 +8,7 @@ def frequency_count(in_str):
     freq_dict = {}
     for each_word in words_list:
         each_word = each_word.strip("!@#$%^&*()_?.,\n ")
+        each_word = each_word.lowercase()
         if each_word in freq_dict:
             freq_dict[each_word] += 1
         else:
@@ -31,7 +32,19 @@ def remove_stop_words(in_freq):
         if each_key in stop_words:
             del in_freq_copy[each_key]
     return in_freq_copy
-
+def compute_similarity(freq_dict1,freq_dict2):
+    common_dict  = {}
+    for each_key in freq_dict1:
+        if each_word in common_dict:
+            common_dict[each_word].append(freq_dict1[each_word])
+        else:
+            common_dict[each_word] = [freq_dict1[each_word]]
+    for each_key in freq_dict2:
+        if each_word in common_dict:
+            common_dict[each_word].append(freq_dict2[each_word])
+        else:
+            common_dict[each_word] = [freq_dict2[each_word]]
+    print(common_dict)
 
 def similarity(input1, input2):
     '''
@@ -39,7 +52,9 @@ def similarity(input1, input2):
     '''
     in1_freq = frequency_count(input1)
     in2_freq = frequency_count(input2)
-    print(remove_stop_words(in1_freq))  
+    freq_dict1 = remove_stop_words(in1_freq)
+    freq_dict2 = remove_stop_words(in2_freq)
+
 
 def main():
     '''
