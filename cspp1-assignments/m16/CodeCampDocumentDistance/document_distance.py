@@ -11,9 +11,10 @@ def frequency_count(in_str):
     for each_word in words_list:
         #each_word = each_word.strip("!-@#$%^&*()_?.,\n ")
         each_word = each_word.lower()
-        each_word = ''.join(e for e in each_word if e.isalnum())
-        each_word = ''.join([i for i in each_word if not each_word.isdigit()])
-        each_word = each_word.rstrip()
+        each_word = ''.join(e for e in each_word if e.isalpha())
+        #each_word = ''.join(e for e in each_word if e.isalnum())
+        #each_word = ''.join([i for i in each_word if not each_word.isdigit()])
+        #each_word = each_word.rstrip()
         if each_word in freq_dict:
             freq_dict[each_word] += 1
         else:
