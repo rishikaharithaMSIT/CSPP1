@@ -33,7 +33,7 @@ def remove_stop_words(in_freq):
         if each_key in stop_words:
             del in_freq_copy[each_key]
     return in_freq_copy
-def compute_similarity(freq_dict1,freq_dict2):
+def compute_similarity(freq_dict1, freq_dict2):
     common_dict  = {}
     for each_key in freq_dict1:
         if each_key not in freq_dict2:
@@ -59,8 +59,8 @@ def compute_similarity(freq_dict1,freq_dict2):
     for each_key in common_dict:
         #print(common_dict[each_key][0])
         num_val = num_val + (common_dict[each_key][0] * common_dict[each_key][1])
-        den_sum1 = den_sum1 + (common_dict[each_key][0] ** 2)
-        den_sum2 = den_sum2 + (common_dict[each_key][1] ** 2) 
+        den_sum1 = den_sum1 + (common_dict[each_key][0] ** 2.0)
+        den_sum2 = den_sum2 + (common_dict[each_key][1] ** 2.0) 
     den_val = math.sqrt(den_sum1) * math.sqrt(den_sum2)
     #print(num_val/den_val)
     return num_val/den_val
@@ -73,8 +73,8 @@ def similarity(input1, input2):
     in2_freq = frequency_count(input2)
     freq_dict1 = remove_stop_words(in1_freq)
     freq_dict2 = remove_stop_words(in2_freq)
-    similarity_val = compute_similarity(freq_dict1,freq_dict2)
-    return round(similarity_val,14)
+    similarity_val = compute_similarity(freq_dict1, freq_dict2)
+    return round(similarity_val, 15)
 def main():
     '''
         take two inputs and call the similarity function
