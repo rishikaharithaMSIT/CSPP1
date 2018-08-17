@@ -9,7 +9,7 @@ def frequency_count(in_str):
     words_list = in_str.split()
     freq_dict = {}
     for each_word in words_list:
-        each_word = each_word.strip("!-@#$%^&*()_?.,\n ")
+        #each_word = each_word.strip("!-@#$%^&*()_?.,\n ")
         each_word = each_word.lower()
         each_word = ''.join(e for e in each_word if e.isalnum())
         each_word = ''.join([i for i in each_word if not each_word.isdigit()])
