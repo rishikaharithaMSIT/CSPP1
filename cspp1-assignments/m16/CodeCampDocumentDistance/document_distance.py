@@ -10,13 +10,7 @@ def frequency_count(in_str):
             freq_dict[each_word] += 1
         else:
             freq_dict[each_word] = 1
-    print(freq_dict)
-    
-def similarity(dict1, dict2):
-    '''
-        Compute the document distance as given in the PDF
-    '''
-    
+    return freq_dict
 
 def load_stopwords(filename):
     '''
@@ -28,13 +22,27 @@ def load_stopwords(filename):
             stopwords[line.strip()] = 0
     return stopwords
 
+def remove_stop_words(in_freq):
+    stop_words = load_stopwords("stopwords.txt")
+    print(stop_words)
+
+
+def similarity(input1, input2):
+    '''
+        Compute the document distance as given in the PDF
+    '''
+    in1_freq = frequency_count(input1)
+    in2_freq = frequency_count(input2)
+    remove_stop_words(in1_freq)  
+
 def main():
     '''
         take two inputs and call the similarity function
     '''
     input1 = input()
     input2 = input()
-    frequency_count(input1)
+    
+
     print(similarity(input1, input2))
 
 if __name__ == '__main__':
