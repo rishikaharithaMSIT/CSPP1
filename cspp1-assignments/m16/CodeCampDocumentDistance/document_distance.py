@@ -35,6 +35,13 @@ def remove_stop_words(in_freq):
     return in_freq_copy
 def compute_similarity(freq_dict1,freq_dict2):
     common_dict  = {}
+    for each_key in freq_dict1:
+        if each_key not in freq_dict2:
+            freq_dict2[each_key] = 0
+    for each_key in freq_dict2:
+        if each_key not in freq_dict1:
+            freq_dict1[each_key] = 0
+            
     for each_word in freq_dict1:
         if each_word in common_dict:
             common_dict[each_word].append(freq_dict1[each_word])
