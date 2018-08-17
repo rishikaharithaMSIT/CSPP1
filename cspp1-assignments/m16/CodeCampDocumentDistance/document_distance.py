@@ -3,6 +3,8 @@
 '''
 def frequency_count(in_str):
     words_list = in_str.split()
+    for each_word in words_list:
+        each_word = each_word.strip("!@#$%^&*()_?., ")
     print(words_list)
 
 def similarity(dict1, dict2):
