@@ -3,7 +3,7 @@
 '''
 import copy
 import math
-
+ 
 def frequency_count(in_str):
     '''frequency count'''
     words_list = in_str.split()
@@ -70,7 +70,7 @@ def compute_similarity(freq_dict1, freq_dict2):
         len_key = len(each_key)
         if len_key == 0:
             del common_dict[each_key]
-    #print(len(common_dict))
+    print(len(common_dict))
     for each_key in common_dict:
         num_val = num_val + (common_dict[each_key][0] * common_dict[each_key][1])
         den_sum1 = den_sum1 + (common_dict[each_key][0] ** 2.0)
