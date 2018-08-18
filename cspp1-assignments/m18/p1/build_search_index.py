@@ -41,9 +41,11 @@ def word_list(text):
     '''
     new_list = []
     doc_list = text.split()
+    stop_words = load_stopwords("stopwords.txt")
     for each_word in doc_list:
     	each_word = ''.join(e for e in each_word if e.isalpha())
-    	new_list.append(each_word)
+    	if each_word not in stop_words:
+    		new_list.append(each_word)
     print(new_list)
 
 def build_search_index(docs):
