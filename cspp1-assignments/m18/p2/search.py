@@ -40,7 +40,7 @@ def search(search_index, query):
     li = []
     for each_word in search_index:
         if query == each_word:
-            for ind in search_index[each_word]:
+            for ind in range(len(search_index[each_word])):
                 li.append(search_index[each_word][ind][0])
     print(li)
 def process_queries(search_index, queries):
