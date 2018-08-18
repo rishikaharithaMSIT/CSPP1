@@ -68,7 +68,7 @@ def build_search_index(docs):
     len_docs = len(docs)
     for each_doc in range(len_docs):
     	docs[each_doc] = word_list(docs[each_doc])
-    	docs[each_doc] = Counter(docs[each_doc])
+    	docs[each_doc] = collections.Counter(docs[each_doc])
     print(docs)
 
 # helper function to print the search index
