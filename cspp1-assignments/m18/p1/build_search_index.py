@@ -73,10 +73,10 @@ def build_search_index(docs):
     for i_itr in range(len(docs)):
     	for word in docs[i_itr]:
     		if word in search_dict:
-    			pass
+    			search_dict[word].append((i_itr,docs[i_itr][word]))
     		else:
     			search_dict[word] = [(i_itr,docs[i_itr][word])]
-    print(search_dict)
+    print_search_index(search_dict)
 
 # helper function to print the search index
 # use this to verify how the search index looks
