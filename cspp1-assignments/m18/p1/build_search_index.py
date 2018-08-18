@@ -57,9 +57,9 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    len_docs = len(documents)
+    len_docs = len(docs)
     for each_doc in range(len_docs):
-    	documents[each_doc] = word_list(documents[each_doc])
+    	docs[each_doc] = word_list(docs[each_doc])
 
 # helper function to print the search index
 # use this to verify how the search index looks
