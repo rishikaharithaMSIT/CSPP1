@@ -38,8 +38,7 @@ def search(search_index, query):
         make a set of doc_id and return
     '''
     for each_word in search_index:
-        if query is each_word:
-            print(search_index[each_word])
+        print(each_word)
 
 def process_queries(search_index, queries):
     '''
