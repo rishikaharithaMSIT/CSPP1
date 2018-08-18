@@ -43,10 +43,10 @@ def word_list(text):
     doc_list = text.split()
     stop_words = load_stopwords("stopwords.txt")
     for each_word in doc_list:
-    	each_word = each_word.lower()
-    	each_word = ''.join(e for e in each_word if e.isalpha())
-    	if each_word not in stop_words:
-    		new_list.append(each_word)
+        each_word = each_word.lower()
+        each_word = ''.join(e for e in each_word if e.isalpha())
+        if each_word not in stop_words:
+            new_list.append(each_word)
     return new_list
 
 def build_search_index(docs):
@@ -67,15 +67,15 @@ def build_search_index(docs):
     # return search index
     len_docs = len(docs)
     for each_doc in range(len_docs):
-    	docs[each_doc] = word_list(docs[each_doc])
-    	docs[each_doc] = collections.Counter(docs[each_doc])
+        docs[each_doc] = word_list(docs[each_doc])
+        docs[each_doc] = collections.Counter(docs[each_doc])
     search_dict = {}
     for i_itr in range(len(docs)):
-    	for word in docs[i_itr]:
-    		if word in search_dict:
-    			search_dict[word].append((i_itr,docs[i_itr][word]))
-    		else:
-    			search_dict[word] = [(i_itr,docs[i_itr][word])]
+        for word in docs[i_itr]:
+            if word in search_dict:
+                search_dict[word].append((i_itr, docs[i_itr][word]))
+            else:
+                search_dict[word] = [(i_itr, docs[i_itr][word])]
     return search_dict
 
 # helper function to print the search index
