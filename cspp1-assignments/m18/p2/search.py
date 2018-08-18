@@ -53,7 +53,9 @@ def process_queries(search_index, queries):
     for query in queries:
         query = query.split()
         for each_word in query:
-            result.append(e for e in search(search_index, each_word))
+            ou_li = search(search_index, each_word)
+            for i in ou_li:
+                result.append(i)
         print(result)
 
 def main():
