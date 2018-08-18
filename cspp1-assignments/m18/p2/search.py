@@ -64,6 +64,7 @@ def main():
     '''
     # This line loads the search index
     search_index = input()
+    print(search_index)
 
     # read the number of search queries
     lines = int(input())
