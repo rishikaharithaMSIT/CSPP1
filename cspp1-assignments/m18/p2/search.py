@@ -38,7 +38,7 @@ def search(search_index, query):
         make a set of doc_id and return
     '''
     if query in search_index:
-        print(search_index[query])
+        print(search_index[query][0])
 
 def process_queries(search_index, queries):
     '''
