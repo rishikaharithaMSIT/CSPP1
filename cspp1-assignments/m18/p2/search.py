@@ -49,11 +49,13 @@ def process_queries(search_index, queries):
         iterate through all the queries and call the search function
         print the results returned by search function
     '''
-    result = []
+    
     for query in queries:
         query = query.split()
+        result = []
         for each_word in query:
             ou_li = []
+
             ou_li = search(search_index, each_word)
             for i in ou_li:
                 result.append(i)
