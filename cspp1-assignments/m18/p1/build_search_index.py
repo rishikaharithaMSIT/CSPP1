@@ -39,7 +39,12 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    print(text)
+    new_list = []
+    doc_list = text.split()
+    for each_word in doc_list:
+    	each_word = each_word.''.join(e for e in each_word if isalpha())
+    	new_list.append(each_word)
+    print(new_list)
 
 def build_search_index(docs):
     '''
