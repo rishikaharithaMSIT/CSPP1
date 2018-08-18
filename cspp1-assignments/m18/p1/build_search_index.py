@@ -47,7 +47,7 @@ def word_list(text):
     	each_word = ''.join(e for e in each_word if e.isalpha())
     	if each_word not in stop_words:
     		new_list.append(each_word)
-    print(new_list)
+    return new_list
 
 def build_search_index(docs):
     '''
@@ -68,6 +68,7 @@ def build_search_index(docs):
     len_docs = len(docs)
     for each_doc in range(len_docs):
     	docs[each_doc] = word_list(docs[each_doc])
+    print(docs)
 
 # helper function to print the search index
 # use this to verify how the search index looks
