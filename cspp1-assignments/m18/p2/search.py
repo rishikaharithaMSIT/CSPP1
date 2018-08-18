@@ -49,11 +49,11 @@ def process_queries(search_index, queries):
         iterate through all the queries and call the search function
         print the results returned by search function
     '''
-    result = {}
+    result = []
     for query in queries:
         query = query.split()
         for each_word in query:
-            result = search(search_index, each_word)
+            result.append(search(search_index, each_word))
         print(set(result))
 
 def main():
