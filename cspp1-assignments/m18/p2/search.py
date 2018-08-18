@@ -56,7 +56,7 @@ def process_queries(search_index, queries):
             ou_li = search(search_index, each_word)
             for i in ou_li:
                 result.append(i)
-        print(result)
+        print(set(result))
 
 def main():
     '''
