@@ -43,6 +43,7 @@ def word_list(text):
     doc_list = text.split()
     stop_words = load_stopwords("stopwords.txt")
     for each_word in doc_list:
+    	each_word = each_word.lower()
     	each_word = ''.join(e for e in each_word if e.isalpha())
     	if each_word not in stop_words:
     		new_list.append(each_word)
