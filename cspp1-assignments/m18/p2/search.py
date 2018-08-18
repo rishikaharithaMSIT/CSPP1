@@ -39,7 +39,7 @@ def search(search_index, query):
     '''
     for each_word in search_index:
         if query == each_word:
-            print(each_word, query)
+            print(search_index[each_word], query)
 
 def process_queries(search_index, queries):
     '''
