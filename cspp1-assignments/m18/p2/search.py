@@ -48,7 +48,7 @@ def process_queries(search_index, queries):
         function to process the search queries
         iterate through all the queries and call the search function
         print the results returned by search function
-    '''   
+    '''
     for query in queries:
         query = query.split()
         result = []
@@ -67,7 +67,6 @@ def main():
 
     # read the number of search queries
     lines = int(input())
-    
     # read the search queries into a list
     queries = []
     for i in range(lines):
@@ -79,4 +78,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    
