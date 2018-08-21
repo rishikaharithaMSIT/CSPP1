@@ -155,6 +155,7 @@ class Message():
                 cipher_string += a_dict[i]
             else:
                 cipher_string += i
+        a_shift += 1
         return cipher_string
 
 
