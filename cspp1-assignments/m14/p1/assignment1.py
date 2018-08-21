@@ -117,12 +117,12 @@ class Message(object):
         lower = string.ascii_lowercase + string.ascii_lowercase
         upper  = string.ascii_uppercase + string.ascii_uppercase
         
-        if shift > 25:
+        # if shift > 25:
 
-            #print("in")
-            lower += lower
-            upper += upper
-            #n = n-1
+        #     #print("in")
+        #     lower += lower
+        #     upper += upper
+        #     #n = n-1
 
         #print(lower, upper)
         shift_dict ={}
