@@ -122,7 +122,7 @@ class Message(object):
             #print("in")
             lower += lower
             upper += upper
-            n = n-1
+            #n = n-1
 
         #print(lower, upper)
         shift_dict ={}
