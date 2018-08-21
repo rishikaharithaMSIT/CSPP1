@@ -142,7 +142,7 @@ def main():
     print(shift)
     print(data.build_shift_dict(shift))
     print(data.apply_shift(shift))
-    print(data)
+    #print(data)
     shift = int(input())
     print(shift)
     print(data.build_shift_dict(shift))
