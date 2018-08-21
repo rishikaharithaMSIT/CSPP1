@@ -137,9 +137,9 @@ class Message(object):
 def main():
     ''' Function to handle testcases '''
     inp = input()
-    data = PlaintextMessage(inp, int(input()))
-    print(data.get_shift())
-    print(data.get_encrypting_dict())
+    data = Message(inp, int(input()))
+    print(data.build_shift_dict(shift))
+    print(data.apply_shift(shift))
     print(data.get_message_text_encrypted())
     data.change_shift(int(input()))
     print(data.get_shift())
