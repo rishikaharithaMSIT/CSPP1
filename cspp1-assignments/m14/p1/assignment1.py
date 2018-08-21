@@ -126,16 +126,16 @@ class Message(object):
 
         #print(lower, upper)
         shift_dict ={}
-        for i in range(0,(len(lower)-shift)):
+        for i in range(0, (len(lower)-shift)):
             shift_dict[lower[i]] = lower[i+shift]
 
-        for i in range(0,(len(lower)-shift)):
+        for i in range(0, (len(lower)-shift)):
             shift_dict[upper[i]] = upper[i+shift]
 
         #print(shift_dict)
         return shift_dict
 
-    def apply_shift(self, shift,h):
+    def apply_shift(self, shift, a_dict):
         '''
         Applies the Caesar Cipher to self.message_text with the input shift.
         Creates a new string that is self.message_text shifted down the
@@ -149,11 +149,11 @@ class Message(object):
         '''
         #delete this line and replace with your code here   
 
-        mess = self.message_text
+        mess_age = self.message_text
         cipher_string = ""
-        for i in mess:
-            if i in h:
-                cipher_string += h[i]
+        for i in mess_age:
+            if i in a_dict:
+                cipher_string += a_dict[i]
             else:
                 cipher_string += i
         return cipher_string
@@ -167,9 +167,9 @@ def main():
     data = Message(input())
     data.get_message_text()
     
-    n = int(input())
-    h = data.build_shift_dict(n)
-    print(data.apply_shift(n,h))
+    i_n = int(input())
+    a_dict = data.build_shift_dict(i_n)
+    print(data.apply_shift(i_n, a_dict))
 
 
 if __name__ == "__main__":
