@@ -71,7 +71,7 @@ class Message(object):
     def __init__(self, text):
         '''
         Initializes a Message object
-                
+
         text (string): the message's text
 
         a Message object has two attributes:
@@ -94,7 +94,7 @@ class Message(object):
     def get_valid_words(self):
         '''
         Used to safely access a copy of self.valid_words outside of the class
-        
+
         Returns: a COPY of self.valid_words
         '''
         return self.valid_words[:]
@@ -105,7 +105,7 @@ class Message(object):
         character shifted down the alphabet by the input shift. The dictionary
         should have 52 keys of all the uppercase letters and all the lowercase
         letters only.        
-        
+
         shift (integer): the amount by which to shift every letter of the 
         alphabet. 0 <= shift < 26
 
@@ -114,7 +114,7 @@ class Message(object):
         '''
         #delete this line and replace with your code here
         lower = string.ascii_lowercase + string.ascii_lowercase
-        upper  = string.ascii_uppercase + string.ascii_uppercase
+        upper = string.ascii_uppercase + string.ascii_uppercase
         
         # if shift > 25:
 
