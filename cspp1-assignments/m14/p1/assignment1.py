@@ -119,7 +119,7 @@ class Message(object):
         
         if shift > 25:
 
-            print("in")
+            #print("in")
             lower += lower
             upper += upper
             n = n-1
