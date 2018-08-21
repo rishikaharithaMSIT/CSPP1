@@ -85,7 +85,7 @@ class Message(object):
     def get_message_text(self):
         '''
         Used to safely access self.message_text outside of the class
-        
+
         Returns: self.message_text
         '''
         return self.message_text
@@ -98,7 +98,6 @@ class Message(object):
         Returns: a COPY of self.valid_words
         '''
         return self.valid_words[:]
-        
     def build_shift_dict(self, shift):
         '''
         Creates a dictionary that can be used to apply a cipher to a letter.
@@ -125,7 +124,7 @@ class Message(object):
         #     #n = n-1
 
         #print(lower, upper)
-        shift_dict ={}
+        shift_dict = {}
         for i in range(0, (len(lower)-shift)):
             shift_dict[lower[i]] = lower[i+shift]
 
@@ -139,7 +138,7 @@ class Message(object):
         '''
         Applies the Caesar Cipher to self.message_text with the input shift.
         Creates a new string that is self.message_text shifted down the
-        alphabet by some number of characters determined by the input shift        
+        alphabet by some number of characters determined by the input shift
         
         shift (integer): the shift with which to encrypt the message.
         0 <= shift < 26
