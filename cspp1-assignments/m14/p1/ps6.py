@@ -114,15 +114,7 @@ class Message(object):
         Returns: the message text (string) in which every character is shifted
              down the alphabet by the input shift
         '''
-        #delete this line and replace with your code here
-        alphabet_seq = string.ascii_lowercase
-        cipher_string = list(self.message_text)
-        for i in range(len(cipher_string)):
-            cipher_string[i] = alphabet_seq[i+shift]
-
-        cipher_string = str(cipher_string)
-        cipher_string.replace(',','')
-        return cipher_string
+        pass #delete this line and replace with your code here
 
 class PlaintextMessage(Message):
     def __init__(self, text, shift):
