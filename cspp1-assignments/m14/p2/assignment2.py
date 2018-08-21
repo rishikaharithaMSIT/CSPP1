@@ -139,13 +139,13 @@ def main():
     inp = input()
     data = Message(inp)
     shift = int(input())
+    print(shift)
     print(data.build_shift_dict(shift))
     print(data.apply_shift(shift))
-    print(data.get_message_text_encrypted())
-    data.change_shift(int(input()))
-    print(data.get_shift())
-    print(data.get_encrypting_dict())
-    print(data.get_message_text_encrypted())
+    shift = int(input())
+    print(shift)
+    print(data.build_shift_dict(shift))
+    print(data.apply_shift(shift))
 
 if __name__ == "__main__":
     main()
