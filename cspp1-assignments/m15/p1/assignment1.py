@@ -261,9 +261,7 @@ class CiphertextMessage(Message):
                 self.encrypting_dict = message.build_shift_dict(shift)
                 self.message_text_encrypted = message.apply_shift(shift)
                 self.message_text_encrypted = ''.join(
-                                                      e for e in 
-                                                      self.message_text_encrypted
-                                                      if e.isalpha())
+                                                      e for e in self.message_text_encrypted if e.isalpha())
                 self.message_text_encrypted = self.message_text_encrypted.lower()
                 #print("message text ",self.message_text_encrypted)
                 if self.message_text_encrypted in self.valid_words:
