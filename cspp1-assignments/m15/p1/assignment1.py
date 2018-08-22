@@ -259,10 +259,10 @@ class CiphertextMessage(Message):
                 self.encrypting_dict = message.build_shift_dict(shift)
                 self.message_text_encrypted = message.apply_shift(shift)
                 if self.message_text_encrypted in self.valid_words:
-                    count += 1
+                    cnt += 1
 
-            if count > max_cnt:
-                max_cnt = count
+            if cnt > max_cnt:
+                max_cnt = cnt
                 max_shift = shift
         print(max_shift, max_cnt)
 
