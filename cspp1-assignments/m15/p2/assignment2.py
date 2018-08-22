@@ -214,8 +214,6 @@ class PlaintextMessage(Message):
         self.encrypting_dict = message.build_shift_dict(shift)
         self.message_text_encrypted = message.apply_shift(shift)
 
-# Helper code ends
-
 class CiphertextMessage(Message):
     ''' CiphertextMessage class '''
     def __init__(self, text):
@@ -229,8 +227,8 @@ class CiphertextMessage(Message):
             self.valid_words (list, determined using helper function load_words)
         '''
         self.message_text = text
-        self.valid_words = load_words("words.txt")
-
+        self.valid_words = load_words("words.txt")[:]
+        self.max_valid_words = 0
 
     def decrypt_message(self):
         '''
@@ -248,40 +246,31 @@ class CiphertextMessage(Message):
         Returns: a tuple of the best shift value used to decrypt the message
         and the decrypted message text using that shift value
         '''
-        max_cnt = 0
-        max_shift = 0
         for shift in range(27):
-            cnt = 0
-            #print("Shift", shift)
-            words = self.message_text.split()
-            #print("words " ,words)
-            for each_word in words:
-                message = Message(each_word)
-                self.encrypting_dict = message.build_shift_dict(shift)
-                self.message_text_encrypted = message.apply_shift(shift)
-                self.message_text_encrypted = ''.join(
-                    e for e in self.message_text_encrypted if e.isalpha())
-                self.message_text_encrypted = self.message_text_encrypted.lower()
-                #print("message text ",self.message_text_encrypted)
-                if self.message_text_encrypted in self.valid_words:
-                    cnt += 1
-                    #print("cnt ",cnt)
-            if cnt > max_cnt:
-                max_cnt = cnt
-                max_shift = shift
-        message = Message(self.message_text)
-        self.encrypting_dict = message.build_shift_dict(max_shift)
-        self.message_text_encrypted = message.apply_shift(max_shift)
-        return (26-max_shift, self.message_text_encrypted)
+            message = PlaintextMessage(self.message_text, shift)
+            decrypted = message.get_message_text_encrypted()
+            valid_words_count = 0
+            for word in decrypted.split(' '):
+                if is_word(self.valid_words, word):
+                    valid_words_count += 1
+            if self.max_valid_words < valid_words_count:
+                self.max_valid_words = valid_words_count
+                self.decrypted_message = (26-shift, decrypted)
+        return self.decrypted_message
 
+# Helper code ends
 
-
-
+def decrypt_story():
+    ''' Decrypt the story text using CiphertextMessage class and return the
+        shift value and decrypted string in a tuple.
+    '''
+    #delete this line when you write your code.
+    cipher = CiphertextMessage(get_story_string())
+    return cipher.decrypt_message()
 ### DO NOT MODIFY THIS METHOD ###
 def main():
     ''' This method is provided to handle testcases'''
-    ciphertext = CiphertextMessage(input())
-    print(ciphertext.decrypt_message())
+    print(decrypt_story())
 
 if __name__ == '__main__':
     main()
