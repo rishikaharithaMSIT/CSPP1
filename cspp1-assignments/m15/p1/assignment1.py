@@ -253,19 +253,19 @@ class CiphertextMessage(Message):
         max_shift = 0
         for shift in range(27):
             cnt = 0
-            print("Shift", shift)
+            #print("Shift", shift)
             words = self.message_text.split()
-            print("words " ,words)
+            #print("words " ,words)
             for each_word in words:
                 message = Message(each_word)
                 self.encrypting_dict = message.build_shift_dict(shift)
                 self.message_text_encrypted = message.apply_shift(shift)
                 self.message_text_encrypted = ''.join(e for e in self.message_text_encrypted if e.isalpha())
                 self.message_text_encrypted = self.message_text_encrypted.lower()
-                print("message text ",self.message_text_encrypted)
+                #print("message text ",self.message_text_encrypted)
                 if self.message_text_encrypted in self.valid_words:
                     cnt += 1
-                    print("cnt ",cnt)
+                    #print("cnt ",cnt)
 
             if cnt > max_cnt:
                 max_cnt = cnt
@@ -273,7 +273,7 @@ class CiphertextMessage(Message):
         message = Message(self.message_text)
         self.encrypting_dict = message.build_shift_dict(max_shift)
         self.message_text_encrypted = message.apply_shift(max_shift)
-        print(self.message_text_encrypted)
+        return (max_shift, self.message_text_encrypted)
 
 
 
