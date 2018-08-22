@@ -43,7 +43,7 @@ def is_word(word_list, word):
     False
     '''
     word = word.lower()
-    word = word.strip(" !@#$%^&*()-_+={}[]|\:;'<>?,./\"")
+    word = word.strip(" !@#$%^&*()-_+={}[]|:;'<>?,./\"")
     return word in word_list
 
 ### DO NOT MODIFY THIS FUNCTION ###
@@ -71,6 +71,7 @@ class Message():
             self.message_text (string, determined by input text)
             self.valid_words (list, determined using helper function load_words
         '''
+        self.shift_dict = {}
         self.message_text = text
         self.valid_words = load_words("words.txt")
 
