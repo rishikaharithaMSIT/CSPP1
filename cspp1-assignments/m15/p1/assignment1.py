@@ -270,7 +270,10 @@ class CiphertextMessage(Message):
             if cnt > max_cnt:
                 max_cnt = cnt
                 max_shift = shift
-        print(max_shift, max_cnt)
+        message = Message(self.message_text)
+        self.encrypting_dict = message.build_shift_dict(max_shift)
+        self.message_text_encrypted = message.apply_shift(max_shift)
+        print(self.message_text_encrypted)
 
 
 
