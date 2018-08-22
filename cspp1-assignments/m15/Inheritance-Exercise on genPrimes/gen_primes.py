@@ -14,3 +14,4 @@ def main():
 if __name__== "__main__":
     gen = main()
     print(next(gen))
+    print(next(gen))
