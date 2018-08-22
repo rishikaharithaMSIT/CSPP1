@@ -234,6 +234,7 @@ class CiphertextMessage(Message):
         self.message_text = text
         self.valid_words = load_words("words.txt")
         self.encrypting_dict = {}
+        self.message_text_encrypted = ""
 
 
     def decrypt_message(self):
