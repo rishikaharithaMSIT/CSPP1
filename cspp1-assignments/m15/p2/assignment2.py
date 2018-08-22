@@ -43,7 +43,7 @@ def is_word(word_list, word):
     False
     '''
     word = word.lower()
-    word = word.strip(" !@#$%^&*()-_+={}[]|\:;'<>?,./\"")
+    word = word.strip(" !@#$%^&*()-_+={}[]|:;'<>?,./\"")
     return word in word_list
 
 ### DO NOT MODIFY THIS FUNCTION ###
@@ -228,7 +228,7 @@ class CiphertextMessage(Message):
             self.message_text (string, determined by input text)
             self.valid_words (list, determined using helper function load_words)
         '''
-        super(CiphertextMessage, self).__init__(text)
+        super(CiphertextMessage, self).__init(text)
         self.message_text = text
         self.valid_words = load_words("words.txt")[:]
         self.max_valid_words = 0
