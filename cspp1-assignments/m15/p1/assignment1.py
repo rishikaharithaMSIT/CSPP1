@@ -253,13 +253,17 @@ class CiphertextMessage(Message):
         max_shift = 0
         for shift in range(27):
             cnt = 0
+            print("Shift", shift)
             words = self.message_text.split()
+            print("words " ,words)
             for each_word in words:
                 message = Message(each_word)
                 self.encrypting_dict = message.build_shift_dict(shift)
                 self.message_text_encrypted = message.apply_shift(shift)
+                print("message text ",self.message_text_encrypted)
                 if self.message_text_encrypted in self.valid_words:
                     cnt += 1
+                    print("cnt ",cnt)
 
             if cnt > max_cnt:
                 max_cnt = cnt
