@@ -273,7 +273,7 @@ class CiphertextMessage(Message):
         message = Message(self.message_text)
         self.encrypting_dict = message.build_shift_dict(max_shift)
         self.message_text_encrypted = message.apply_shift(max_shift)
-        return (max_shift, self.message_text_encrypted)
+        return (26-max_shift, self.message_text_encrypted)
 
 
 
