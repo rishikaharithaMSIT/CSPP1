@@ -41,7 +41,8 @@ def main():
     matrix1 = []
     for i in range(int(matrix1_D[0])):
         in_1 = input().split()
-        print(in_1)
+        in_1 = list(map(int, in_1))
+
 
     matrix2_D = input().split(",")
     matrix2 = []
