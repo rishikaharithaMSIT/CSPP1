@@ -38,6 +38,7 @@ def main():
     # multiply matrix 1 and matrix 2
     matrix1_D = input().split(",")
     matrix1_D = list(map(int, matrix1_D))
+    print(matrix1_D)
     matrix1 = []
     for i in range(int(matrix1_D[0])):
         matrix1.append(input().split())
