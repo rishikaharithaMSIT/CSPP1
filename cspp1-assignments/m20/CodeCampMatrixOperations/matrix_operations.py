@@ -7,10 +7,7 @@ def mult_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    len_row = len(matrix1[0])
-    for i in matrix1:
-        if len(i) != len_row:
-            return "Error: Invalid input for the matrix"
+    
     if matrix1_D[0] != matrix2_D[1] or matrix1_D[1] != matrix2_D[0]:
         print("Error: Matrix shapes invalid for mult")
         return None
@@ -37,18 +34,7 @@ def add_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    len_row = len(matrix1[0])
-    print(len_row)
-    for i in matrix1:
-        #print(i, "i")
-        if len(i) != len_row:
-            return "Error: Invalid input for the matrix"
-    len_row = len(matrix2[0])
-    #print(len_row)
-    for i in matrix2:
-        print(i, "i")
-        if len(i) != len_row:
-            return "Error: Invalid input for the matrix"
+    
     if matrix1_D != matrix2_D:
         print("Error: Matrix shapes invalid for addition")
         return None
@@ -90,9 +76,10 @@ def main():
         in_2 = input().split()
         in_2 = list(map(int, in_2))
         matrix2.append(in_2)
+
     error_msg = ""
     len_row = len(matrix1[0])
-    print(len_row)
+    #print(len_row)
     for i in matrix1:
         #print(i, "i")
         if len(i) != len_row:
