@@ -1,5 +1,4 @@
 from operator import add
-
 def mult_matrix(matrix1_dimension, matrix_1, matrix2_dimension, matrix_2):
     '''
         check if the matrix1 columns = matrix2 rows
@@ -8,7 +7,6 @@ def mult_matrix(matrix1_dimension, matrix_1, matrix2_dimension, matrix_2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-
     if matrix1_dimension[0] != matrix2_dimension[1] or matrix1_dimension[1] != matrix2_dimension[0]:
         print("Error: Matrix shapes invalid for mult")
         return None
@@ -39,7 +37,7 @@ def add_matrix(matrix1_dimension, matrix_1, matrix2_dimension, matrix_2):
         return None
     sum_matrix = []
     for i in range(matrix1_dimension[0]):
-        row_list = list( map(add, matrix_1[i], matrix_2[i]))
+        row_list = list(map(add, matrix_1[i], matrix_2[i]))
         sum_matrix.append(row_list)
     return sum_matrix
 def read_matrix():
