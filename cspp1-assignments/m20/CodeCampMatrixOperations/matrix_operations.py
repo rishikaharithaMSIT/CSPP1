@@ -41,13 +41,13 @@ def main():
     matrix1 = []
     for i in range(int(matrix1_D[0])):
         matrix1.append(input().split())
-        matrix1 = list(map(int, matrix1))
+        matrix1 = list(map(int, matrix1[i]))
 
     matrix2_D = input().split(",")
     matrix2 = []
     for i in range(int(matrix2_D[0])):
         matrix2.append(input().split())
-        matrix2 = list(map(int, matrix2))
+        matrix2 = list(map(int, matrix2[i]))
 
     if matrix1_D is not matrix2_D:
     	print("can't add")    
