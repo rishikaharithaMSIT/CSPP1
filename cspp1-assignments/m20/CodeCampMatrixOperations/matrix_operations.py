@@ -1,5 +1,5 @@
 from operator import add
-def mult_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
+def mult_matrix(matrix1_dimension, matrix_1, matrix2_dimension,matrix_2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -8,25 +8,25 @@ def mult_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
         error message should be "Error: Matrix shapes invalid for mult"
     '''
     
-    if matrix1_D[0] != matrix2_D[1] or matrix1_D[1] != matrix2_D[0]:
+    if matrix1_dimension[0] != matrix2_dimension[1] or matrix1_dimension[1] != matrix2_dimension[0]:
         print("Error: Matrix shapes invalid for mult")
         return None
     multi_matrix =[]
-    for i in range(matrix1_D[0]):
-        row = []               
-        for j in range(matrix1_D[0]):
+    for i in range(matrix1_dimension[0]):
+        row_list = []               
+        for j in range(matrix1_dimension[0]):
             h = 0
             
-            for k in range(matrix1_D[1]):
-                h += matrix1[i][k]*matrix2[k][j]
+            for k in range(matrix1_dimension[1]):
+                ele_ment += matrix_1[i][k]*matrix_2[k][j]
                # print(matrix1[i][k], " ",matrix2[k][j])
             #print(h)
-            row.append(h)
+            row_list.append(ele_ment)
             #print(row)
-        multi_matrix.append(row)
+        multi_matrix.append(row_list)
     return multi_matrix
         
-def add_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
+def add_matrix(matrix1_dimension, matrix_1, matrix2_dimension,matrix_2):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -35,13 +35,13 @@ def add_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     
-    if matrix1_D != matrix2_D:
+    if matrix1_dimension != matrix2_dimension:
         print("Error: Matrix shapes invalid for addition")
         return None
     sum_matrix = []
-    for i in range(matrix1_D[0]):
-        row = list( map(add, matrix1[i], matrix2[i]))        
-        sum_matrix.append(row)
+    for i in range(matrix1_dimension[0]):
+        row_list = list( map(add, matrix_1[i], matrix_2[i]))        
+        sum_matrix.append(row_list)
     return sum_matrix
 def read_matrix():
     '''
