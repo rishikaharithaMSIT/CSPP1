@@ -36,7 +36,7 @@ def main():
     # add matrix 1 and mqtrix 2
 
     # multiply matrix 1 and matrix 2
-    matrix1_D = (int(x) for x in input().split())
+    matrix1_D = list((int(x) for x in input().split()))
     print(matrix1_D,"mart")
     matrix1 = []
     for i in matrix1_D[0]:
