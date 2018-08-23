@@ -38,7 +38,9 @@ def add_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     len_row = len(matrix1[0])
+    print(len_row)
     for i in matrix1:
+        print(i, "i")
         if len(i) != len_row:
             return "Error: Invalid input for the matrix"
     if matrix1_D != matrix2_D:
