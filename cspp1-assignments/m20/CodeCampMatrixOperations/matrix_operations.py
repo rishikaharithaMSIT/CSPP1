@@ -1,3 +1,4 @@
+from operator import add
 def mult_matrix(m1, m2):
     '''
         check if the matrix1 columns = matrix2 rows
@@ -20,11 +21,8 @@ def add_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
         return None
     sum_matrix = []
     for i in range(matrix1_D[0]):
-        row = []
-        k = 0
-        for j in range(matrix1_D[1]):
-            k = matrix1[i] + matrix2[j]
-            row.append(k)
+        row = list( map(add, list1, list2) )
+        
         sum_matrix.append(row)
     print(sum_matrix)
 def read_matrix():
