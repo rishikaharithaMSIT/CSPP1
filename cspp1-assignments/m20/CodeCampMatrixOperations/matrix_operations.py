@@ -15,7 +15,7 @@ def mult_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
         k = 0
         for j in range(matrix2_D[1]):
             for k in range(matrix2_D[i]):
-                k += matrix1[i][j][k]*matrix2[j][i][k]
+                k += matrix1[i][j]*matrix2[j][i]
         row.append(row)
         print(row)
 def add_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
