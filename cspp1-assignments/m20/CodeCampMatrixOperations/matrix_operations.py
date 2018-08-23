@@ -15,7 +15,7 @@ def mult_matrix(matrix1_dimension, matrix_1, matrix2_dimension,matrix_2):
     for i in range(matrix1_dimension[0]):
         row_list = []               
         for j in range(matrix1_dimension[0]):
-            h = 0
+            ele_ment = 0
             
             for k in range(matrix1_dimension[1]):
                 ele_ment += matrix_1[i][k]*matrix_2[k][j]
