@@ -43,6 +43,12 @@ def add_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
         print(i, "i")
         if len(i) != len_row:
             return "Error: Invalid input for the matrix"
+    len_row = len(matrix2[0])
+    print(len_row)
+    for i in matrix2:
+        print(i, "i")
+        if len(i) != len_row:
+            return "Error: Invalid input for the matrix"
     if matrix1_D != matrix2_D:
         print("Error: Matrix shapes invalid for addition")
         return None
