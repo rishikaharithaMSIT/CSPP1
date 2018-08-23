@@ -11,14 +11,16 @@ def mult_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
         return None
     multi_matrix =[]
     for i in range(matrix1_D[0]):
-        row = []
-        
+                
         for j in range(matrix1_D[1]):
             h = 0
+            row = []
             for k in range(matrix1_D[1]):
                 h += matrix1[i][k]*matrix2[k][j]
                 print(matrix1[i][k], " ",matrix2[k][j])
-            print(h)
+            row.append(row)
+        multi_matrix.append(row)
+    print(multi_matrix)
         
 def add_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
     '''
