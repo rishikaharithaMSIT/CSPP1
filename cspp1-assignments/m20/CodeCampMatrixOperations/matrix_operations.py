@@ -61,38 +61,38 @@ def main():
     # add matrix 1 and mqtrix 2
 
     # multiply matrix 1 and matrix 2
-    matrix1_D = input().split(",")
-    matrix1_D = list(map(int, matrix1_D))
-    matrix1 = []
-    for i in range(int(matrix1_D[0])):
+    matrix1_dimension = input().split(",")
+    matrix1_dimension = list(map(int, matrix1_dimension))
+    matrix_1 = []
+    for i in range(int(matrix1_dimension[0])):
         in_1 = input().split()
         in_1 = list(map(int, in_1))
-        matrix1.append(in_1)
+        matrix_1.append(in_1)
 
-    matrix2_D = input().split(",")
-    matrix2_D = list(map(int, matrix2_D))
-    matrix2 = []
-    for i in range(int(matrix2_D[0])):
+    matrix2_dimension = input().split(",")
+    matrix2_dimension = list(map(int, matrix2_D))
+    matrix_2 = []
+    for i in range(int(matrix2_dimension[0])):
         in_2 = input().split()
         in_2 = list(map(int, in_2))
-        matrix2.append(in_2)
+        matrix_2.append(in_2)
 
     error_msg = ""
-    len_row = len(matrix1[0])
+    len_row = len(matrix_1[0])
     #print(len_row)
-    for i in matrix1:
+    for i in matrix_1:
         #print(i, "i")
         if len(i) != len_row:
             error_msg= "Error: Invalid input for the matrix"
-    len_row = len(matrix2[0])
+    len_row = len(matrix_2[0])
     #print(len_row)
-    for i in matrix2:
+    for i in matrix_2:
         #print(i, "i")
         if len(i) != len_row:
             error_msg = "Error: Invalid input for the matrix"
     if error_msg == "":
-        print(add_matrix(matrix1_D, matrix1, matrix2_D,matrix2))
-        print(mult_matrix(matrix1_D, matrix1, matrix2_D,matrix2))
+        print(add_matrix(matrix1_dimension, matrix_1, matrix2_dimension,matrix_2))
+        print(mult_matrix(matrix1_dimension, matrix_1, matrix2_dimension,matrix_2))
     else:
         print(error_msg)
 
