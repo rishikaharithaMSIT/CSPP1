@@ -70,7 +70,7 @@ def main():
         matrix_1.append(in_1)
 
     matrix2_dimension = input().split(",")
-    matrix2_dimension = list(map(int, matrix2_D))
+    matrix2_dimension = list(map(int, matrix2_dimension))
     matrix_2 = []
     for i in range(int(matrix2_dimension[0])):
         in_2 = input().split()
