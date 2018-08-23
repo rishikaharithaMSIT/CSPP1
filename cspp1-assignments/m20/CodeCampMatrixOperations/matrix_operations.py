@@ -19,10 +19,10 @@ def add_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
     if matrix1_D != matrix2_D:
         return None
     sum_matrix = []
-    for i in range(matrix1_D):
+    for i in range(matrix1_D[0]):
         row = []
         k = 0
-        for j in range(matrix2_D):
+        for j in range(matrix1_D[1]):
             k = matrix1[i] + matrix2[j]
             row.append(k)
         sum_matrix.append(row)
