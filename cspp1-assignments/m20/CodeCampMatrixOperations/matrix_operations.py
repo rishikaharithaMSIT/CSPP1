@@ -9,7 +9,7 @@ def mult_matrix(m1, m2):
     '''
     pass
 
-def add_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
+def add_matrix(matrix1_D, matrix1, matrix2_D,matrix1):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -21,7 +21,7 @@ def add_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
         return None
     sum_matrix = []
     for i in range(matrix1_D[0]):
-        row = list( map(add, list1, list2) )
+        row = list( map(add, matrix1, matrix1) )
         
         sum_matrix.append(row)
     print(sum_matrix)
