@@ -14,9 +14,9 @@ def mult_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
         row = []
         k = 0
         for j in range(matrix1_D[1]):
-            k += matrix1[i][j]*matrix2[j][i]
-        row.append(k)
-        print(row)
+            print(matrix1[i][j])
+            print(matrix2[j][i])
+        
 def add_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
     '''
         check if the matrix shapes are similar
