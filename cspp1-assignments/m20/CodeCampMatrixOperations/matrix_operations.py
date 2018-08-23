@@ -75,10 +75,12 @@ def main():
         in_2 = input().split()
         in_2 = list(map(int, in_2))
         matrix_2.append(in_2)
-        
+
     try:
-        print(add_matrix(matrix1_dimension, matrix_1, matrix2_dimension, matrix_2))
-        print(mult_matrix(matrix1_dimension, matrix_1, matrix2_dimension, matrix_2))
+        add = add_matrix(matrix1_dimension, matrix_1, matrix2_dimension, matrix_2)
+        multi = mult_matrix(matrix1_dimension, matrix_1, matrix2_dimension, matrix_2)
+        print(add)
+        print(multi)
     except:
         print("Error: Invalid input for the matrix")
 if __name__ == '__main__':
