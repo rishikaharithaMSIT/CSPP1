@@ -79,11 +79,7 @@ def main():
     
     
 
-    add = add_matrix(matrix1_D, matrix1, matrix2_D,matrix2)
-    mult = mult_matrix(matrix1_D, matrix1, matrix2_D,matrix2)
-    if add != None:
-        print(add)
-    if mult != None:
-        print(mult)
+    print(add_matrix(matrix1_D, matrix1, matrix2_D,matrix2))
+    print(mult_matrix(matrix1_D, matrix1, matrix2_D,matrix2))
 if __name__ == '__main__':
     main()
