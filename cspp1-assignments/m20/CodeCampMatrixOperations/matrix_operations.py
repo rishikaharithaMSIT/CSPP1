@@ -8,6 +8,7 @@ def mult_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
         error message should be "Error: Matrix shapes invalid for mult"
     '''
     if matrix1_D[0] != matrix2_D[1] or matrix1_D[1] != matrix2_D[0]:
+        print("Error: Matrix shapes invalid for mult")
         return None
     multi_matrix =[]
     for i in range(matrix1_D[0]):
@@ -33,6 +34,7 @@ def add_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     if matrix1_D != matrix2_D:
+        print("Error: Matrix shapes invalid for addition")
         return None
     sum_matrix = []
     for i in range(matrix1_D[0]):
