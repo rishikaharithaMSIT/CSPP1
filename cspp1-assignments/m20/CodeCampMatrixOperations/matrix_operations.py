@@ -36,7 +36,7 @@ def main():
     # add matrix 1 and matrix 2
 
     # multiply matrix 1 and matrix 2
-    matrix1_D = input().split(",")
+    matrix1_D = int(input()).split(",")
     print(matrix1_D,"mart")
     matrix1 = []
     for i in matrix1_D[0]:
