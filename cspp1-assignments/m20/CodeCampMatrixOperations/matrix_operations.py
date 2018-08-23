@@ -1,5 +1,5 @@
 from operator import add
-def mult_matrix(matrix1_dimension, matrix_1, matrix2_dimension,matrix_2):
+def mult_matrix(matrix1_dimension, matrix_1, matrix2_dimension, matrix_2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -15,8 +15,7 @@ def mult_matrix(matrix1_dimension, matrix_1, matrix2_dimension,matrix_2):
     for i in range(matrix1_dimension[0]):
         row_list = []               
         for j in range(matrix1_dimension[0]):
-            ele_ment = 0
-            
+            ele_ment = 0            
             for k in range(matrix1_dimension[1]):
                 ele_ment += matrix_1[i][k]*matrix_2[k][j]
                # print(matrix1[i][k], " ",matrix2[k][j])
@@ -26,7 +25,7 @@ def mult_matrix(matrix1_dimension, matrix_1, matrix2_dimension,matrix_2):
         multi_matrix.append(row_list)
     return multi_matrix
         
-def add_matrix(matrix1_dimension, matrix_1, matrix2_dimension,matrix_2):
+def add_matrix(matrix1_dimension, matrix_1, matrix2_dimension, matrix_2):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -76,28 +75,11 @@ def main():
         in_2 = input().split()
         in_2 = list(map(int, in_2))
         matrix_2.append(in_2)
-
-    error_msg = ""
-    len_row = len(matrix_1[0])
-    #print(len_row)
-    for i in matrix_1:
-        #print(i, "i")
-        if len(i) != len_row:
-            error_msg= "Error: Invalid input for the matrix"
-    len_row = len(matrix_2[0])
-    #print(len_row)
-    for i in matrix_2:
-        #print(i, "i")
-        if len(i) != len_row:
-            error_msg = "Error: Invalid input for the matrix"
-    if error_msg == "":
-        print(add_matrix(matrix1_dimension, matrix_1, matrix2_dimension,matrix_2))
-        print(mult_matrix(matrix1_dimension, matrix_1, matrix2_dimension,matrix_2))
-    else:
-        print(error_msg)
-
-    
-
-    
+        
+    try:
+        print(add_matrix(matrix1_dimension, matrix_1, matrix2_dimension, matrix_2))
+        print(mult_matrix(matrix1_dimension, matrix_1, matrix2_dimension, matrix_2))
+    except:
+        print("Error: Invalid input for the matrix")
 if __name__ == '__main__':
     main()
