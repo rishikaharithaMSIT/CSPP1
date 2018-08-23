@@ -1,4 +1,5 @@
 from operator import add
+
 def mult_matrix(matrix1_dimension, matrix_1, matrix2_dimension, matrix_2):
     '''
         check if the matrix1 columns = matrix2 rows
@@ -38,7 +39,7 @@ def add_matrix(matrix1_dimension, matrix_1, matrix2_dimension, matrix_2):
         return None
     sum_matrix = []
     for i in range(matrix1_dimension[0]):
-        row_list = list( map(add, matrix_1[i], matrix_2[i]))        
+        row_list = list( map(add, matrix_1[i], matrix_2[i]))
         sum_matrix.append(row_list)
     return sum_matrix
 def read_matrix():
@@ -88,10 +89,12 @@ def main():
         #print(i, "i")
         if len(i) != len_row:
             error_msg = "Error: Invalid input for the matrix"
-    try:
+    if error_msg == "":
         print(add_matrix(matrix1_dimension, matrix_1, matrix2_dimension, matrix_2))
         print(mult_matrix(matrix1_dimension, matrix_1, matrix2_dimension, matrix_2))
-    except:
+    else:
         print(error_msg)
+
+
 if __name__ == '__main__':
     main()
