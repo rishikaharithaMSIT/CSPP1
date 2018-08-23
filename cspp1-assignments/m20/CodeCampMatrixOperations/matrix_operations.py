@@ -10,10 +10,11 @@ def mult_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
     if matrix1_D[0] != matrix2_D[1] or matrix1_D[1] != matrix2_D[0]:
         return None
     multi_matrix =[]
-    for i in range(matrix1_D[1]):                
+    for i in range(matrix1_D[1]):
+        row = []               
         for j in range(matrix1_D[1]):
             h = 0
-            row = []
+            
             for k in range(matrix1_D[1]):
                 h += matrix1[i][k]*matrix2[k][j]
                 print(matrix1[i][k], " ",matrix2[k][j])
