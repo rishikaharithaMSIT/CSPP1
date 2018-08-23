@@ -1,3 +1,4 @@
+'''matrix operations'''
 from operator import add
 def mult_matrix(matrix1_dimension, matrix_1, matrix2_dimension, matrix_2):
     '''
