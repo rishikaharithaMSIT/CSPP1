@@ -1,5 +1,5 @@
 from operator import add
-def mult_matrix(m1, m2):
+def mult_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -7,8 +7,16 @@ def mult_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    pass
-
+    if matrix1_D[0] != matrix2_D[1] or matrix1_D[1] != matrix2_D[0]:
+        return None
+    multi_matrix =[]
+    for i in range(matrix1_D[0]):
+        row = []
+        k = 0
+        for j in range(matrix2_D[1]):
+            k += matrix1[i]*matrix2[j]
+        row.append(row)
+        print(row)
 def add_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
     '''
         check if the matrix shapes are similar
@@ -21,10 +29,9 @@ def add_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
         return None
     sum_matrix = []
     for i in range(matrix1_D[0]):
-        row = list( map(add, matrix1[i], matrix2[i]) )
-        
+        row = list( map(add, matrix1[i], matrix2[i]))        
         sum_matrix.append(row)
-    print(sum_matrix)
+    return sum_matrix
 def read_matrix():
     '''
         read the matrix dimensions from input
@@ -61,9 +68,9 @@ def main():
 
 
     
-    if matrix1_D[0] != matrix2_D[1] or matrix1_D[1] != matrix2_D[0]:
-        print("can't multiply")
+    
 
     print(add_matrix(matrix1_D, matrix1, matrix2_D,matrix2))
+    print(mult_matrix(matrix1_D, matrix1, matrix2_D,matrix2))
 if __name__ == '__main__':
     main()
