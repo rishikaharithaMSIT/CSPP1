@@ -23,7 +23,7 @@ def mult_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
             row.append(h)
             #print(row)
         multi_matrix.append(row)
-    return multi_matrixs
+    return multi_matrix
         
 def add_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
     '''
