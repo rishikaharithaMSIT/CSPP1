@@ -53,7 +53,7 @@ def main():
         matrix2.append(in_2)
 
 
-    if matrix1_D is not matrix2_D:
+    if matrix1_D != matrix2_D:
     	print("can't add")    
 if __name__ == '__main__':
     main()
