@@ -38,18 +38,18 @@ def main():
     # multiply matrix 1 and matrix 2
     matrix1_D = input().split(",")
     matrix1_D = list(map(int, matrix1_D))
-    print(matrix1_D)
     matrix1 = []
     for i in range(int(matrix1_D[0])):
         matrix1.append(input().split())
+        matrix1 = list(map(int, matrix1))
 
     matrix2_D = input().split(",")
     matrix2 = []
     for i in range(int(matrix2_D[0])):
-        matrix1.append(input().split())
+        matrix2.append(input().split())
+        matrix2 = list(map(int, matrix2))
 
-
-
-    
+    if matrix1_D is not matrix2_D:
+    	print("can't add")    
 if __name__ == '__main__':
     main()
