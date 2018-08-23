@@ -54,6 +54,8 @@ def main():
 
 
     if matrix1_D != matrix2_D:
-    	print("can't add")    
+    	print("can't add")
+    if matrix1_D[0] != matrix2_D[1] or matrix1_D[1] != matrix2_D[0]:
+    	print("can't multiply")   
 if __name__ == '__main__':
     main()
