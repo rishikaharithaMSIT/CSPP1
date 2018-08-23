@@ -19,6 +19,7 @@ def mult_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
                 print(matrix1[i][k], " ",matrix2[k][j])
             print(h)
             row.append(h)
+            print(row)
         multi_matrix.append(row)
     print(multi_matrix)
         
