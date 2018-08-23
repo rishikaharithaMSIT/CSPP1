@@ -7,7 +7,7 @@ def mult_matrix(matrix1_dimension, matrix_1, matrix2_dimension, matrix_2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    
+
     if matrix1_dimension[0] != matrix2_dimension[1] or matrix1_dimension[1] != matrix2_dimension[0]:
         print("Error: Matrix shapes invalid for mult")
         return None
@@ -24,7 +24,7 @@ def mult_matrix(matrix1_dimension, matrix_1, matrix2_dimension, matrix_2):
             #print(row)
         multi_matrix.append(row_list)
     return multi_matrix
-        
+
 def add_matrix(matrix1_dimension, matrix_1, matrix2_dimension, matrix_2):
     '''
         check if the matrix shapes are similar
@@ -33,7 +33,6 @@ def add_matrix(matrix1_dimension, matrix_1, matrix2_dimension, matrix_2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    
     if matrix1_dimension != matrix2_dimension:
         print("Error: Matrix shapes invalid for addition")
         return None
@@ -76,12 +75,23 @@ def main():
         in_2 = list(map(int, in_2))
         matrix_2.append(in_2)
 
+    error_msg = ""
+    len_row = len(matrix_1[0])
+    #print(len_row)
+    for i in matrix_1:
+        #print(i, "i")
+        if len(i) != len_row:
+            error_msg= "Error: Invalid input for the matrix"
+    len_row = len(matrix_2[0])
+    #print(len_row)
+    for i in matrix_2:
+        #print(i, "i")
+        if len(i) != len_row:
+            error_msg = "Error: Invalid input for the matrix"
     try:
-        add = add_matrix(matrix1_dimension, matrix_1, matrix2_dimension, matrix_2)
-        multi = mult_matrix(matrix1_dimension, matrix_1, matrix2_dimension, matrix_2)
-        print(add)
-        print(multi)
+        print(add_matrix(matrix1_dimension, matrix_1, matrix2_dimension, matrix_2))
+        print(mult_matrix(matrix1_dimension, matrix_1, matrix2_dimension, matrix_2))
     except:
-        print("Error: Invalid input for the matrix")
+        print(error_msg)
 if __name__ == '__main__':
     main()
