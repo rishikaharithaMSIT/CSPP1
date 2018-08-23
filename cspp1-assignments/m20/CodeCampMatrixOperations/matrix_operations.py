@@ -40,11 +40,11 @@ def add_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
     len_row = len(matrix1[0])
     print(len_row)
     for i in matrix1:
-        print(i, "i")
+        #print(i, "i")
         if len(i) != len_row:
             return "Error: Invalid input for the matrix"
     len_row = len(matrix2[0])
-    print(len_row)
+    #print(len_row)
     for i in matrix2:
         print(i, "i")
         if len(i) != len_row:
@@ -90,12 +90,27 @@ def main():
         in_2 = input().split()
         in_2 = list(map(int, in_2))
         matrix2.append(in_2)
-
+    error_msg = ""
+    len_row = len(matrix1[0])
+    print(len_row)
+    for i in matrix1:
+        #print(i, "i")
+        if len(i) != len_row:
+            error_msg= "Error: Invalid input for the matrix"
+    len_row = len(matrix2[0])
+    #print(len_row)
+    for i in matrix2:
+        #print(i, "i")
+        if len(i) != len_row:
+            error_msg = "Error: Invalid input for the matrix"
+    if error_msg == "":
+        print(add_matrix(matrix1_D, matrix1, matrix2_D,matrix2))
+        print(mult_matrix(matrix1_D, matrix1, matrix2_D,matrix2))
+    else:
+        print(error_msg)
 
     
-    
 
-    print(add_matrix(matrix1_D, matrix1, matrix2_D,matrix2))
-    print(mult_matrix(matrix1_D, matrix1, matrix2_D,matrix2))
+    
 if __name__ == '__main__':
     main()
