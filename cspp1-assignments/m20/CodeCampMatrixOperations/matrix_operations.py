@@ -37,12 +37,11 @@ def main():
 
     # multiply matrix 1 and matrix 2
     matrix1_D = input().split(",")
-    for i in matrix1_D:
-    	i = int(i)
+    
 
     print(matrix1_D,"mart")
     matrix1 = []
-    for i in matrix1_D[0]:
+    for i in int(matrix1_D[0]):
         matrix1.append(input().split())
     print(matrix1)
 if __name__ == '__main__':
