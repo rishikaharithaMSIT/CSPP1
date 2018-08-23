@@ -12,11 +12,11 @@ def mult_matrix(matrix1_dimension, matrix_1, matrix2_dimension, matrix_2):
     if matrix1_dimension[0] != matrix2_dimension[1] or matrix1_dimension[1] != matrix2_dimension[0]:
         print("Error: Matrix shapes invalid for mult")
         return None
-    multi_matrix =[]
+    multi_matrix = []
     for i in range(matrix1_dimension[0]):
-        row_list = []               
+        row_list = []
         for j in range(matrix1_dimension[0]):
-            ele_ment = 0            
+            ele_ment = 0
             for k in range(matrix1_dimension[1]):
                 ele_ment += matrix_1[i][k]*matrix_2[k][j]
                # print(matrix1[i][k], " ",matrix2[k][j])
@@ -53,6 +53,7 @@ def read_matrix():
     pass
 
 def main():
+    '''in main'''
     # read matrix 1
 
     # read matrix 2
@@ -82,7 +83,7 @@ def main():
     for i in matrix_1:
         #print(i, "i")
         if len(i) != len_row:
-            error_msg= "Error: Invalid input for the matrix"
+            error_msg = "Error: Invalid input for the matrix"
     len_row = len(matrix_2[0])
     #print(len_row)
     for i in matrix_2:
