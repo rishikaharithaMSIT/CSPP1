@@ -41,7 +41,7 @@ def main():
 
     print(matrix1_D,"mart")
     matrix1 = []
-    for i in int(matrix1_D[0]):
+    for i in range(int(matrix1_D[0])):
         matrix1.append(input().split())
     print(matrix1)
 if __name__ == '__main__':
