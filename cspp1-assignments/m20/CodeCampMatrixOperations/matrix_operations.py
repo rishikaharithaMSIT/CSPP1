@@ -7,6 +7,10 @@ def mult_matrix(matrix1_D, matrix1, matrix2_D,matrix2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
+    len_row = len(matrix1[0])
+    for i in matrix1:
+        if len(i) != len_row:
+            return "Error: Invalid input for the matrix"
     if matrix1_D[0] != matrix2_D[1] or matrix1_D[1] != matrix2_D[0]:
         print("Error: Matrix shapes invalid for mult")
         return None
