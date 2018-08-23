@@ -42,6 +42,8 @@ def main():
     for i in range(int(matrix1_D[0])):
         in_1 = input().split()
         in_1 = list(map(int, in_1))
+        matrix1.append(in_1)
+    print(matrix1)   
 
 
     matrix2_D = input().split(",")
