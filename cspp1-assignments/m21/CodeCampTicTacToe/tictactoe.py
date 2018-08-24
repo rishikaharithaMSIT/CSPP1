@@ -3,18 +3,18 @@ def displayboard(board):
 		for j in i:
 			print(j ," " ,end='')
 		print()
-def insertX(player1,board):	
-	for i in range(len(board)):
-		for j in range(len(board)):
-			if i == player1[0] and j == player1[1] and board[i][j] == '_':
-				board[i][j] = 'X'
-	return board
-def insertO(player2,board):
-	for i in range(len(board)):
-		for j in range(len(board)):
-			if i == player2[0] and j == player2[1] and board[i][j] == '_':
-				board[i][j] = 'O'
-	return board
+# def insertX(player1,board):	
+# 	for i in range(len(board)):
+# 		for j in range(len(board)):
+# 			if i == player1[0] and j == player1[1] and board[i][j] == '_':
+# 				board[i][j] = 'X'
+# 	return board
+# def insertO(player2,board):
+# 	for i in range(len(board)):
+# 		for j in range(len(board)):
+# 			if i == player2[0] and j == player2[1] and board[i][j] == '_':
+# 				board[i][j] = 'O'
+# 	return board
 def checkGame(board, player):
 	game = False
 	def checkRows(board, player):
@@ -47,27 +47,31 @@ def checkGame(board, player):
  
 
 def main():
-	board = [['_','_','_'], ['_','_','_'], ['_','_','_']]
+	board = []
+	for i in range(3):
+		in_row = input().split()
+		board.append(in_row)
+
 	displayboard(board)
-	while True:
-		player1 = input("Player 1 turn: ")
-		player1 = player1.split()
-		player1 = list(map(int, player1))
-		board  = insertX(player1, board)
-		displayboard(board)		
-		play1 = checkGame(board, 'X')
-		if play1 == True:
-			print("player 1 wins")
-			break
-		player2 = input("Player 2 turn: ")
-		player2 = player2.split()
-		player2 = list(map(int, player2))
-		board  = insertO(player2, board)
-		displayboard(board)
-		play2 = checkGame(board, '0')
-		if play2 == True:
-			print("player 2 wins")
-			break
+	# while True:
+	# 	player1 = input("Player 1 turn: ")
+	# 	player1 = player1.split()
+	# 	player1 = list(map(int, player1))
+	# 	board  = insertX(player1, board)
+	# 	displayboard(board)		
+	# 	play1 = checkGame(board, 'X')
+	# 	if play1 == True:
+	# 		print("player 1 wins")
+	# 		break
+	# 	player2 = input("Player 2 turn: ")
+	# 	player2 = player2.split()
+	# 	player2 = list(map(int, player2))
+	# 	board  = insertO(player2, board)
+	# 	displayboard(board)
+	# 	play2 = checkGame(board, '0')
+	# 	if play2 == True:
+	# 		print("player 2 wins")
+	# 		break
 		
 
 
