@@ -23,15 +23,15 @@ def checkGame(board, player):
     rows = checkRows(board, player)
     cols = checkCols(board, player)
     diag = checkdiags(board, player)
-    if rows == True and cols == True:
+    if rows and cols:
         game = "Invalid"
-    elif rows == True and diag == True:
+    elif rows and diag:
         game = "Invalid"
-    elif cols == True and diag == True:
+    elif cols and diag:
         game = "Invalid"
-    elif rows == True and cols == True and diag == True:
+    elif rows and cols and diag:
         game = "Invalid"
-    elif rows == True or cols == True or diag == True:
+    elif rows or cols or diag:
         game = True
     return game
 
