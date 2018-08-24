@@ -45,6 +45,7 @@ def check_game(board, player):
     return game
 
 def main():
+    '''Main Fucntion'''
     board = []
     invalid_input = False
     for i in range(3):
