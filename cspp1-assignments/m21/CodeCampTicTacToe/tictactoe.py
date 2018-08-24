@@ -58,7 +58,7 @@ def main():
 
 	if x_game == True:
 			print("x")
-	if o_game == False:
+	if o_game == True:
 			print("o")
 
 
