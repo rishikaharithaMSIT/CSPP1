@@ -66,7 +66,7 @@ def main():
 
 	if x_game == "Invalid" or o_game == "Invalid":
 		print("invalid game")
-	elif x_game == True or o_game == True:
+	elif x_game == True and o_game == True:
 		print("invalid game")
 	elif x_game == True:
 			print("x")
