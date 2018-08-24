@@ -53,6 +53,15 @@ def main():
 		board.append(in_row)
 
 	displayboard(board)
+	x_game = checkGame(board, 'x')
+	o_game = checkGame(board, 'o')
+
+	if x_game == True:
+			print("x")
+	if o_game == False:
+			print("o")
+
+
 	# while True:
 	# 	player1 = input("Player 1 turn: ")
 	# 	player1 = player1.split()
