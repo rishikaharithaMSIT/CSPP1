@@ -1,3 +1,9 @@
+'''
+Author: Rishika Haritha
+Date: 24 August 2018
+Encoding: utf-8
+'''
+
 def checkGame(board, player):
     game = False
     def checkRows(board, player):
