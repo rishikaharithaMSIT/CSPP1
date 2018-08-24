@@ -9,7 +9,7 @@ def checkGame(board, player):
     def checkCols(board, player):
         cols = False
         for i in range(len(board)):
-            if board[0][i] == player and board[1][i] == player and board[2][i]== player:
+            if board[0][i] == player and board[1][i] == player and board[2][i] == player:
                 cols = True
         return cols
     def checkdiags(board, player):
