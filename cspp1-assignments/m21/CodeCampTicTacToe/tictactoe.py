@@ -57,7 +57,7 @@ def main():
             print("x")
     elif o_game:
             print("o")
-    elif x_game == False and o_game == False:
+    elif x_game is False and o_game is False:
         print("draw")
 
 if __name__ == "__main__":
