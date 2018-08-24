@@ -5,14 +5,17 @@ Encoding: utf-8
 '''
 
 def check_game(board, player):
+    '''check the game'''
     game = False
     def checkRows(board, player):
+        '''check the rows'''
         rows = False
         for i in range(len(board)):
             if board[i][0] == player and board[i][1] == player and board[i][2] == player:
                 rows = True
         return rows
     def checkCols(board, player):
+        '''check colums'''
         cols = False
         for i in range(len(board)):
             if board[0][i] == player and board[1][i] == player and board[2][i] == player:
