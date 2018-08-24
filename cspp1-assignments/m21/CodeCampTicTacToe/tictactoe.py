@@ -7,7 +7,7 @@ Encoding: utf-8
 def check_game(board, player):
     '''check the game'''
     game = False
-    def checkRows(board, player):
+    def check_rows(board, player):
         '''check the rows'''
         rows = False
         for i in range(len(board)):
@@ -29,7 +29,7 @@ def check_game(board, player):
             diags = True
         return diags
 
-    rows = checkRows(board, player)
+    rows = check_rows(board, player)
     cols = checkCols(board, player)
     diag = checkdiags(board, player)
     if rows and cols:
