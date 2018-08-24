@@ -69,7 +69,7 @@ def main():
 	x_game = checkGame(board, 'x')
 	o_game = checkGame(board, 'o')
 	if invalid_input == True:
-		print("invalid game")
+		print("invalid input")
 	elif x_game == "Invalid" or o_game == "Invalid":
 		print("invalid game")
 	elif x_game == True and o_game == True:
