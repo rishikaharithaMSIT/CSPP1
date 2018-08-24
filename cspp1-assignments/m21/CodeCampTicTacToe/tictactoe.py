@@ -72,6 +72,8 @@ def main():
 			print("x")
 	elif o_game == True:
 			print("o")
+	elif x_game == False and o_game == False:
+		print("draw")
 
 
 	# while True:
