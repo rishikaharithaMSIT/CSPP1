@@ -56,15 +56,21 @@ def checkGame(board, player):
 
 def main():
 	board = []
+	invalid_input = False
 	for i in range(3):
 		in_row = input().split()
 		board.append(in_row)
+		for j in in_row:
+			if j != 'x' or j != 'o':
+				invalid_input = True
+
 
 	#displayboard(board)
 	x_game = checkGame(board, 'x')
 	o_game = checkGame(board, 'o')
-
-	if x_game == "Invalid" or o_game == "Invalid":
+	if invalid_input == True:
+		print("Invalid")
+	elif x_game == "Invalid" or o_game == "Invalid":
 		print("invalid game")
 	elif x_game == True and o_game == True:
 		print("invalid game")
