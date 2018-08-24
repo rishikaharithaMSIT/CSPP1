@@ -15,7 +15,7 @@ def check_game(board, player):
             if board[i][0] == player and board[i][1] == player and board[i][2] == player:
                 rows = True
         return rows
-    def checkCols(board, player):
+    def check_cols(board, player):
         '''check colums'''
         cols = False
         for i in range(len(board)):
@@ -31,7 +31,7 @@ def check_game(board, player):
         return diags
 
     rows = check_rows(board, player)
-    cols = checkCols(board, player)
+    cols = check_cols(board, player)
     diag = checkdiags(board, player)
     if rows and cols:
         game = "Invalid"
