@@ -54,9 +54,9 @@ def main():
     elif x_game and o_game:
         print("invalid game")
     elif x_game:
-            print("x")
+        print("x")
     elif o_game:
-            print("o")
+        print("o")
     elif x_game is False and o_game is False:
         print("draw")
 
