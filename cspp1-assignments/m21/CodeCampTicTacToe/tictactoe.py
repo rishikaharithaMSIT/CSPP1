@@ -47,15 +47,15 @@ def main():
 
     x_game = checkGame(board, 'x')
     o_game = checkGame(board, 'o')
-    if invalid_input == True:
+    if invalid_input:
         print("invalid input")
     elif x_game == "Invalid" or o_game == "Invalid":
         print("invalid game")
-    elif x_game == True and o_game == True:
+    elif x_game and o_game:
         print("invalid game")
-    elif x_game == True:
+    elif x_game:
             print("x")
-    elif o_game == True:
+    elif o_game:
             print("o")
     elif x_game == False and o_game == False:
         print("draw")
