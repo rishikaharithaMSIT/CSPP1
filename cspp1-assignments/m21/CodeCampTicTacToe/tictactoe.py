@@ -33,7 +33,7 @@ def checkGame(board, player):
 		diags = False
 		if board[0][0] == player and board[1][1] == player and board[2][2] == player:
 			diags = True
-		if board[0][0] == player and board[1][1] == player and board[2][2] == player:
+		if board[0][2] == player and board[1][1] == player and board[2][0] == player:
 			diags = True 
 		return diags
 
