@@ -48,12 +48,13 @@ def check_game(board, player):
 def main():
     '''Main Fucntion'''
     board = []
+    ref = 'xo.'
     invalid_input = False
     for i in range(3):
         in_row = input().split()
         board.append(in_row)
         for j in in_row:
-            if j != 'x' and j != 'o' and j != '.':
+            if j not in ref:
                 invalid_input = True
 
     x_game = check_game(board, 'x')
