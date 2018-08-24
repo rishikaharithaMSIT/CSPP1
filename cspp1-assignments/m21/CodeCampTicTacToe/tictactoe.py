@@ -61,7 +61,7 @@ def main():
 		in_row = input().split()
 		board.append(in_row)
 		for j in in_row:
-			if j != 'x' or j != 'o':
+			if j != 'x' or j != 'o' or j != '.':
 				invalid_input = True
 
 
@@ -69,7 +69,7 @@ def main():
 	x_game = checkGame(board, 'x')
 	o_game = checkGame(board, 'o')
 	if invalid_input == True:
-		print("Invalid")
+		print("invalid")
 	elif x_game == "Invalid" or o_game == "Invalid":
 		print("invalid game")
 	elif x_game == True and o_game == True:
