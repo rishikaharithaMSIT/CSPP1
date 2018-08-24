@@ -53,6 +53,7 @@ def main():
     for i in range(3):
         in_row = input().split()
         board.append(in_row)
+        i += 1
         for j in in_row:
             if j not in ref:
                 invalid_input = True
