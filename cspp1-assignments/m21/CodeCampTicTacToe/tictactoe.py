@@ -17,7 +17,7 @@ def checkGame(board, player):
         if board[0][0] == player and board[1][1] == player and board[2][2] == player:
             diags = True
         if board[0][2] == player and board[1][1] == player and board[2][0] == player:
-            diags = True 
+            diags = True
         return diags
 
     rows = checkRows(board, player)
