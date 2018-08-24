@@ -52,7 +52,7 @@ def main():
 		in_row = input().split()
 		board.append(in_row)
 
-	displayboard(board)
+	#displayboard(board)
 	x_game = checkGame(board, 'x')
 	o_game = checkGame(board, 'o')
 
