@@ -4,7 +4,7 @@ Date: 24 August 2018
 Encoding: utf-8
 '''
 
-def checkGame(board, player):
+def check_game(board, player):
     game = False
     def checkRows(board, player):
         rows = False
@@ -51,8 +51,8 @@ def main():
             if j != 'x' and j != 'o' and j != '.':
                 invalid_input = True
 
-    x_game = checkGame(board, 'x')
-    o_game = checkGame(board, 'o')
+    x_game = check_game(board, 'x')
+    o_game = check_game(board, 'o')
     if invalid_input:
         print("invalid input")
     elif x_game == "Invalid" or o_game == "Invalid":
