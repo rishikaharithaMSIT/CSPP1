@@ -10,7 +10,8 @@ def check_game(board, player):
     def check_rows(board, player):
         '''check the rows'''
         rows = False
-        for i in range(len(board)):
+        length = len(board)
+        for i in range(length):
             if board[i][0] == player and board[i][1] == player and board[i][2] == player:
                 rows = True
         return rows
