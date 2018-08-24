@@ -41,6 +41,14 @@ def checkGame(board, player):
 	rows = checkRows(board, player)
 	cols = checkCols(board, player)
 	diag = checkdiags(board, player)
+	if rows == True and cols == True:
+		game = "Invalid"
+	if rows == True and diag == True:
+		game = "Invalid"
+	if cols == True and diag == True:
+		game = "Invalid"
+	if rows == True and cols == True and diag == True:
+		game = "Invalid"
 	if rows == True or cols == True or diag == True:
 		game = True
 	return game
@@ -52,13 +60,17 @@ def main():
 		in_row = input().split()
 		board.append(in_row)
 
-	displayboard(board)
+	#displayboard(board)
 	x_game = checkGame(board, 'x')
 	o_game = checkGame(board, 'o')
 
-	if x_game == True:
+	if x_game == "Invalid" or o_game == "Invalid":
+		print("invalid game")
+	elif x_game == True or o_game == True:
+		print("invalid game")
+	elif x_game == True:
 			print("x")
-	if o_game == True:
+	elif o_game == True:
 			print("o")
 
 
