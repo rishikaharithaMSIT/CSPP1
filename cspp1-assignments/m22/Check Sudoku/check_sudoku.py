@@ -7,6 +7,13 @@
     Complete the check_sudoku function to check if the given grid
     satisfies all the sudoku rules given in the statement above.
 '''
+def make_ints(sudoku):
+    sudoku_copy= sudoku[:]
+    for i in range(len(sudoku_copy)):
+        for j in range(len(sudoku_copy[i])):
+            sudoku[i][j] = int(sudoku_copy[i][j])
+    return sudoku
+
 def make_cols(sudoku):
     '''make cols'''
     col_s = [[], [], [], [], [], [], [], [], []]
@@ -26,7 +33,7 @@ def make_squares(sudoku):
     [sudoku[3][6:9]+sudoku[4][6:9]+sudoku[5][6:9]],\
     [sudoku[6][6:9]+sudoku[7][6:9]+sudoku[8][6:9]],\
     ]
-    print(sq_s)
+    return sq_s
 
 def check_sudoku(sudoku):
     '''
@@ -34,9 +41,10 @@ def check_sudoku(sudoku):
         The function has to return True for a valid sudoku grid and false otherwise
     '''
     #make_rows()
-
+    sudoku = make_ints(sudoku)
+    print(sudoku)
     col_s = make_cols(sudoku)
-    make_squares(sudoku)
+    sq_s = make_squares(sudoku)
 def main():
     '''
         main function to read input sudoku from console
