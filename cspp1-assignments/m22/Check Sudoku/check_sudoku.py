@@ -8,13 +8,11 @@
     satisfies all the sudoku rules given in the statement above.
 '''
 def make_cols(sudoku):
-    print(sudoku)
-    print(sudoku[8][8])
     col_s = [[],[],[],[],[],[],[],[],[]]
     for i in range(9):
         for j in range(9):
             col_s[i].append(sudoku[i][j])
-    print(cols)
+    print(col_s)
 
 def check_sudoku(sudoku):
     '''
