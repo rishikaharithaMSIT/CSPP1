@@ -27,7 +27,6 @@ def make_cols(sudoku):
 
 def make_squares(sudoku):
     '''make squares'''
-    sq_s = [[], [], [], [], [], [], [], [], []]
     sq_s = [[sudoku[0][0:3]+sudoku[1][0:3]+sudoku[2][0:3]], \
     [sudoku[3][0:3]+sudoku[4][0:3]+sudoku[5][0:3]],\
     [sudoku[6][0:3]+sudoku[7][0:3]+sudoku[8][0:3]],\
