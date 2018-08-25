@@ -10,8 +10,10 @@
 def make_ints(sudoku):
     '''make ints'''
     sudoku_copy= sudoku[:]
-    for i in range(len(sudoku_copy)):
-        for j in range(len(sudoku_copy[i])):
+    len_s = len(sudoku_copy)
+    for i in range(len_s):
+        len_s2 = len(sudoku_copy[i])
+        for j in range(len_s2):
             sudoku[i][j] = int(sudoku_copy[i][j])
     return sudoku
 
