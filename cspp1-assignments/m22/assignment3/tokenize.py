@@ -8,7 +8,7 @@ def tokenize(string):
     for each_line in string:
         line_words = each_line.split()
         for each_word in line_words:
-            each_word = ''.join(e for e in each_word if e.isalpha())
+            each_word = ''.join(e for e in each_word if e.isalnum())
             if each_word in token_dict:
                 token_dict[each_word] += 1
             else:
