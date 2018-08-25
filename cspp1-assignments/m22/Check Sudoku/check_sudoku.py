@@ -9,7 +9,7 @@
 '''
 def make_ints(sudoku):
     '''make ints'''
-    sudoku_copy= sudoku[:]
+    sudoku_copy = sudoku[:]
     len_s = len(sudoku_copy)
     for i in range(len_s):
         len_s2 = len(sudoku_copy[i])
@@ -77,7 +77,6 @@ def main():
         main function to read input sudoku from console
         call check_sudoku function and print the result to console
     '''
-    
     # initialize empty list
     sudoku = []
 
@@ -86,6 +85,7 @@ def main():
         # read a line, split it on SPACE and append row to list
         row = input().split(' ')
         sudoku.append(row)
+        i += 1 #for pylint
     # call solution function and print result to console
     print(check_sudoku(sudoku))
 
