@@ -18,9 +18,11 @@ def make_squares(sudoku):
     sq_s = [[], [], [], [], [], [], [], [], []]
     # sq_s = [[sudoku[0][0:3]+sudoku[1][0:3]+sudoku[2][0:3]], \
     # [sudoku[3][0:3]+sudoku[4][0:3]+sudoku[5][0:3]]]
-    for i in range(3):
-        for j in range(9):
-            sq_s[i].append(sudoku[j][i])
+    for i in range(9):
+        new_li = []
+        for j in range(3):
+            new_li.append(sudoku[i][0:2])
+        sq_s[i].appen(new_li)
     print(sq_s)
 
 def check_sudoku(sudoku):
