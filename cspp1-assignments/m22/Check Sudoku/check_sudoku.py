@@ -58,7 +58,11 @@ def check_sudoku(sudoku):
     col_s = make_cols(sudoku)
     sq_s = make_squares(sudoku)
     ch_rows = check_rows(row_s)
-    print(ch_rows)
+    ch_cols = check_rows(col_s)
+    ch_sq = check_rows(sq_s)
+    if ch_rows and ch_cols and ch_sq:
+        return True
+    return False
 def main():
     '''
         main function to read input sudoku from console
