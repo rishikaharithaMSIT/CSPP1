@@ -8,6 +8,7 @@
     satisfies all the sudoku rules given in the statement above.
 '''
 def make_cols(sudoku):
+    print(sudoku)
     col_s = [[],[],[],[],[],[],[],[],[]]
     for i in range(9):
         for j in range(9):
