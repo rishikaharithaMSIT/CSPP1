@@ -16,12 +16,8 @@ def make_cols(sudoku):
     return col_s
 def make_squares(sudoku):
     sq_s = [[], [], [], [], [], [], [], [], []]
-    # sq_s = [[sudoku[0][0:3]+sudoku[1][0:3]+sudoku[2][0:3]], \
-    # [sudoku[3][0:3]+sudoku[4][0:3]+sudoku[5][0:3]]]
-    index_s = 0
-    for i in range(9):
-        sq_s[index_s].append(sudoku[i][0:3])
-        index_s += 1
+    sq_s = [[sudoku[0][0:3]+sudoku[1][0:3]+sudoku[2][0:3]], \
+    [sudoku[3][0:3]+sudoku[4][0:3]+sudoku[5][0:3]]]
     print(sq_s)
 
 def check_sudoku(sudoku):
