@@ -22,7 +22,7 @@ def make_squares(sudoku):
         new_li = []
         for j in range(3):
             new_li.append(sudoku[i][0:2])
-        sq_s[i].appen(new_li)
+        sq_s[i].append(new_li)
     print(sq_s)
 
 def check_sudoku(sudoku):
