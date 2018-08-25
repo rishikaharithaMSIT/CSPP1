@@ -4,6 +4,7 @@ each word
 '''
 
 def tokenize(string):
+    '''tokenize'''
     token_dict = {}
     for each_line in string:
         line_words = each_line.split()
@@ -13,9 +14,11 @@ def tokenize(string):
                 token_dict[each_word] += 1
             else:
                 token_dict[each_word] = 1
+        each_line += 1 #for pylint
     return token_dict
-            
+
 def main():
+    '''main'''
     no_lines = int(input())
     in_str = []
     for each_line in range(no_lines):
