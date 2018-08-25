@@ -9,6 +9,7 @@
 '''
 def make_cols(sudoku):
     print(sudoku)
+    print(sudoku[8][8])
     col_s = [[],[],[],[],[],[],[],[],[]]
     for i in range(9):
         for j in range(9):
