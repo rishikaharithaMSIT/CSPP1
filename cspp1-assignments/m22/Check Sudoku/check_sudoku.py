@@ -11,7 +11,7 @@ def make_cols(sudoku):
     col_s = [[],[],[],[],[],[],[],[],[]]
     for i in range(9):
         for j in range(9):
-            col_s[i].append(sudoku[i][j])
+            col_s[i].append(sudoku[j][i])
     print(col_s)
 
 def check_sudoku(sudoku):
