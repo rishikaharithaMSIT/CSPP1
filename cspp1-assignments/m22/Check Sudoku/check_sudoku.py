@@ -8,6 +8,7 @@
     satisfies all the sudoku rules given in the statement above.
 '''
 def make_ints(sudoku):
+    '''make ints'''
     sudoku_copy= sudoku[:]
     for i in range(len(sudoku_copy)):
         for j in range(len(sudoku_copy[i])):
@@ -21,7 +22,9 @@ def make_cols(sudoku):
         for j in range(9):
             col_s[i].append(sudoku[j][i])
     return col_s
+
 def make_squares(sudoku):
+    '''make squares'''
     sq_s = [[], [], [], [], [], [], [], [], []]
     sq_s = [[sudoku[0][0:3]+sudoku[1][0:3]+sudoku[2][0:3]], \
     [sudoku[3][0:3]+sudoku[4][0:3]+sudoku[5][0:3]],\
@@ -34,12 +37,16 @@ def make_squares(sudoku):
     [sudoku[6][6:9]+sudoku[7][6:9]+sudoku[8][6:9]],\
     ]
     return sq_s
+
 def check_rows(row_s):
+    '''check rows'''
     count_row = 0
-    for i in range(len(row_s)):
+    len_rows = len(row_s)
+    for i in range(len_rows):
         len_set = len(set(row_s[i]))
         sum_row = 0
-        for j in range(len(row_s[i])):
+        len_rows2 = len(row_s[i])
+        for j in range(len_rows2):
             sum_row += row_s[i][j]
         if len_set == 9 and sum_row == 45:
             count_row += 1
