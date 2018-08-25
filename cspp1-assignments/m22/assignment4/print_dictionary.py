@@ -17,7 +17,7 @@ def print_dictionary(dictionary):
 
 def main():
     '''in main()'''
-    dictionary = eval(input())
+    dictionary = input()
     print_dictionary(dictionary)
 
 if __name__ == '__main__':
