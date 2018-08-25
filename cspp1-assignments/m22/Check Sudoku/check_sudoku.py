@@ -28,14 +28,14 @@ def make_cols(sudoku):
 def make_squares(sudoku):
     '''make squares'''
     sq_s = [sudoku[0][0:3]+sudoku[1][0:3]+sudoku[2][0:3], \
-    [sudoku[3][0:3]+sudoku[4][0:3]+sudoku[5][0:3]],\
-    [sudoku[6][0:3]+sudoku[7][0:3]+sudoku[8][0:3]],\
-    [sudoku[0][3:6]+sudoku[1][3:6]+sudoku[2][3:6]],\
-    [sudoku[3][3:6]+sudoku[4][3:6]+sudoku[5][3:6]],\
-    [sudoku[6][3:6]+sudoku[7][3:6]+sudoku[8][3:6]],\
-    [sudoku[0][6:9]+sudoku[1][6:9]+sudoku[2][6:9]],\
-    [sudoku[3][6:9]+sudoku[4][6:9]+sudoku[5][6:9]],\
-    [sudoku[6][6:9]+sudoku[7][6:9]+sudoku[8][6:9]],\
+    sudoku[3][0:3]+sudoku[4][0:3]+sudoku[5][0:3],\
+    sudoku[6][0:3]+sudoku[7][0:3]+sudoku[8][0:3],\
+    sudoku[0][3:6]+sudoku[1][3:6]+sudoku[2][3:6],\
+    sudoku[3][3:6]+sudoku[4][3:6]+sudoku[5][3:6],\
+    sudoku[6][3:6]+sudoku[7][3:6]+sudoku[8][3:6],\
+    sudoku[0][6:9]+sudoku[1][6:9]+sudoku[2][6:9],\
+    sudoku[3][6:9]+sudoku[4][6:9]+sudoku[5][6:9],\
+    sudoku[6][6:9]+sudoku[7][6:9]+sudoku[8][6:9],\
     ]
     return sq_s
 
