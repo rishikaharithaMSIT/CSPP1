@@ -8,11 +8,16 @@
     satisfies all the sudoku rules given in the statement above.
 '''
 def make_cols(sudoku):
-    col_s = [[],[],[],[],[],[],[],[],[]]
+    '''make cols'''
+    col_s = [[], [], [], [], [], [], [], [], []]
     for i in range(9):
         for j in range(9):
             col_s[i].append(sudoku[j][i])
-    print(col_s)
+    return col_s
+def make_squares(sudoku):
+    sq_s = [[], [], [], [], [], [], [], [], []]
+    sq_s = [[sudoku[0][0:3]+sudoku[1][0:3]+sudoku[2][0:3]]]
+    print(sudoku)
 
 def check_sudoku(sudoku):
     '''
@@ -20,8 +25,8 @@ def check_sudoku(sudoku):
         The function has to return True for a valid sudoku grid and false otherwise
     '''
     #make_rows()
-    make_cols(sudoku)
-    #make_squares()
+    col_s = make_cols(sudoku)
+    make_squares(sudoku)
 def main():
     '''
         main function to read input sudoku from console
