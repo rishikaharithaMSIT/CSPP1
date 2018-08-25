@@ -24,6 +24,7 @@ def main():
     for each_line in range(no_lines):
         in_line = input()
         in_str.append(in_line)
+        each_line += 1 #for pylint
     print(tokenize(in_str))
 
 if __name__ == '__main__':
