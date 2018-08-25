@@ -59,8 +59,8 @@ def check_sudoku(sudoku):
     sq_s = make_squares(sudoku)
     ch_rows = check_rows(row_s)
     ch_cols = check_rows(col_s)
-    ch_sq = check_rows(sq_s)
-    if ch_rows and ch_cols and ch_sq:
+    #ch_sq = check_rows(sq_s)
+    if ch_rows and ch_cols:
         return True
     return False
 def main():
