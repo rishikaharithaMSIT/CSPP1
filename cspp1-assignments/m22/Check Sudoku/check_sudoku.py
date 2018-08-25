@@ -35,15 +35,15 @@ def make_squares(sudoku):
     ]
     return sq_s
 def check_rows(row_s):
-    count_row = 0:
+    count_row = 0
     for i in range(len(row_s))
         len_set = len(set(row_s[i]))
         sum_row = 0
         for j in range(len(row_s[i])):
             sum_row += row_s[i][j]
-        if len_set == 9 and sum == 45:
-            count += 1
-    if count == 9:
+        if len_set == 9 and sum_row == 45:
+            count_row += 1
+    if count_row == 9:
         return True
     return False
 
