@@ -20,7 +20,7 @@ def make_squares(sudoku):
     # [sudoku[3][0:3]+sudoku[4][0:3]+sudoku[5][0:3]]]
     for i in range(3):
         for j in range(9):
-            sq_s[i].append[sudoku[j][i]]
+            sq_s[i].append(sudoku[j][i])
     print(sq_s)
 
 def check_sudoku(sudoku):
