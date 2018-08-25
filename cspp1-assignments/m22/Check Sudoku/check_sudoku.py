@@ -36,7 +36,7 @@ def make_squares(sudoku):
     return sq_s
 def check_rows(row_s):
     count_row = 0
-    for i in range(len(row_s))
+    for i in range(len(row_s)):
         len_set = len(set(row_s[i]))
         sum_row = 0
         for j in range(len(row_s[i])):
