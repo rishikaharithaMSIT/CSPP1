@@ -7,13 +7,21 @@
     Complete the check_sudoku function to check if the given grid
     satisfies all the sudoku rules given in the statement above.
 '''
+def make_cols(sudoku):
+    col_s = [[],[],[],[],[],[],[],[],[]]
+    for i in range(9):
+        for j in range(9):
+            col_s[i][j].append(sudoku[i][j])
+    print(cols)
 
 def check_sudoku(sudoku):
     '''
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
-    print(sudoku)
+    #make_rows()
+    make_cols(sudoku)
+    #make_squares()
 def main():
     '''
         main function to read input sudoku from console
