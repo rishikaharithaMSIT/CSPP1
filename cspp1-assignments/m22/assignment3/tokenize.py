@@ -14,7 +14,7 @@ def tokenize(string):
                 token_dict[each_word] += 1
             else:
                 token_dict[each_word] = 1
-        each_line += 1 #for pylint
+        each_line = '' #for pylint
     return token_dict
 
 def main():
