@@ -17,7 +17,7 @@ def make_cols(sudoku):
 def make_squares(sudoku):
     sq_s = [[], [], [], [], [], [], [], [], []]
     sq_s = [[sudoku[0][0:3]+sudoku[1][0:3]+sudoku[2][0:3]]]
-    print(sudoku)
+    print(sq_s)
 
 def check_sudoku(sudoku):
     '''
