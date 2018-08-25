@@ -34,6 +34,18 @@ def make_squares(sudoku):
     [sudoku[6][6:9]+sudoku[7][6:9]+sudoku[8][6:9]],\
     ]
     return sq_s
+def check_rows(row_s):
+    count_row = 0:
+    for i in range(len(row_s))
+        len_set = len(set(row_s[i]))
+        sum_row = 0
+        for j in range(len(row_s[i])):
+            sum_row += row_s[i][j]
+        if len_set == 9 and sum == 45:
+            count += 1
+    if count == 9:
+        return True
+    return False
 
 def check_sudoku(sudoku):
     '''
@@ -42,9 +54,11 @@ def check_sudoku(sudoku):
     '''
     #make_rows()
     sudoku = make_ints(sudoku)
-    print(sudoku)
+    row_s = sudoku[:]
     col_s = make_cols(sudoku)
     sq_s = make_squares(sudoku)
+    ch_rows = check_rows(row_s)
+    print(ch_rows)
 def main():
     '''
         main function to read input sudoku from console
